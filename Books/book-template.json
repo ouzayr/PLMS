@@ -1,0 +1,121 @@
+{
+  "schema": "fwlib.book/1",
+  "id": "my-new-book",
+  "title": "My New Book",
+  "subtitle": "Replace with your framework name",
+  "source": "Where the content comes from",
+  "version": "1.0",
+  "color": "#7A3E3E",
+  "estimatedMinutes": 30,
+  "description": "Short description shown on the book page. Supports **bold** and `code`.",
+  "chapters": [
+    {
+      "id": "ch-1",
+      "title": "First chapter",
+      "summary": "One-line summary of the chapter.",
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Every block type",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A paragraph. Inline **bold** and `code` are supported. No HTML."
+            },
+            {
+              "type": "h",
+              "text": "A subheading"
+            },
+            {
+              "type": "list",
+              "items": [
+                "Bullet item one",
+                "Bullet item two"
+              ],
+              "ordered": false
+            },
+            {
+              "type": "list",
+              "items": [
+                "Numbered step one",
+                "Numbered step two"
+              ],
+              "ordered": true
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Column A",
+                "Column B"
+              ],
+              "rows": [
+                [
+                  "Row 1 A",
+                  "Row 1 B"
+                ],
+                [
+                  "Row 2 A",
+                  "Row 2 B"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Callout title",
+              "text": "Callout styles: tip, warn, example, exam, exec, note."
+            },
+            {
+              "type": "def",
+              "term": "Term",
+              "text": "Definition of the term."
+            },
+            {
+              "type": "control",
+              "id": "A.1",
+              "text": "Control or outcome statement.",
+              "practice": "What it looks like in practice.",
+              "example": "A concrete example."
+            }
+          ]
+        },
+        {
+          "id": "sec-2",
+          "title": "Second section",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Each section is one reading page. Sections are marked read when you tap Done."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Question text?",
+          "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+          ],
+          "answer": 1,
+          "explain": "Explanation shown after answering. 'answer' is the 0-based index of the right option."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Front of card",
+      "back": "Back of card",
+      "tag": "Optional tag"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Term",
+      "definition": "Definition"
+    }
+  ]
+}
