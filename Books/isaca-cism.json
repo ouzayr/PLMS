@@ -1,0 +1,4686 @@
+{
+ "schema": "fwlib.book/1",
+ "id": "isaca-cism",
+ "title": "ISACA CISM",
+ "subtitle": "Certified Information Security Manager exam prep",
+ "source": "Structured on ISACA's CISM Exam Content Outline (in force until 2 November 2026), with the 3 November 2026 update. Independent study material, not affiliated with ISACA",
+ "version": "2026",
+ "color": "#7A2340",
+ "estimatedMinutes": 330,
+ "description": "All four CISM domains subtopic by subtopic, the manager mindset and exam technique, the new architecture content from November 2026, formulas and recovery terms, CISM-style quizzes and a practice exam.",
+ "chapters": [
+  {
+   "id": "about",
+   "title": "About CISM and the exam",
+   "summary": "What CISM is, exam format, domains, eligibility, maintenance and the November 2026 update.",
+   "sections": [
+    {
+     "id": "what",
+     "title": "What CISM is",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The **Certified Information Security Manager (CISM)** credential from ISACA certifies that you can design, manage and oversee an enterprise information security programme. ISACA has awarded it since 2002, and more than 111,000 professionals have earned it."
+      },
+      {
+       "type": "p",
+       "text": "CISM is a **management** certification. It tests whether you can align security with business goals, manage risk, run a security programme and lead incident management. It does not test deep technical skills such as configuring firewalls or writing exploits."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Certification",
+        "Focus",
+        "Typical holder"
+       ],
+       "rows": [
+        [
+         "CISM (ISACA)",
+         "Managing and governing an information security programme",
+         "Security managers, CISOs, GRC leads"
+        ],
+        [
+         "CISSP (ISC2)",
+         "Broad security knowledge across 8 domains, more technical",
+         "Security architects, engineers, managers"
+        ],
+        [
+         "CISA (ISACA)",
+         "Auditing information systems",
+         "IT auditors, assurance professionals"
+        ],
+        [
+         "CRISC (ISACA)",
+         "IT risk management and controls",
+         "Risk and control professionals"
+        ],
+        [
+         "CGEIT (ISACA)",
+         "Enterprise governance of IT",
+         "IT governance leaders"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exec",
+       "title": "Why it matters for a leadership path",
+       "text": "CISM is one of the certifications most often listed in CISO and security leadership job descriptions, because it proves you can speak the language of governance, risk and business value, not only technology."
+      }
+     ]
+    },
+    {
+     "id": "format",
+     "title": "Exam format",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Item",
+        "Detail"
+       ],
+       "rows": [
+        [
+         "Questions",
+         "150 multiple-choice questions, one correct answer out of four"
+        ],
+        [
+         "Duration",
+         "4 hours"
+        ],
+        [
+         "Scoring",
+         "Scaled score from 200 to 800; 450 or higher passes"
+        ],
+        [
+         "Delivery",
+         "PSI test centres or remote online proctoring"
+        ],
+        [
+         "Fee",
+         "US$575 for ISACA members, US$760 for non-members"
+        ],
+        [
+         "Scheduling",
+         "Book up to 90 days ahead; appointments available as early as 48 hours after payment"
+        ],
+        [
+         "Retakes",
+         "Waiting period between attempts (check ISACA's current retake policy)"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "A scaled score is not a percentage",
+       "text": "450 does not mean 56% correct. ISACA converts raw scores to a 200-800 scale so that different exam versions are comparable. Aim for 75% or better on good practice questions before you book."
+      }
+     ]
+    },
+    {
+     "id": "domains",
+     "title": "The four domains (outline in force until 2 November 2026)",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Domain",
+        "Weight",
+        "Approx. questions",
+        "Part A",
+        "Part B"
+       ],
+       "rows": [
+        [
+         "1. Information Security Governance",
+         "17%",
+         "25-26",
+         "Enterprise governance",
+         "Information security strategy"
+        ],
+        [
+         "2. Information Security Risk Management",
+         "20%",
+         "30",
+         "Risk assessment",
+         "Risk response"
+        ],
+        [
+         "3. Information Security Program",
+         "33%",
+         "49-50",
+         "Program development",
+         "Program management"
+        ],
+        [
+         "4. Incident Management",
+         "30%",
+         "45",
+         "Incident management readiness",
+         "Incident management operations"
+        ]
+       ]
+      },
+      {
+       "type": "p",
+       "text": "Each part lists subtopics. This book follows them one by one, so every subtopic in the official outline has its own section."
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Where the marks are",
+       "text": "Domains 3 and 4 carry 63% of the exam. Governance is only 17%, but its thinking (business alignment, senior management accountability, risk-based decisions) is how you pick the right answer in every domain."
+      }
+     ]
+    },
+    {
+     "id": "update",
+     "title": "The 3 November 2026 update",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "ISACA announced on 10 September 2026 an updated CISM exam content outline. Updated preparation materials launched on 1 September 2026, and the updated exam is available from **3 November 2026**."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Domain",
+        "Until 2 Nov 2026",
+        "From 3 Nov 2026"
+       ],
+       "rows": [
+        [
+         "1. Information Security Governance",
+         "17%",
+         "18%"
+        ],
+        [
+         "2. Information Security Risk Management",
+         "20%",
+         "20%"
+        ],
+        [
+         "3. Information Security Program",
+         "33%",
+         "33%"
+        ],
+        [
+         "4. Incident Management",
+         "30%",
+         "29%"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**New content areas:** enterprise architecture and information security architecture.",
+        "**More emphasis:** information security strategy and program development.",
+        "**Unchanged:** 150 questions, 4 hours, 450 on a 200-800 scale to pass."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "warn",
+       "title": "Which outline applies to you",
+       "text": "If you sit the exam on or before 2 November 2026, the current outline applies. From 3 November, study the new outline too: read the Architecture chapter in this book and check ISACA's Exam Content Outline page for the full list of new subtopics, which third-party sources had not reproduced at the time this book was written."
+      }
+     ]
+    },
+    {
+     "id": "eligibility",
+     "title": "Eligibility and maintenance",
+     "blocks": [
+      {
+       "type": "h",
+       "text": "Becoming certified"
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Pass the exam.**",
+        "**Experience:** five years of information security work experience, including at least three years of information security management across three or more of the CISM domains, gained within the 10 years before applying or within five years after passing.",
+        "**Substitutions:** up to two years of the general experience can be waived, for example for holding CISA or CISSP, or for a relevant postgraduate degree. The three years of security management experience can't be waived. Check ISACA's current substitution rules.",
+        "**Apply within five years** of passing, and pay the US$50 application fee.",
+        "**Agree to the ISACA Code of Professional Ethics** and the CPE policy."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "h",
+       "text": "Staying certified"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Requirement",
+        "Detail"
+       ],
+       "rows": [
+        [
+         "CPE",
+         "At least 20 hours each year and 120 hours over each three-year period"
+        ],
+        [
+         "Maintenance fee",
+         "US$45 per year for members, US$85 for non-members"
+        ],
+        [
+         "Audit",
+         "A random sample of holders must provide evidence of reported CPE; failing the audit can lead to revocation"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ethics",
+     "title": "ISACA Code of Professional Ethics",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Every CISM holder agrees to the Code. In summary, members commit to:"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Support effective governance and management of enterprise information systems and technology, including security, by implementing appropriate standards and procedures.",
+        "Perform duties with objectivity, due diligence and professional care.",
+        "Serve stakeholders' interests lawfully, with high standards of conduct and character, and not discredit the profession.",
+        "Maintain the privacy and confidentiality of information obtained in their work, unless disclosure is legally required.",
+        "Maintain competency and only undertake work they can reasonably complete with the necessary skills.",
+        "Inform appropriate parties of the results of work performed, disclosing all significant facts known to them.",
+        "Support the professional education of stakeholders in understanding governance, security and risk."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Ethics in questions",
+       "text": "When a scenario involves pressure to hide a finding or overstate compliance, the answer that reports facts to the appropriate party through proper channels is almost always right."
+      }
+     ]
+    },
+    {
+     "id": "tasks",
+     "title": "What ISACA expects you to do: the 37 tasks",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The outline lists 37 supporting tasks that describe the job. Paraphrased and grouped:"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Tasks",
+        "Theme",
+        "Examples"
+       ],
+       "rows": [
+        [
+         "1-10",
+         "Governance and strategy",
+         "Identify influences on strategy; build strategy, governance framework and policies; write business cases; gain senior leadership commitment; define responsibilities; report programme effectiveness and metrics"
+        ],
+        [
+         "11-21",
+         "Security programme",
+         "Run the programme in line with strategy and business functions; maintain processes, resources and documentation; run awareness; build security into organisational processes and contracts; monitor third parties; define metrics; classify assets; identify compliance requirements"
+        ],
+        [
+         "22-28",
+         "Risk management",
+         "Oversee risk identification, assessment and treatment; oversee vulnerability and threat analysis; select risk responses within risk appetite; judge whether controls are adequate; integrate risk into business and IT processes; monitor for changes; report risk to stakeholders"
+        ],
+        [
+         "29-37",
+         "Incident management",
+         "Maintain the incident response plan aligned with BCP and DRP; classify incidents; detect them promptly; investigate and document lawfully; handle containment, notification, escalation, eradication and recovery; staff and train teams; communicate internally and externally; test plans; run post-incident reviews"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "howto",
+     "title": "How to use this book",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Read the **CISM mindset** chapter first. It changes how you read every question.",
+        "Work through the domain chapters in order. Governance first, because it underpins everything else.",
+        "Take each chapter quiz. Read the explanation even when you get it right: the reasoning is what the exam tests.",
+        "Use the flashcards for terms and formulas (ALE, RTO, RPO, KRI and so on).",
+        "Finish with the **Final review** and the **Practice exam** chapters.",
+        "Pair this book with ISACA's official Review Manual and question database (QAE) matching your exam outline."
+       ],
+       "ordered": false
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "How many questions are on the CISM exam, and how long is it?",
+     "options": [
+      "150 questions, 4 hours",
+      "200 questions, 6 hours",
+      "100 questions, 3 hours",
+      "125 questions, 3.5 hours"
+     ],
+     "answer": 0,
+     "explain": "150 questions in 4 hours."
+    },
+    {
+     "q": "What is the passing score?",
+     "options": [
+      "450 on a 200-800 scale",
+      "70%",
+      "500 on a 200-800 scale",
+      "700 on a 100-1000 scale"
+     ],
+     "answer": 0,
+     "explain": "A scaled score of 450 or more passes."
+    },
+    {
+     "q": "Which domain carries the most weight?",
+     "options": [
+      "Information Security Program",
+      "Governance",
+      "Risk Management",
+      "Incident Management"
+     ],
+     "answer": 0,
+     "explain": "Domain 3 is 33%."
+    },
+    {
+     "q": "Which content areas are added from 3 November 2026?",
+     "options": [
+      "Physical security",
+      "Enterprise architecture and information security architecture",
+      "Cryptography and PKI",
+      "Penetration testing and red teaming"
+     ],
+     "answer": 1,
+     "explain": "Two new areas: enterprise architecture and information security architecture."
+    },
+    {
+     "q": "How many CPE hours must a CISM holder earn?",
+     "options": [
+      "40 a year, 120 over three years",
+      "None",
+      "20 a year, 120 over three years",
+      "10 a year, 60 over three years"
+     ],
+     "answer": 2,
+     "explain": "At least 20 annually and 120 per three-year cycle."
+    },
+    {
+     "q": "How much management experience can be waived?",
+     "options": [
+      "One year",
+      "All of it",
+      "None of the three required years",
+      "Two years"
+     ],
+     "answer": 2,
+     "explain": "Up to two years of general experience can be substituted, but not the three years of security management."
+    }
+   ]
+  },
+  {
+   "id": "mindset",
+   "title": "The CISM mindset and exam technique",
+   "summary": "Think like a security manager: business first, risk-based, governance-led. How to read and answer questions.",
+   "sections": [
+    {
+     "id": "manager",
+     "title": "Think like a manager, not a technician",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Most wrong answers in CISM are technically correct but **wrong for a manager**. The exam rewards the answer a senior security manager would choose in a real organisation."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Technician instinct",
+        "CISM manager answer"
+       ],
+       "rows": [
+        [
+         "Install a tool to fix it",
+         "Understand the business impact and risk first, then decide"
+        ],
+        [
+         "Block it now",
+         "Follow the policy, the incident plan or the agreed escalation path"
+        ],
+        [
+         "Security decides",
+         "The business (risk or asset owner) decides; security advises and informs"
+        ],
+        [
+         "Maximum protection",
+         "Protection proportionate to risk and within risk appetite"
+        ],
+        [
+         "Fix the symptom",
+         "Find the root cause and fix the process"
+        ],
+        [
+         "Report to the IT manager",
+         "Report to the party with authority to act (often senior management or the risk owner)"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "The golden thread",
+       "text": "Business objectives, then risk, then controls. When unsure, choose the answer that connects security to business objectives or to risk-informed decisions by the right owner."
+      }
+     ]
+    },
+    {
+     "id": "principles",
+     "title": "Principles that decide most questions",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Senior management is accountable.** Boards and executives own information security governance and risk decisions. The security manager enables and advises.",
+        "**Risk owners accept risk, not security.** The security manager makes sure the owner understands the risk.",
+        "**Business alignment comes first.** A strategy, programme or control that doesn't support business objectives is the wrong answer.",
+        "**Policy before procedure, strategy before tactics.** Governance artefacts come before tools.",
+        "**Assess before you act.** Understand the current state, impact or root cause before choosing a solution.",
+        "**Follow the plan.** In incidents, the incident response plan and escalation paths come before improvisation.",
+        "**Cost-effective, proportionate controls.** Spending more than the risk is worth is wrong.",
+        "**Prevention and detection before correction** where it's practical, but recovery capability is mandatory."
+       ],
+       "ordered": false
+      }
+     ]
+    },
+    {
+     "id": "keywords",
+     "title": "Question keywords",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Keyword",
+        "What it asks for",
+        "Tip"
+       ],
+       "rows": [
+        [
+         "FIRST",
+         "The step that must come before all others",
+         "Usually assess, understand, identify, or consult the plan"
+        ],
+        [
+         "BEST",
+         "The option that achieves the goal most completely and appropriately",
+         "Several answers may work; pick the one aligned to business and risk"
+        ],
+        [
+         "MOST important",
+         "The factor with the greatest influence on success",
+         "Often senior management support, business alignment or risk"
+        ],
+        [
+         "PRIMARY",
+         "The main purpose or reason",
+         "Think about why something exists, not side benefits"
+        ],
+        [
+         "MOST LIKELY",
+         "The most probable cause or outcome",
+         "Choose the common, realistic answer, not the exotic one"
+        ],
+        [
+         "GREATEST concern",
+         "The biggest risk",
+         "Look for impact on the business or loss of accountability"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Eliminate first",
+       "text": "Remove answers that are technical point fixes, bypass governance, or assign accountability to the wrong person. You are often left with two; choose the one closer to business objectives and risk."
+      }
+     ]
+    },
+    {
+     "id": "method",
+     "title": "A method for each question",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Read the last sentence first: what exactly is asked (FIRST, BEST, MOST)?",
+        "Identify your role in the scenario. You are almost always the information security manager.",
+        "Identify the stage: governance, risk, programme or incident. Where in the process are we?",
+        "Predict the answer before reading the options.",
+        "Eliminate options that are too technical, too late in the process, or outside your authority.",
+        "Choose the option that is most business-aligned and risk-based.",
+        "Don't overthink. If two answers look right, ask which one a CISO would present to the board."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "callout",
+       "style": "example",
+       "title": "Worked question",
+       "text": "**An employee reports that a laptop containing customer data was stolen. What should the information security manager do FIRST?** A) Notify customers. B) Wipe the laptop remotely. C) Follow the incident response plan to assess the incident. D) Report it to the police. **Answer: C.** Notification and wiping may follow, but the first step is to invoke the plan and assess (was the disk encrypted? what data?)."
+      }
+     ]
+    },
+    {
+     "id": "plan",
+     "title": "A study plan",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Weeks",
+        "Focus"
+       ],
+       "rows": [
+        [
+         "1",
+         "Mindset, exam format, Domain 1 (governance and strategy)"
+        ],
+        [
+         "2-3",
+         "Domain 2 (risk assessment and response), including quantitative calculations"
+        ],
+        [
+         "4-6",
+         "Domain 3 (programme development and management), the largest domain"
+        ],
+        [
+         "7-8",
+         "Domain 4 (readiness and operations), including BIA and recovery terms"
+        ],
+        [
+         "9",
+         "Architecture chapter (essential if sitting on or after 3 November 2026)"
+        ],
+        [
+         "10-11",
+         "Practice questions under timed conditions; review every wrong answer"
+        ],
+        [
+         "12",
+         "Final review, rest, exam"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "The practice question trap",
+       "text": "Memorising answers from a question bank doesn't transfer to the real exam. For each question, explain in one sentence why each wrong option is wrong. That builds the judgement the exam tests."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "A business unit wants to launch a product with a known security weakness. Who should decide whether to accept the risk?",
+     "options": [
+      "Internal audit",
+      "The business owner, with senior management as appropriate",
+      "The IT operations team",
+      "The information security manager"
+     ],
+     "answer": 1,
+     "explain": "Risk acceptance belongs to the owner with authority; security advises."
+    },
+    {
+     "q": "Which answer style is MOST often correct in CISM?",
+     "options": [
+      "Block all risky activity",
+      "Deploy the latest security tool",
+      "Align to business objectives and manage risk to acceptable levels",
+      "Escalate every issue to law enforcement"
+     ],
+     "answer": 2,
+     "explain": "Business alignment and risk-based decisions are the core of CISM."
+    },
+    {
+     "q": "A question asks what to do FIRST. Which type of answer is usually right?",
+     "options": [
+      "Terminate an employee",
+      "Buy insurance",
+      "Implement a control",
+      "Assess or understand the situation"
+     ],
+     "answer": 3,
+     "explain": "Understand before acting."
+    },
+    {
+     "q": "Who is ultimately accountable for information security governance?",
+     "options": [
+      "The board and senior management",
+      "The CISO",
+      "The IT manager",
+      "External auditors"
+     ],
+     "answer": 0,
+     "explain": "Governance accountability sits with the board and executive management."
+    },
+    {
+     "q": "Which is the BEST reason for a security control?",
+     "options": [
+      "A peer company uses it",
+      "It reduces risk to an acceptable level cost-effectively and supports business objectives",
+      "It covers all possible threats",
+      "It is the newest technology"
+     ],
+     "answer": 1,
+     "explain": "Proportionate, cost-effective, business-aligned risk reduction."
+    }
+   ]
+  },
+  {
+   "id": "d1a",
+   "title": "Domain 1A: Enterprise governance",
+   "summary": "Governance fundamentals, organisational culture, legal and regulatory requirements, structures, roles and responsibilities.",
+   "sections": [
+    {
+     "id": "fundamentals",
+     "title": "Governance fundamentals",
+     "blocks": [
+      {
+       "type": "def",
+       "term": "Governance",
+       "text": "Ensures that stakeholder needs are evaluated to set agreed objectives, that direction is set through prioritisation and decision-making, and that performance and compliance are monitored. The board and executive management own it."
+      },
+      {
+       "type": "def",
+       "term": "Management",
+       "text": "Plans, builds, runs and monitors activities in line with the direction set by governance to achieve objectives."
+      },
+      {
+       "type": "def",
+       "term": "Information security governance",
+       "text": "The part of corporate governance that provides strategic direction for security activities, makes sure objectives are achieved, risk is managed appropriately, resources are used responsibly and the programme's success is monitored."
+      },
+      {
+       "type": "h",
+       "text": "The six outcomes of information security governance"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Outcome",
+        "Meaning",
+        "Example evidence"
+       ],
+       "rows": [
+        [
+         "Strategic alignment",
+         "Security supports business strategy and objectives",
+         "Security strategy traced to business goals; business leaders on the steering committee"
+        ],
+        [
+         "Risk management",
+         "Risk is managed to an acceptable level within risk appetite",
+         "Approved appetite statement, risk register, treatment plans"
+        ],
+        [
+         "Value delivery",
+         "Security investments deliver value and are cost-effective",
+         "Business cases, benefits tracking, standardised controls"
+        ],
+        [
+         "Resource optimisation",
+         "Knowledge, people and infrastructure are used efficiently",
+         "Shared services, documented processes, skills plans"
+        ],
+        [
+         "Performance measurement",
+         "Metrics show whether objectives are being met",
+         "KPIs, KRIs, board dashboard"
+        ],
+        [
+         "Assurance process integration",
+         "Assurance functions (audit, risk, compliance, legal, HR, physical security) work together",
+         "Integrated assurance map, shared findings tracking"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Remember the six",
+       "text": "Strategic alignment, risk management, value delivery, resource optimisation, performance measurement, assurance integration. Questions often describe a symptom (e.g. duplicate audits) and ask which outcome is missing (assurance integration)."
+      }
+     ]
+    },
+    {
+     "id": "culture",
+     "title": "Organisational culture",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Culture is the set of shared values, beliefs and behaviours that shapes how people actually act, whatever the policy says. A security manager can't change culture by decree but can influence it."
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Risk culture:** how willing people are to take risk, report problems and challenge unsafe decisions.",
+        "**Security culture:** whether people see security as part of their job or as someone else's obstacle.",
+        "**Tone at the top:** visible behaviour of leaders (using MFA, attending exercises, funding security) sets norms.",
+        "**Culture differs by region and unit:** a group-wide approach must allow for local norms, languages and regulations."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Culture type",
+        "Security implication"
+       ],
+       "rows": [
+        [
+         "Risk-averse, hierarchical (e.g. traditional bank)",
+         "Formal policies accepted; slower change; escalation paths matter"
+        ],
+        [
+         "Risk-tolerant, fast-moving (e.g. start-up)",
+         "Guardrails and automation beat long policies; security must not block speed"
+        ],
+        [
+         "Consensus-driven",
+         "Invest time in stakeholder buy-in before launching initiatives"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Exam angle",
+       "text": "If a control keeps being bypassed, the best answer is rarely \"enforce harder\". Look for the answer that addresses culture: awareness, business involvement, simplifying the control, or leadership support."
+      }
+     ]
+    },
+    {
+     "id": "legal",
+     "title": "Legal, regulatory and contractual requirements",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The security manager must identify every external obligation that affects information security and make sure it is addressed in strategy, policy and controls."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Source",
+        "Examples"
+       ],
+       "rows": [
+        [
+         "Privacy and data protection laws",
+         "EU GDPR, Mauritius Data Protection Act 2017, Saudi PDPL, UAE PDPL, South Africa POPIA"
+        ],
+        [
+         "Sector regulation",
+         "Central bank cyber directives, insurance regulators, telecom regulators, health regulators, critical infrastructure rules"
+        ],
+        [
+         "Industry requirements",
+         "PCI DSS for card data, SWIFT Customer Security Programme for banks"
+        ],
+        [
+         "Contracts",
+         "Customer security clauses, data processing agreements, SLAs, cyber insurance conditions"
+        ],
+        [
+         "Cross-border rules",
+         "Data localisation, transfer restrictions, export controls"
+        ],
+        [
+         "Legal processes",
+         "E-discovery, legal hold, evidence requirements, breach notification deadlines"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Keep a **compliance register** with owners, and monitor for changes.",
+        "Map requirements to controls once and reuse evidence (\"test once, satisfy many\").",
+        "Involve **legal counsel** to interpret laws; the security manager does not give legal opinions.",
+        "Where requirements conflict (e.g. retention vs deletion), escalate to legal and senior management."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Compliance is a floor, not the goal",
+       "text": "CISM treats compliance as a minimum. The best answer usually manages risk to the organisation's appetite, which may require more than the regulation demands."
+      }
+     ]
+    },
+    {
+     "id": "roles",
+     "title": "Organisational structures, roles and responsibilities",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Role",
+        "Responsibility"
+       ],
+       "rows": [
+        [
+         "Board of directors",
+         "Sets direction and risk appetite; oversees security as a business risk; ultimately accountable"
+        ],
+        [
+         "Executive management (CEO and C-suite)",
+         "Implements governance; provides resources; owns enterprise risk decisions"
+        ],
+        [
+         "Security steering committee",
+         "Cross-functional group of senior business and IT leaders that prioritises, approves and oversees security initiatives"
+        ],
+        [
+         "CISO / information security manager",
+         "Develops and runs the programme; advises on risk; reports on posture; coordinates incident management"
+        ],
+        [
+         "Business process owners",
+         "Own processes and associated risk; approve controls and accept residual risk"
+        ],
+        [
+         "Data (information) owners",
+         "Accountable for classifying data and approving access; usually senior business managers"
+        ],
+        [
+         "Data custodians",
+         "Implement and operate protections (often IT) on behalf of owners"
+        ],
+        [
+         "Users",
+         "Follow policy and report incidents"
+        ],
+        [
+         "Internal audit",
+         "Independent assurance to the board on control effectiveness"
+        ],
+        [
+         "Risk management, compliance, legal, HR, privacy (DPO)",
+         "Partner functions for enterprise risk, obligations, people and privacy"
+        ]
+       ]
+      },
+      {
+       "type": "h",
+       "text": "Reporting lines"
+      },
+      {
+       "type": "p",
+       "text": "The CISO's reporting line affects independence. Reporting to the CEO, COO, CRO or directly to a board committee gives more independence than reporting inside IT, where a CIO may face a conflict between delivery speed and security."
+      },
+      {
+       "type": "h",
+       "text": "Useful tools"
+      },
+      {
+       "type": "list",
+       "items": [
+        "**RACI matrix** (Responsible, Accountable, Consulted, Informed) for key processes.",
+        "**Segregation of duties** so no single person can complete a sensitive transaction end to end.",
+        "**Security champions** in business units to extend reach."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Accountability can't be delegated",
+       "text": "Responsibility can be delegated; accountability cannot. If asked who is accountable for protecting customer data, the answer is the data owner or senior management, not the custodian or security team."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which is the PRIMARY goal of information security governance?",
+     "options": [
+      "Passing audits",
+      "Providing strategic direction so security supports business objectives and risk is managed",
+      "Implementing the latest security technology",
+      "Reducing the security budget"
+     ],
+     "answer": 1,
+     "explain": "Governance aligns security with business objectives and ensures risk is managed."
+    },
+    {
+     "q": "Separate audit, risk and compliance teams each test the same controls with different findings. Which governance outcome is weakest?",
+     "options": [
+      "Value delivery",
+      "Performance measurement",
+      "Assurance process integration",
+      "Strategic alignment"
+     ],
+     "answer": 2,
+     "explain": "Assurance functions aren't integrated."
+    },
+    {
+     "q": "Who should classify customer data?",
+     "options": [
+      "The security manager",
+      "The data custodian",
+      "The data owner",
+      "The DBA"
+     ],
+     "answer": 2,
+     "explain": "The data owner is accountable for classification."
+    },
+    {
+     "q": "What is the BEST way to gain acceptance of security in a fast-moving digital business?",
+     "options": [
+      "Longer policies",
+      "Security guardrails that enable delivery and involve business leaders",
+      "Blocking non-compliant releases without discussion",
+      "Outsourcing security"
+     ],
+     "answer": 1,
+     "explain": "Culture-aware, business-enabling approaches work best."
+    },
+    {
+     "q": "A new data protection law applies to the organisation. What should the security manager do FIRST?",
+     "options": [
+      "Notify customers",
+      "Buy a DLP tool",
+      "Work with legal to understand the requirements and assess current gaps",
+      "Rewrite all policies"
+     ],
+     "answer": 2,
+     "explain": "Understand obligations with legal, then assess gaps."
+    },
+    {
+     "q": "Why is a CISO reporting line outside IT often preferred?",
+     "options": [
+      "Greater independence and fewer conflicts of interest",
+      "It is required by ISO 27001",
+      "Less work",
+      "Higher salary"
+     ],
+     "answer": 0,
+     "explain": "Independence from IT delivery pressures."
+    }
+   ]
+  },
+  {
+   "id": "d1b",
+   "title": "Domain 1B: Information security strategy",
+   "summary": "Developing strategy, governance frameworks and standards, and strategic planning with budgets and business cases.",
+   "sections": [
+    {
+     "id": "strategy",
+     "title": "Information security strategy development",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "A security strategy describes how security will support the organisation's objectives over a period (typically three to five years). It links business goals to a desired security state and a roadmap."
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Understand business strategy and objectives** (and what the business is trying to become).",
+        "**Identify influences:** threats, regulation, technology changes, culture, stakeholder expectations.",
+        "**Define the desired state** (e.g. target maturity, target CSF profile, risk appetite).",
+        "**Assess the current state** (maturity assessments, audits, risk assessments).",
+        "**Analyse gaps.**",
+        "**Build a roadmap** of initiatives, sequenced and resourced.",
+        "**Define metrics** to track progress.",
+        "**Obtain senior management approval and commitment.**"
+       ],
+       "ordered": true
+      },
+      {
+       "type": "h",
+       "text": "Constraints on strategy"
+      },
+      {
+       "type": "p",
+       "text": "Strategy must work within constraints such as legal and regulatory requirements, physical constraints, ethics, culture, organisational structure, costs, personnel, resources and capabilities, time, and risk appetite."
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "The most important input",
+       "text": "The MOST important factor in developing a security strategy is the organisation's business objectives (with risk appetite close behind). Answers that start from threats or technology alone are usually wrong."
+      }
+     ]
+    },
+    {
+     "id": "frameworks",
+     "title": "Governance frameworks and standards",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Framework",
+        "What it is",
+        "Use in a security programme"
+       ],
+       "rows": [
+        [
+         "COBIT 2019 (ISACA)",
+         "Governance and management framework for enterprise I&T: 40 objectives in EDM, APO, BAI, DSS, MEA",
+         "Governance structure, alignment with enterprise IT, capability assessment"
+        ],
+        [
+         "ISO/IEC 27001 / 27002",
+         "Certifiable ISMS standard with 93 Annex A controls; 27002 gives guidance",
+         "Management system, certification, control baseline"
+        ],
+        [
+         "ISO/IEC 27005",
+         "Information security risk management guidance",
+         "Risk process within the ISMS"
+        ],
+        [
+         "NIST CSF 2.0",
+         "Outcome framework: Govern, Identify, Protect, Detect, Respond, Recover",
+         "Programme structure, profiles, board reporting"
+        ],
+        [
+         "NIST SP 800-53",
+         "Security and privacy control catalog",
+         "Detailed control selection"
+        ],
+        [
+         "CIS Controls",
+         "Prioritised Safeguards with Implementation Groups",
+         "Practical implementation priorities"
+        ],
+        [
+         "ISO 22301",
+         "Business continuity management systems",
+         "BCM programme (Domain 4)"
+        ],
+        [
+         "ISO/IEC 27701",
+         "Privacy information management extension to 27001",
+         "Privacy integration"
+        ],
+        [
+         "TOGAF, SABSA, Zachman",
+         "Enterprise and security architecture frameworks",
+         "Architecture alignment (see Architecture chapter)"
+        ]
+       ]
+      },
+      {
+       "type": "h",
+       "text": "Business Model for Information Security (BMIS)"
+      },
+      {
+       "type": "p",
+       "text": "ISACA's BMIS views security as a system of four elements (**organisation, people, process, technology**) connected by six dynamic interconnections: **governing** (organisation-process), **culture** (organisation-people), **enabling and support** (process-technology), **emergence** (people-process), **human factors** (people-technology) and **architecture** (organisation-technology). A change in one element affects the others."
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Frameworks are tools, not goals",
+       "text": "The exam favours adapting frameworks to the organisation's context. \"Implement every control in the standard\" is rarely the best answer."
+      }
+     ]
+    },
+    {
+     "id": "planning",
+     "title": "Strategic planning: budgets, resources and business cases",
+     "blocks": [
+      {
+       "type": "h",
+       "text": "Business case"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Problem or opportunity in business terms.",
+        "Options considered, including doing nothing.",
+        "Costs: capital and operating, internal effort, ongoing maintenance.",
+        "Benefits: risk reduction, compliance, enabling revenue, efficiency.",
+        "Financial measures: ROI, NPV, payback period, return on security investment (ROSI).",
+        "Risks of the initiative itself and dependencies.",
+        "Alignment to strategy and how success will be measured."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "def",
+       "term": "ROSI",
+       "text": "Return on security investment = (risk reduction in money - cost of the control) / cost of the control. Example: ALE falls by $80,000 for a $20,000 control, ROSI = (80,000 - 20,000) / 20,000 = 300%."
+      },
+      {
+       "type": "h",
+       "text": "Budget and resources"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Tie budget lines to roadmap initiatives and risks, not to tools.",
+        "Separate run costs (operations, licences) from change costs (projects).",
+        "Plan people: skills inventory, hiring, training, outsourcing and managed services.",
+        "Use maturity models (CMMI or COBIT capability levels 0-5) to express current and target state."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "h",
+       "text": "Getting commitment"
+      },
+      {
+       "type": "p",
+       "text": "Senior management commitment is the single most important success factor for a security programme. Gain it by presenting risk and value in business terms, linking initiatives to business objectives, and reporting progress regularly."
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Typical question",
+       "text": "\"What is the MOST effective way to obtain senior management commitment?\" Answer: present a business case showing how security supports business objectives and reduces risk. Not: show threat statistics or compliance penalties alone."
+      }
+     ]
+    },
+    {
+     "id": "policies",
+     "title": "From strategy to policy",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Document",
+        "Purpose",
+        "Approved by",
+        "Example"
+       ],
+       "rows": [
+        [
+         "Policy",
+         "High-level statement of management intent and direction",
+         "Senior management or board",
+         "All information must be classified and protected according to its classification"
+        ],
+        [
+         "Standard",
+         "Mandatory requirement that supports a policy",
+         "Security management",
+         "Passwords must be at least 14 characters or use MFA"
+        ],
+        [
+         "Procedure",
+         "Step-by-step instructions",
+         "Process owner",
+         "How to request and approve access in the IAM tool"
+        ],
+        [
+         "Guideline",
+         "Recommended practice, not mandatory",
+         "Security team",
+         "Tips for spotting phishing"
+        ],
+        [
+         "Baseline",
+         "Minimum configuration for a platform",
+         "Security and IT",
+         "CIS Level 1 Benchmark for Windows 11"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Policies change slowly",
+       "text": "Policies should be technology-neutral and stable. If a question describes a new technology, the answer usually changes a standard or procedure, not the policy."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What is the MOST important input when developing an information security strategy?",
+     "options": [
+      "Industry best practice",
+      "The security budget",
+      "Current threat reports",
+      "Business objectives"
+     ],
+     "answer": 3,
+     "explain": "Strategy must support business objectives."
+    },
+    {
+     "q": "Which is the FIRST step in developing a security strategy?",
+     "options": [
+      "Run a penetration test",
+      "Buy tools",
+      "Understand business strategy and objectives",
+      "Write procedures"
+     ],
+     "answer": 2,
+     "explain": "Start with the business."
+    },
+    {
+     "q": "In BMIS, the dynamic interconnection between people and technology is...",
+     "options": [
+      "Culture",
+      "Human factors",
+      "Emergence",
+      "Governing"
+     ],
+     "answer": 1,
+     "explain": "Human factors connects people and technology."
+    },
+    {
+     "q": "A control costs $25,000 per year and reduces ALE from $120,000 to $40,000. What is the ROSI?",
+     "options": [
+      "120%",
+      "220%",
+      "320%",
+      "80%"
+     ],
+     "answer": 1,
+     "explain": "(80,000 - 25,000) / 25,000 = 220%."
+    },
+    {
+     "q": "Which document states management's high-level intent?",
+     "options": [
+      "Policy",
+      "Baseline",
+      "Guideline",
+      "Procedure"
+     ],
+     "answer": 0,
+     "explain": "Policies express intent; standards make them mandatory and specific."
+    },
+    {
+     "q": "What is the MOST effective way to gain senior management commitment?",
+     "options": [
+      "Threaten non-compliance fines",
+      "Present a business case linking security to business objectives and risk",
+      "Show recent breach headlines",
+      "Benchmark tool spend against peers"
+     ],
+     "answer": 1,
+     "explain": "Business value and risk in business terms."
+    }
+   ]
+  },
+  {
+   "id": "d2a",
+   "title": "Domain 2A: Information security risk assessment",
+   "summary": "Risk fundamentals, emerging threats, vulnerability and control deficiency analysis, and risk assessment methods.",
+   "sections": [
+    {
+     "id": "basics",
+     "title": "Risk fundamentals",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Term",
+        "Meaning"
+       ],
+       "rows": [
+        [
+         "Asset",
+         "Anything of value to the organisation: information, systems, people, reputation"
+        ],
+        [
+         "Threat",
+         "Anything that can cause harm by exploiting a vulnerability (actor or event)"
+        ],
+        [
+         "Vulnerability",
+         "A weakness that can be exploited"
+        ],
+        [
+         "Likelihood",
+         "How probable it is that a threat will exploit a vulnerability"
+        ],
+        [
+         "Impact",
+         "The consequence to the business if it does"
+        ],
+        [
+         "Risk",
+         "The combination of likelihood and impact of an adverse event"
+        ],
+        [
+         "Inherent risk",
+         "Risk before controls"
+        ],
+        [
+         "Residual risk",
+         "Risk remaining after controls"
+        ],
+        [
+         "Risk appetite",
+         "The amount and type of risk the organisation is willing to accept in pursuit of objectives"
+        ],
+        [
+         "Risk tolerance",
+         "Acceptable deviation from risk appetite for a specific objective"
+        ],
+        [
+         "Risk capacity",
+         "The maximum risk the organisation can absorb before it fails or can't meet objectives"
+        ]
+       ]
+      },
+      {
+       "type": "h",
+       "text": "Risk management frameworks"
+      },
+      {
+       "type": "list",
+       "items": [
+        "**ISO 31000:** enterprise risk management principles and process.",
+        "**ISO/IEC 27005:** information security risk management.",
+        "**NIST SP 800-30** (risk assessment), **800-37** (Risk Management Framework), **800-39** (organisation-wide risk).",
+        "**COBIT 2019 / COBIT for Risk** and ISACA's **Risk IT** concepts.",
+        "**FAIR:** quantitative analysis of loss event frequency and magnitude.",
+        "**OCTAVE:** self-directed, asset-focused risk assessment."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Risk is always business risk",
+       "text": "Information security risk matters because of its impact on business objectives. When a question asks how to express risk to senior management, choose business impact (money, customers, regulation, operations), not technical severity."
+      }
+     ]
+    },
+    {
+     "id": "emerging",
+     "title": "Emerging risk and threat landscape",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Threat or trend",
+        "Why it matters"
+       ],
+       "rows": [
+        [
+         "Ransomware and extortion",
+         "Double extortion (encryption plus data leak) makes backups alone insufficient"
+        ],
+        [
+         "Supply chain and third-party compromise",
+         "Attacks through software updates, MSPs and SaaS platforms bypass your perimeter"
+        ],
+        [
+         "Identity attacks",
+         "Phishing, MFA fatigue, session token theft; identity is the new perimeter"
+        ],
+        [
+         "Cloud misconfiguration",
+         "Public storage, excessive permissions, weak control plane security"
+        ],
+        [
+         "AI-enabled attacks and AI risk",
+         "Deepfake fraud, faster phishing; risks from your own AI use such as data leakage and prompt injection"
+        ],
+        [
+         "IoT and OT convergence",
+         "Legacy devices connected to IT networks; safety impact"
+        ],
+        [
+         "Nation-state and APT activity",
+         "Long-term, targeted intrusions; critical infrastructure focus"
+        ],
+        [
+         "Insider threats",
+         "Malicious or careless employees and contractors"
+        ],
+        [
+         "Regulatory change",
+         "New privacy, AI and cyber resilience laws create compliance risk"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Sources:** threat intelligence feeds, national CERTs, ISACs, vendor reports, law enforcement advisories.",
+        "**Threat modelling** (e.g. STRIDE, attack trees, MITRE ATT&CK) translates threats into scenarios relevant to your assets.",
+        "**Horizon scanning:** review emerging technologies the business plans to adopt."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "New technology adoption",
+       "text": "When the business wants to adopt a new technology (AI, cloud, IoT), the best first step is a risk assessment of that use case, not an outright ban and not unconditional approval."
+      }
+     ]
+    },
+    {
+     "id": "vuln",
+     "title": "Vulnerability and control deficiency analysis",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Vulnerability identification:** scanning, penetration testing, code review, configuration reviews, audit findings, threat intelligence.",
+        "**Control deficiency analysis:** compare required controls (from policy, standards, frameworks) with what is implemented and effective.",
+        "**Design vs operating effectiveness:** a control can be well designed but not operate consistently, or operate consistently but be badly designed.",
+        "**Root cause:** fix the process that allowed the vulnerability, not just the instance.",
+        "**Prioritise** by exploitability, exposure and asset criticality, not raw count."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "example",
+       "title": "Example",
+       "text": "A scan finds 3,000 vulnerabilities. Analysis shows 80% come from servers built without the hardening standard. The control deficiency is the build process, so the fix is enforcing hardened images in provisioning, not patching servers one by one forever."
+      }
+     ]
+    },
+    {
+     "id": "methods",
+     "title": "Risk assessment and analysis methods",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Approach",
+        "How it works",
+        "Pros",
+        "Cons"
+       ],
+       "rows": [
+        [
+         "Qualitative",
+         "Rates likelihood and impact on scales (e.g. low to high), often in a heat map",
+         "Fast, easy to communicate",
+         "Subjective; hard to compare with financial decisions"
+        ],
+        [
+         "Semi-quantitative",
+         "Assigns numeric scores to qualitative scales",
+         "Allows ranking",
+         "Numbers can give false precision"
+        ],
+        [
+         "Quantitative",
+         "Uses monetary values and probabilities (e.g. ALE, FAIR, Monte Carlo)",
+         "Supports cost-benefit decisions",
+         "Needs data; time-consuming"
+        ]
+       ]
+      },
+      {
+       "type": "h",
+       "text": "Quantitative formulas"
+      },
+      {
+       "type": "def",
+       "term": "SLE (single loss expectancy)",
+       "text": "Asset value (AV) x exposure factor (EF)."
+      },
+      {
+       "type": "def",
+       "term": "ARO (annualised rate of occurrence)",
+       "text": "Expected number of occurrences per year (e.g. once every 4 years = 0.25)."
+      },
+      {
+       "type": "def",
+       "term": "ALE (annualised loss expectancy)",
+       "text": "SLE x ARO."
+      },
+      {
+       "type": "callout",
+       "style": "example",
+       "title": "Worked example",
+       "text": "A customer database is valued at $500,000. A breach would destroy 40% of its value (EF), so SLE = $200,000. It's expected once every 4 years (ARO 0.25), so ALE = $50,000. A control costing $20,000 a year reduces ARO to 0.05: new ALE $10,000. Annual benefit = $50,000 - $10,000 - $20,000 = **$20,000**, so the control is justified."
+      },
+      {
+       "type": "h",
+       "text": "Process"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Define scope and context (assets, processes, risk criteria).",
+        "Identify risks: assets, threats, vulnerabilities, existing controls.",
+        "Analyse likelihood and impact.",
+        "Evaluate risk against appetite and criteria to prioritise.",
+        "Record in the risk register and hand to risk treatment."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Asset value first",
+       "text": "Before assessing risk you must know what assets exist and what they are worth to the business. A question asking what's needed FIRST for a risk assessment often wants asset identification and valuation."
+      }
+     ]
+    },
+    {
+     "id": "bia-link",
+     "title": "Linking risk assessment and BIA",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "A **risk assessment** asks how likely and harmful events are. A **business impact analysis** (Domain 4) asks how harmful a disruption to each process would be over time, whatever the cause. Together they tell you where to invest in prevention and where in recovery."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "",
+        "Risk assessment",
+        "BIA"
+       ],
+       "rows": [
+        [
+         "Question",
+         "What could happen and how likely is it?",
+         "What happens to the business if this process stops?"
+        ],
+        [
+         "Output",
+         "Prioritised risks and treatments",
+         "Criticality, RTO, RPO, recovery priorities"
+        ],
+        [
+         "Owner",
+         "Risk and security management with business owners",
+         "Business continuity with process owners"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Risk that remains after controls are implemented is called...",
+     "options": [
+      "Inherent risk",
+      "Control risk",
+      "Risk appetite",
+      "Residual risk"
+     ],
+     "answer": 3,
+     "explain": "Residual risk."
+    },
+    {
+     "q": "An asset worth $1,000,000 has an EF of 25% and an ARO of 0.2. What is the ALE?",
+     "options": [
+      "$25,000",
+      "$50,000",
+      "$200,000",
+      "$250,000"
+     ],
+     "answer": 1,
+     "explain": "SLE = 250,000; ALE = 250,000 x 0.2 = 50,000."
+    },
+    {
+     "q": "What should be done FIRST in a risk assessment?",
+     "options": [
+      "Select controls",
+      "Identify and value assets",
+      "Calculate ALE",
+      "Buy insurance"
+     ],
+     "answer": 1,
+     "explain": "You need to know what you are protecting and its value."
+    },
+    {
+     "q": "The business wants to use a public generative AI service. What should the security manager do FIRST?",
+     "options": [
+      "Approve it",
+      "Block it",
+      "Assess the risk of the intended use cases",
+      "Wait for regulation"
+     ],
+     "answer": 2,
+     "explain": "Assess the risk of the specific use, then decide with the business."
+    },
+    {
+     "q": "Which is the BEST way to express information security risk to the board?",
+     "options": [
+      "CVSS scores",
+      "Potential impact on business objectives",
+      "Firewall log volumes",
+      "Number of vulnerabilities"
+     ],
+     "answer": 1,
+     "explain": "Business impact."
+    },
+    {
+     "q": "Which method BEST supports a cost-benefit decision on a control?",
+     "options": [
+      "Checklist review",
+      "Quantitative analysis",
+      "Interviews",
+      "Qualitative heat map"
+     ],
+     "answer": 1,
+     "explain": "Quantitative results are in monetary terms."
+    }
+   ]
+  },
+  {
+   "id": "d2b",
+   "title": "Domain 2B: Information security risk response",
+   "summary": "Treatment options, controls, risk and control ownership, and risk monitoring and reporting.",
+   "sections": [
+    {
+     "id": "options",
+     "title": "Risk treatment and response options",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Option",
+        "What it means",
+        "Example"
+       ],
+       "rows": [
+        [
+         "Mitigate (reduce)",
+         "Implement controls to reduce likelihood or impact",
+         "Add MFA to reduce account takeover risk"
+        ],
+        [
+         "Transfer (share)",
+         "Shift financial impact to a third party",
+         "Cyber insurance; outsourcing with contractual liability"
+        ],
+        [
+         "Accept",
+         "Knowingly accept the risk within appetite",
+         "Accept risk on a low-value internal system"
+        ],
+        [
+         "Avoid",
+         "Stop the activity causing the risk",
+         "Decide not to store card data; exit a risky market"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Choose options by comparing **cost of treatment** with **risk reduction** and appetite.",
+        "**Transfer never transfers accountability.** If a cloud provider leaks your customers' data, the regulator still comes to you.",
+        "**Acceptance must be formal:** documented, approved by someone with authority, time-limited and reviewed.",
+        "Some risks need a combination (e.g. mitigate and insure the residual)."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Classic trap",
+       "text": "\"Risk was transferred to the insurer, so it's no longer our concern.\" Wrong: insurance covers some financial loss, not reputational damage or legal accountability."
+      }
+     ]
+    },
+    {
+     "id": "controls",
+     "title": "Controls and control types",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "By function",
+        "Purpose",
+        "Example"
+       ],
+       "rows": [
+        [
+         "Preventive",
+         "Stop an incident happening",
+         "Access control, encryption, MFA"
+        ],
+        [
+         "Detective",
+         "Identify an incident",
+         "Logging, IDS, audits"
+        ],
+        [
+         "Corrective",
+         "Fix issues after detection",
+         "Patching, restoring from backup"
+        ],
+        [
+         "Deterrent",
+         "Discourage attempts",
+         "Warning banners, visible CCTV"
+        ],
+        [
+         "Compensating",
+         "Alternative when the primary control isn't possible",
+         "Extra monitoring on a legacy system that can't be patched"
+        ],
+        [
+         "Recovery",
+         "Restore operations",
+         "DR site, backups"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "headers": [
+        "By nature",
+        "Examples"
+       ],
+       "rows": [
+        [
+         "Administrative (managerial)",
+         "Policies, training, background checks"
+        ],
+        [
+         "Technical (logical)",
+         "Firewalls, encryption, access control lists"
+        ],
+        [
+         "Physical",
+         "Locks, guards, fences"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Control objective first",
+       "text": "Define what the control must achieve (control objective), then choose the control. It keeps choices tied to risk rather than products."
+      }
+     ]
+    },
+    {
+     "id": "ownership",
+     "title": "Risk and control ownership",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Role",
+        "Owns"
+       ],
+       "rows": [
+        [
+         "Risk owner",
+         "The risk: accountable for deciding the response and accepting residual risk. Usually the business owner of the process or asset"
+        ],
+        [
+         "Control owner",
+         "A control: responsible for designing, operating and evidencing it"
+        ],
+        [
+         "Security manager",
+         "The process: facilitates assessment, advises, monitors and reports"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Every risk in the register needs a named owner with authority and budget.",
+        "Ownership should sit at the level that can act, not the most junior person available.",
+        "When no one accepts ownership, escalate to senior management."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Who accepts risk?",
+       "text": "If the question asks who should accept residual risk, pick the business or risk owner (or senior management), never the security manager or IT."
+      }
+     ]
+    },
+    {
+     "id": "monitoring",
+     "title": "Risk monitoring and reporting",
+     "blocks": [
+      {
+       "type": "def",
+       "term": "KRI (key risk indicator)",
+       "text": "A metric that signals a change in risk exposure, ideally before a loss. Example: percentage of critical systems missing patches beyond SLA."
+      },
+      {
+       "type": "def",
+       "term": "Risk register",
+       "text": "The central record of risks with owner, rating, treatment, status and review date."
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Reassess risk when things change:** new systems, mergers, new regulations, new threats, major incidents, audit findings.",
+        "**Report by audience:** board (top risks, trends, appetite breaches), executives (risk by business unit, treatment status), operations (detailed findings).",
+        "**Heat maps and trends** show movement; pair them with narrative on what decisions are needed.",
+        "**Escalate** risks outside appetite promptly."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Change triggers reassessment",
+       "text": "A question describing a merger, new cloud platform or new law usually wants \"reassess risk\" before any specific control."
+      }
+     ]
+    },
+    {
+     "id": "integration",
+     "title": "Integrating risk into business processes",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Change management:** security impact assessment before approval.",
+        "**Project and SDLC:** security requirements at the start, threat modelling, security testing before go-live.",
+        "**Procurement:** third-party risk assessment before contract.",
+        "**Mergers and acquisitions:** security due diligence before completion.",
+        "**Enterprise risk management:** cyber risks reported alongside financial and operational risks using common scales."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Early is cheaper",
+       "text": "The best time to address security in a project is the requirements or design phase. Answers that add security at testing or after go-live are rarely BEST."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "A company buys cyber insurance for ransomware. Which risk response is this?",
+     "options": [
+      "Accept",
+      "Transfer",
+      "Avoid",
+      "Mitigate"
+     ],
+     "answer": 1,
+     "explain": "Insurance transfers part of the financial impact, not accountability."
+    },
+    {
+     "q": "Who should accept residual risk for a customer-facing application?",
+     "options": [
+      "The developer",
+      "The security manager",
+      "The auditor",
+      "The business owner of the application"
+     ],
+     "answer": 3,
+     "explain": "The risk owner."
+    },
+    {
+     "q": "Additional monitoring on an unpatchable legacy server is what type of control?",
+     "options": [
+      "Directive",
+      "Deterrent",
+      "Corrective",
+      "Compensating"
+     ],
+     "answer": 3,
+     "explain": "It compensates for the missing primary control."
+    },
+    {
+     "q": "The organisation is acquiring a competitor. What should the security manager do FIRST?",
+     "options": [
+      "Assess the security risks of the acquisition",
+      "Integrate networks immediately",
+      "Replace the competitor's tools",
+      "Terminate their security staff"
+     ],
+     "answer": 0,
+     "explain": "Reassess risk when significant change occurs."
+    },
+    {
+     "q": "Which metric is BEST as a key risk indicator?",
+     "options": [
+      "Percentage of critical systems with overdue patches",
+      "Number of firewall rules",
+      "Number of security staff",
+      "Training budget"
+     ],
+     "answer": 0,
+     "explain": "It signals rising exposure."
+    },
+    {
+     "q": "When is the BEST time to address security requirements in a new system?",
+     "options": [
+      "During decommissioning",
+      "During requirements and design",
+      "During user acceptance testing",
+      "After go-live"
+     ],
+     "answer": 1,
+     "explain": "Early is cheaper and more effective."
+    }
+   ]
+  },
+  {
+   "id": "d3a",
+   "title": "Domain 3A: Information security program development",
+   "summary": "Programme resources, asset identification and classification, standards and frameworks, policies, and metrics.",
+   "sections": [
+    {
+     "id": "program",
+     "title": "Programme fundamentals and resources",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The **information security programme** is the set of activities, resources and processes that delivers the security strategy. Strategy says where to go; the programme gets you there and keeps you there."
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Programme charter:** mandate, scope, authority, governance and reporting lines, approved by senior management.",
+        "**Scope:** business units, geographies, technologies, third parties.",
+        "**Roadmap:** initiatives from the strategy, sequenced by risk, dependency and resources.",
+        "**Integration:** alignment with IT, HR, legal, procurement, audit, risk and business operations."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Resource",
+        "Considerations"
+       ],
+       "rows": [
+        [
+         "People",
+         "Roles and skills, headcount, training, succession, retention, segregation of duties, security champions"
+        ],
+        [
+         "Processes",
+         "Documented, repeatable processes (risk, access, change, vulnerability, incident)"
+        ],
+        [
+         "Tools and technologies",
+         "Chosen to meet control objectives; integration and operating cost matter as much as features"
+        ],
+        [
+         "External resources",
+         "Managed security services, consultants, cloud providers; accountability stays internal"
+        ],
+        [
+         "Budget",
+         "Linked to roadmap and risk; run vs change costs"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Programme success factor",
+       "text": "The MOST important factor for programme success is senior management support, followed by alignment with business objectives. Tools and headcount come after."
+      }
+     ]
+    },
+    {
+     "id": "assets",
+     "title": "Information asset identification and classification",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Identify assets:** information, applications, infrastructure, cloud services, people and facilities.",
+        "**Assign owners** who are accountable for each asset.",
+        "**Value assets** by business impact (confidentiality, integrity, availability), not purchase price.",
+        "**Classify** using a simple scheme (e.g. Public, Internal, Confidential, Restricted).",
+        "**Define handling rules** for each level: storage, transmission, sharing, retention and disposal.",
+        "**Label and enforce** through tools (labels, DLP, access control).",
+        "**Review** classifications periodically and when data changes."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Why classify?",
+       "text": "The PRIMARY purpose of classification is to apply protection proportionate to the asset's value and sensitivity. Over-protecting everything wastes money; under-protecting creates risk."
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Keep it simple",
+       "text": "Three or four levels is usually enough. Complex schemes with seven levels are rarely applied consistently."
+      }
+     ]
+    },
+    {
+     "id": "standards",
+     "title": "Industry standards and frameworks for information security",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Standards give the programme a proven structure and make it easier to demonstrate compliance to others."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Need",
+        "Typical choice"
+       ],
+       "rows": [
+        [
+         "Certification demanded by clients",
+         "ISO/IEC 27001"
+        ],
+        [
+         "Board-level outcome structure",
+         "NIST CSF 2.0"
+        ],
+        [
+         "Prioritised technical controls",
+         "CIS Controls v8.1"
+        ],
+        [
+         "Detailed control catalogue",
+         "NIST SP 800-53 or ISO/IEC 27002"
+        ],
+        [
+         "Card data",
+         "PCI DSS v4"
+        ],
+        [
+         "Service organisation assurance",
+         "SOC 2"
+        ],
+        [
+         "IT governance alignment",
+         "COBIT 2019"
+        ],
+        [
+         "Cloud controls",
+         "CSA Cloud Controls Matrix"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Map once, comply many",
+       "text": "Choose one primary control framework and map other obligations to it. Separate programmes for each standard multiply cost and confuse owners."
+      }
+     ]
+    },
+    {
+     "id": "policies",
+     "title": "Policies, procedures and guidelines",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Policy framework:** one top-level policy approved by the board or executives, supported by topic policies (access, acceptable use, classification, incident, third party, cloud, AI).",
+        "**Lifecycle:** draft with stakeholders, approve, communicate, implement, monitor compliance, review at least annually or after major change.",
+        "**Exceptions process:** documented request, risk assessment, compensating controls, approval by risk owner, expiry date.",
+        "**Enforcement:** technical enforcement where possible; HR disciplinary process for violations.",
+        "**Acknowledgement:** staff confirm they have read key policies."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Policy exceptions",
+       "text": "If a business unit can't comply with a policy, the best answer is a documented exception with risk acceptance by the appropriate owner and compensating controls, not ignoring it and not immediately changing the policy."
+      }
+     ]
+    },
+    {
+     "id": "metrics",
+     "title": "Information security programme metrics",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Metric type",
+        "Measures",
+        "Example"
+       ],
+       "rows": [
+        [
+         "KGI (key goal indicator)",
+         "Whether a goal was achieved",
+         "No major incidents affecting customer data this year"
+        ],
+        [
+         "KPI (key performance indicator)",
+         "How well a process performs",
+         "Mean time to patch critical vulnerabilities"
+        ],
+        [
+         "KRI (key risk indicator)",
+         "Changes in risk exposure",
+         "Number of privileged accounts without MFA"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Level",
+        "Audience",
+        "Example"
+       ],
+       "rows": [
+        [
+         "Strategic",
+         "Board and executives",
+         "Risk trend vs appetite; progress on strategic roadmap; maturity score"
+        ],
+        [
+         "Management (tactical)",
+         "Security and IT management",
+         "Programme milestones, control coverage, budget use"
+        ],
+        [
+         "Operational",
+         "Technical teams",
+         "Patch compliance, alerts handled, scan coverage"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Good metrics are **SMART**: specific, measurable, attainable, relevant, timely.",
+        "Metrics should drive decisions. If no one would act differently based on a metric, drop it.",
+        "A **balanced scorecard** can show security across financial, customer, internal process, and learning and growth perspectives."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Metrics for the board",
+       "text": "The BEST metrics for senior management show risk and progress against business objectives. Technical counts (number of blocked attacks, viruses detected) are poor board metrics."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What is the PRIMARY purpose of information classification?",
+     "options": [
+      "To label documents",
+      "To apply protection proportionate to value and sensitivity",
+      "To reduce storage costs",
+      "To comply with ISO 27001"
+     ],
+     "answer": 1,
+     "explain": "Proportionate protection."
+    },
+    {
+     "q": "Who should approve the top-level information security policy?",
+     "options": [
+      "The security analyst",
+      "External auditors",
+      "The IT help desk",
+      "Senior management or the board"
+     ],
+     "answer": 3,
+     "explain": "Policies express management intent."
+    },
+    {
+     "q": "A business unit can't meet a policy requirement for six months. What is the BEST response?",
+     "options": [
+      "Rewrite the policy",
+      "Report the unit to HR",
+      "Document an exception with risk acceptance, compensating controls and expiry",
+      "Ignore it"
+     ],
+     "answer": 2,
+     "explain": "Formal exceptions keep risk visible and owned."
+    },
+    {
+     "q": "Which is a KRI rather than a KPI?",
+     "options": [
+      "Budget spent",
+      "Mean time to close service tickets",
+      "Training courses delivered",
+      "Number of privileged accounts without MFA"
+     ],
+     "answer": 3,
+     "explain": "It indicates changing risk exposure."
+    },
+    {
+     "q": "Which metric is MOST useful to the board?",
+     "options": [
+      "Firewall uptime",
+      "Number of spam emails blocked",
+      "Number of antivirus signatures",
+      "Trend of top risks against risk appetite"
+     ],
+     "answer": 3,
+     "explain": "Boards need risk against appetite."
+    },
+    {
+     "q": "What is the MOST important factor for security programme success?",
+     "options": [
+      "External certification",
+      "Large team",
+      "Latest tools",
+      "Senior management support"
+     ],
+     "answer": 3,
+     "explain": "Senior management support."
+    }
+   ]
+  },
+  {
+   "id": "d3b-controls",
+   "title": "Domain 3B: Controls, design to testing",
+   "summary": "Control design and selection, implementation and integration, and testing and evaluation.",
+   "sections": [
+    {
+     "id": "design",
+     "title": "Control design and selection",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Start from **control objectives** derived from risk and requirements.",
+        "Select controls based on **cost-effectiveness**, feasibility, impact on business processes and fit with the architecture.",
+        "Apply **defence in depth**: multiple layers so one failure doesn't expose the asset.",
+        "Prefer **automated, preventive** controls where practical; add detective and corrective layers.",
+        "Consider **people, process and technology** together (BMIS).",
+        "Use recognised baselines (e.g. CIS Benchmarks, ISO/IEC 27002, NIST SP 800-53) and tailor them."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Principle",
+        "Meaning"
+       ],
+       "rows": [
+        [
+         "Least privilege",
+         "Users and systems get only the access they need"
+        ],
+        [
+         "Need to know",
+         "Access to information only when required for a role"
+        ],
+        [
+         "Segregation of duties",
+         "No one person controls a sensitive process end to end"
+        ],
+        [
+         "Defence in depth",
+         "Layered, independent controls"
+        ],
+        [
+         "Fail secure",
+         "On failure, the system defaults to a safe state"
+        ],
+        [
+         "Secure by default",
+         "Out-of-the-box configuration is secure"
+        ],
+        [
+         "Zero trust",
+         "Never trust by network location; verify each request"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Business impact of controls",
+       "text": "A control that blocks a critical business process is a bad control, even if it is secure. The best answer balances protection and business operations."
+      }
+     ]
+    },
+    {
+     "id": "implement",
+     "title": "Control implementation and integration",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**SDLC and DevSecOps:** security requirements, secure coding, testing and gates in pipelines.",
+        "**Change and configuration management:** hardened baselines; security review of changes.",
+        "**Identity and access management:** joiner-mover-leaver, MFA, privileged access management, access reviews.",
+        "**Data protection:** encryption, key management, DLP, backup.",
+        "**Network and cloud security:** segmentation, secure cloud configuration, shared responsibility.",
+        "**Endpoint security:** EDR, patching, device management.",
+        "**Monitoring:** logging, SIEM, SOC processes.",
+        "**Physical and environmental security.**"
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Integration beats islands",
+       "text": "Controls work best when built into existing processes (HR onboarding, procurement, change approval) rather than run as separate security steps people can skip."
+      }
+     ]
+    },
+    {
+     "id": "testing",
+     "title": "Control testing and evaluation",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Method",
+        "Who",
+        "Purpose"
+       ],
+       "rows": [
+        [
+         "Control self-assessment",
+         "Control owners",
+         "Owners check their own controls; builds accountability"
+        ],
+        [
+         "Internal audit",
+         "Independent internal function",
+         "Assurance to the board on design and operation"
+        ],
+        [
+         "External audit or certification",
+         "Independent third party",
+         "ISO 27001 certification, SOC 2 reports, regulatory audits"
+        ],
+        [
+         "Vulnerability assessment",
+         "Security team or vendor",
+         "Find technical weaknesses"
+        ],
+        [
+         "Penetration testing and red teaming",
+         "Qualified testers",
+         "Prove exploitability and test detection and response"
+        ],
+        [
+         "Continuous control monitoring",
+         "Automated tools",
+         "Ongoing evidence of control operation"
+        ]
+       ]
+      },
+      {
+       "type": "def",
+       "term": "Design effectiveness",
+       "text": "Whether the control, if operated as intended, would achieve its objective."
+      },
+      {
+       "type": "def",
+       "term": "Operating effectiveness",
+       "text": "Whether the control actually works as designed, consistently over time."
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Independence matters",
+       "text": "The person who designed or operates a control should not be the only one testing it. Questions about assurance usually favour an independent party."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What should drive control selection?",
+     "options": [
+      "The newest technology",
+      "Peer company choices",
+      "Control objectives derived from risk and requirements",
+      "Vendor recommendations"
+     ],
+     "answer": 2,
+     "explain": "Control objectives come from risk and requirements."
+    },
+    {
+     "q": "Which principle ensures no single person can create and approve a payment?",
+     "options": [
+      "Need to know",
+      "Fail secure",
+      "Segregation of duties",
+      "Least privilege"
+     ],
+     "answer": 2,
+     "explain": "Segregation of duties."
+    },
+    {
+     "q": "A control works when tested once but fails intermittently in practice. What is weak?",
+     "options": [
+      "Design effectiveness",
+      "Deterrence",
+      "Operating effectiveness",
+      "Compensation"
+     ],
+     "answer": 2,
+     "explain": "Operating effectiveness is consistency over time."
+    },
+    {
+     "q": "Who should provide independent assurance on control effectiveness to the board?",
+     "options": [
+      "The security manager",
+      "Internal audit",
+      "The control owner",
+      "The vendor"
+     ],
+     "answer": 1,
+     "explain": "Internal audit is independent."
+    },
+    {
+     "q": "A proposed control would stop a critical business process. What should the security manager do?",
+     "options": [
+      "Find an alternative control that meets the objective with acceptable business impact",
+      "Drop the requirement",
+      "Implement it anyway",
+      "Ask IT to decide"
+     ],
+     "answer": 0,
+     "explain": "Balance protection with business needs."
+    }
+   ]
+  },
+  {
+   "id": "d3b-people",
+   "title": "Domain 3B: Awareness, third parties and reporting",
+   "summary": "Awareness and training, management of external services, and programme communications and reporting.",
+   "sections": [
+    {
+     "id": "awareness",
+     "title": "Information security awareness and training",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Programme, not event:** onboarding, annual refreshers, ongoing short content, simulations.",
+        "**Role-based training** for developers, administrators, executives, finance and HR.",
+        "**Tailor** to audience, language and culture; use real examples from the organisation.",
+        "**Measure behaviour:** phishing report rates, repeat clickers, incident reporting times, policy violations, not just completion.",
+        "**Leadership participation** reinforces importance."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Awareness effectiveness",
+       "text": "The BEST indicator that awareness works is a change in behaviour (e.g. more phishing reports, fewer incidents caused by users), not the number of people who completed training."
+      }
+     ]
+    },
+    {
+     "id": "thirdparty",
+     "title": "Management of external services",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Providers, suppliers, third parties and **fourth parties** (your suppliers' suppliers) extend your attack surface. The security manager integrates security across the whole relationship lifecycle."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Stage",
+        "Activities"
+       ],
+       "rows": [
+        [
+         "Planning and due diligence",
+         "Classify the service by risk; assess security (questionnaires, SOC 2, ISO 27001 certificates, site visits)"
+        ],
+        [
+         "Contracting",
+         "Security requirements, right to audit, breach notification timelines, data location, subcontractor controls, SLAs, exit terms, liability"
+        ],
+        [
+         "Onboarding",
+         "Least-privilege access, secure integration, contacts for incidents"
+        ],
+        [
+         "Monitoring",
+         "Performance and SLA reviews, reassessment, security ratings, incident reporting, fourth-party changes"
+        ],
+        [
+         "Termination",
+         "Revoke access, return or destroy data with certification, transition support"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Cloud shared responsibility:** the provider secures the platform; you secure your data, identities and configuration.",
+        "**SOC 2 Type I vs Type II:** Type I assesses design at a point in time; Type II assesses operating effectiveness over a period (usually 6-12 months).",
+        "**Concentration risk:** too many critical services with one provider."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Accountability stays with you",
+       "text": "Outsourcing a service outsources the work, not the accountability. The BEST protection is security requirements in the contract, verified by ongoing monitoring and the right to audit."
+      }
+     ]
+    },
+    {
+     "id": "reporting",
+     "title": "Programme communications and reporting",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Audience",
+        "What they need",
+        "Format"
+       ],
+       "rows": [
+        [
+         "Board",
+         "Top risks, appetite breaches, trend, major incidents, decisions required",
+         "Short, business language, quarterly"
+        ],
+        [
+         "Executive management",
+         "Programme progress, risk by business unit, resource needs",
+         "Dashboards, monthly"
+        ],
+        [
+         "Business owners",
+         "Risks and actions in their area, their responsibilities",
+         "Risk reviews"
+        ],
+        [
+         "IT and operations",
+         "Technical findings, deadlines",
+         "Tickets, operational reports"
+        ],
+        [
+         "Regulators and auditors",
+         "Evidence of compliance and control effectiveness",
+         "Formal reports as required"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Report **risk and business impact**, not activity counts.",
+        "Be honest about gaps; credibility is the security manager's most valuable asset.",
+        "Tie every request for budget or decisions to risk and objectives."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Reporting noncompliance",
+       "text": "If a significant control failure or noncompliance is found, the information security manager must report it to senior management (or the appropriate owner), even if it is embarrassing to IT or the business."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What is the BEST indicator of an effective awareness programme?",
+     "options": [
+      "Length of the training",
+      "Number of posters",
+      "Increased reporting of suspicious emails",
+      "100% training completion"
+     ],
+     "answer": 2,
+     "explain": "Behaviour change."
+    },
+    {
+     "q": "What is the BEST way to ensure a cloud provider protects your data?",
+     "options": [
+      "Include security requirements and right to audit in the contract, and monitor compliance",
+      "Ask for a verbal promise",
+      "Encrypt nothing",
+      "Trust its marketing"
+     ],
+     "answer": 0,
+     "explain": "Contract plus ongoing monitoring."
+    },
+    {
+     "q": "A SOC 2 Type II report provides assurance on...",
+     "options": [
+      "Design at a point in time",
+      "Financial statements",
+      "Operating effectiveness over a period",
+      "Physical security only"
+     ],
+     "answer": 2,
+     "explain": "Type II covers operating effectiveness over time."
+    },
+    {
+     "q": "Who remains accountable for customer data processed by an outsourced provider?",
+     "options": [
+      "The insurer",
+      "The organisation that outsourced it",
+      "The regulator",
+      "The provider"
+     ],
+     "answer": 1,
+     "explain": "Accountability can't be outsourced."
+    },
+    {
+     "q": "What should the security manager report to the board?",
+     "options": [
+      "Every vulnerability",
+      "Top risks, trends against appetite, and decisions needed",
+      "Number of viruses blocked",
+      "Firewall configuration changes"
+     ],
+     "answer": 1,
+     "explain": "Board reporting is about risk and decisions."
+    }
+   ]
+  },
+  {
+   "id": "architecture",
+   "title": "Enterprise and security architecture (new from November 2026)",
+   "summary": "Enterprise architecture, security architecture frameworks, principles, zero trust and cloud reference architectures.",
+   "sections": [
+    {
+     "id": "why",
+     "title": "Why architecture joins the CISM outline",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "ISACA added **enterprise architecture** and **information security architecture** to the CISM outline from 3 November 2026, recognising that security managers must understand the technologies and structures under their oversight. For CISM, the focus is the manager's view: how architecture aligns security with business strategy, how to govern it, and how to use it to make consistent decisions."
+      },
+      {
+       "type": "callout",
+       "style": "warn",
+       "title": "Scope check",
+       "text": "ISACA's full new subtopic list wasn't publicly reproduced when this book was written. This chapter covers the core concepts a manager is expected to know. Confirm the exact subtopics on ISACA's CISM Exam Content Outline page before your exam."
+      }
+     ]
+    },
+    {
+     "id": "ea",
+     "title": "Enterprise architecture",
+     "blocks": [
+      {
+       "type": "def",
+       "term": "Enterprise architecture (EA)",
+       "text": "A structured description of how an organisation's business processes, information, applications and technology fit together, today and in a target state, and a discipline for moving from one to the other."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Framework",
+        "Key idea"
+       ],
+       "rows": [
+        [
+         "TOGAF (The Open Group)",
+         "The Architecture Development Method (ADM): Preliminary; A Architecture Vision; B Business; C Information Systems (data and application); D Technology; E Opportunities and Solutions; F Migration Planning; G Implementation Governance; H Architecture Change Management; with Requirements Management at the centre"
+        ],
+        [
+         "Zachman Framework",
+         "A classification matrix: six questions (what, how, where, who, when, why) against six perspectives (from planner to worker)"
+        ],
+        [
+         "COBIT 2019 APO03",
+         "Managed Enterprise Architecture as a management objective"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Baseline and target architectures** mirror the security strategy's current and desired state.",
+        "**Architecture principles** (e.g. \"data is an asset\", \"security by design\") guide design decisions.",
+        "**Architecture governance:** an architecture review board approves designs against standards; security should be a voting member.",
+        "**Building blocks and reference models** make approved patterns reusable."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Manager's angle",
+       "text": "The best answer usually embeds security in the EA process (security requirements in each ADM phase, security on the architecture board) rather than reviewing designs after they are built."
+      }
+     ]
+    },
+    {
+     "id": "sa",
+     "title": "Information security architecture",
+     "blocks": [
+      {
+       "type": "def",
+       "term": "Information security architecture",
+       "text": "The design of security controls, services and their relationships across the enterprise, aligned to business requirements and the enterprise architecture."
+      },
+      {
+       "type": "h",
+       "text": "SABSA"
+      },
+      {
+       "type": "p",
+       "text": "SABSA (Sherwood Applied Business Security Architecture) is a business-driven security architecture framework. It works through six layers, each answering what, why, how, who, where and when:"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Layer",
+        "View",
+        "Focus"
+       ],
+       "rows": [
+        [
+         "Contextual",
+         "Business",
+         "Business requirements, risks and attributes (e.g. available, confidential, compliant)"
+        ],
+        [
+         "Conceptual",
+         "Architect",
+         "Security strategy, principles and control objectives"
+        ],
+        [
+         "Logical",
+         "Designer",
+         "Security services and policies"
+        ],
+        [
+         "Physical",
+         "Builder",
+         "Security mechanisms and technologies"
+        ],
+        [
+         "Component",
+         "Tradesman",
+         "Specific products and tools"
+        ],
+        [
+         "Service management (operational)",
+         "Service manager",
+         "Running, monitoring and managing security"
+        ]
+       ]
+      },
+      {
+       "type": "p",
+       "text": "SABSA's **attributes profiling** turns business goals into measurable security attributes, giving traceability from business requirement to control."
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Traceability is the point",
+       "text": "Whether you use SABSA, TOGAF security guidance or your own method, a good security architecture lets you trace every control back to a business requirement and risk."
+      }
+     ]
+    },
+    {
+     "id": "zt",
+     "title": "Zero trust and modern patterns",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "**Zero trust** (NIST SP 800-207) assumes no implicit trust based on network location. Every access request is authenticated, authorised and evaluated continuously."
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Component",
+        "Role"
+       ],
+       "rows": [
+        [
+         "Policy engine (PE)",
+         "Decides whether to grant access based on policy and signals"
+        ],
+        [
+         "Policy administrator (PA)",
+         "Establishes or shuts down the session based on the decision"
+        ],
+        [
+         "Policy enforcement point (PEP)",
+         "Enables, monitors and terminates connections"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Signals include user identity, device health, location, behaviour and data sensitivity.",
+        "Micro-segmentation limits lateral movement.",
+        "Identity becomes the primary control plane.",
+        "Zero trust is a strategy and a journey, not a product."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "h",
+       "text": "Other patterns"
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Defence in depth** and **segmentation** (zones and conduits in OT).",
+        "**Secure access service edge (SASE)**: network and security services delivered from the cloud.",
+        "**Cloud reference architectures** and landing zones with built-in guardrails.",
+        "**Security as code**: policies and controls in version-controlled templates."
+       ],
+       "ordered": false
+      }
+     ]
+    },
+    {
+     "id": "govern-arch",
+     "title": "Governing architecture as a security manager",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Define **security architecture principles** approved by governance.",
+        "Maintain **reference architectures and patterns** so projects reuse approved designs.",
+        "Participate in the **architecture review board** and design reviews early.",
+        "Track **architectural debt** (legacy systems, exceptions) in the risk register.",
+        "Use architecture to show **how the programme delivers the strategy**: current vs target state and roadmap."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Likely question pattern",
+       "text": "\"What is the PRIMARY benefit of an information security architecture?\" Answer: it aligns security controls with business requirements and the enterprise architecture, enabling consistent, cost-effective protection. Not: it lists all security products."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What is the PRIMARY benefit of a security architecture aligned to enterprise architecture?",
+     "options": [
+      "It ensures controls consistently support business requirements",
+      "It replaces policies",
+      "It reduces the number of vendors",
+      "It eliminates risk"
+     ],
+     "answer": 0,
+     "explain": "Alignment and traceability to business requirements."
+    },
+    {
+     "q": "In TOGAF's ADM, which phase defines the target technology architecture?",
+     "options": [
+      "Phase B",
+      "Phase G",
+      "Phase A",
+      "Phase D"
+     ],
+     "answer": 3,
+     "explain": "Phase D is Technology Architecture."
+    },
+    {
+     "q": "Which SABSA layer captures business requirements and risk?",
+     "options": [
+      "Contextual",
+      "Component",
+      "Logical",
+      "Physical"
+     ],
+     "answer": 0,
+     "explain": "The contextual layer is the business view."
+    },
+    {
+     "q": "In NIST SP 800-207, which component decides whether access is granted?",
+     "options": [
+      "Directory",
+      "Policy enforcement point",
+      "Policy engine",
+      "Firewall"
+     ],
+     "answer": 2,
+     "explain": "The policy engine makes the decision; the PEP enforces it."
+    },
+    {
+     "q": "What is the BEST way for security to influence new system designs?",
+     "options": [
+      "Rely on penetration tests",
+      "Block all new systems",
+      "Review systems after go-live",
+      "Participate in the architecture review board and set security principles early"
+     ],
+     "answer": 3,
+     "explain": "Early involvement through architecture governance."
+    }
+   ]
+  },
+  {
+   "id": "d4a",
+   "title": "Domain 4A: Incident management readiness",
+   "summary": "Incident response plan, BIA, BCP, DRP, classification, and training, testing and evaluation.",
+   "sections": [
+    {
+     "id": "irp",
+     "title": "Incident response plan",
+     "blocks": [
+      {
+       "type": "def",
+       "term": "Incident management",
+       "text": "The broader capability (people, process, technology, governance) to prepare for, detect, respond to and learn from incidents."
+      },
+      {
+       "type": "def",
+       "term": "Incident response",
+       "text": "The operational actions taken when an incident occurs."
+      },
+      {
+       "type": "def",
+       "term": "Event vs incident",
+       "text": "An event is any observable occurrence. An incident is an event that harms or threatens the confidentiality, integrity or availability of information or systems, or violates policy, and meets defined criteria."
+      },
+      {
+       "type": "h",
+       "text": "Plan components"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Purpose, scope and authority (approved by senior management).",
+        "Definitions, classification and severity levels.",
+        "Roles and responsibilities, including the incident manager and deputies.",
+        "Escalation paths and decision authority (e.g. who may shut down a system or pay a ransom).",
+        "Procedures and playbooks for common scenarios (ransomware, data breach, business email compromise, DDoS).",
+        "Internal and external communication plans, including regulators and law enforcement.",
+        "Evidence handling and legal considerations.",
+        "Links to BCP and DRP, and criteria for invoking them.",
+        "Testing, training and maintenance schedule."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "h",
+       "text": "Lifecycle models"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Model",
+        "Phases"
+       ],
+       "rows": [
+        [
+         "NIST SP 800-61 (Rev. 2 lifecycle)",
+         "Preparation; detection and analysis; containment, eradication and recovery; post-incident activity"
+        ],
+        [
+         "NIST SP 800-61 Rev. 3 (2025)",
+         "Reorganised around NIST CSF 2.0 functions: Govern, Identify, Protect (preparation) and Detect, Respond, Recover (response)"
+        ],
+        [
+         "SANS (PICERL)",
+         "Preparation, Identification, Containment, Eradication, Recovery, Lessons learned"
+        ],
+        [
+         "ISO/IEC 27035",
+         "Plan and prepare; detection and reporting; assessment and decision; responses; lessons learned"
+        ]
+       ]
+      },
+      {
+       "type": "h",
+       "text": "Team models"
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Model",
+        "When it fits"
+       ],
+       "rows": [
+        [
+         "Central team",
+         "One team for the organisation; smaller or centralised organisations"
+        ],
+        [
+         "Distributed teams",
+         "Teams per region or business unit with coordination; large or global organisations"
+        ],
+        [
+         "Coordinating team",
+         "Advises and coordinates other teams without direct authority"
+        ],
+        [
+         "Outsourced or hybrid",
+         "Retainer with an incident response firm or MSSP; keep an internal owner"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Alignment is tested",
+       "text": "The incident response plan must align with the BCP and DRP. A question about conflicting plans usually wants them integrated and tested together."
+      }
+     ]
+    },
+    {
+     "id": "bia",
+     "title": "Business impact analysis (BIA)",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The BIA identifies critical business processes, the impact of disrupting them over time, and the resources they depend on. It drives recovery priorities and objectives."
+      },
+      {
+       "type": "list",
+       "items": [
+        "Identify business processes and their owners.",
+        "Assess impact over time (financial, customer, regulatory, reputational, safety).",
+        "Identify dependencies: people, systems, data, suppliers, facilities.",
+        "Set recovery objectives with business owners.",
+        "Prioritise recovery."
+       ],
+       "ordered": true
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Term",
+        "Meaning"
+       ],
+       "rows": [
+        [
+         "RTO (recovery time objective)",
+         "The target time within which a process or system must be restored after disruption"
+        ],
+        [
+         "RPO (recovery point objective)",
+         "The maximum acceptable data loss, measured as time before the disruption (drives backup frequency)"
+        ],
+        [
+         "MTD / MTPD",
+         "Maximum tolerable (period of) downtime: the point beyond which the disruption threatens the organisation's viability or objectives. RTO must be shorter"
+        ],
+        [
+         "AIW (acceptable interruption window)",
+         "ISACA term: the maximum period systems can be unavailable before business objectives are compromised"
+        ],
+        [
+         "SDO (service delivery objective)",
+         "ISACA term: the level of service to be reached during alternate processing until normal service is restored"
+        ],
+        [
+         "MTO (maximum tolerable outage)",
+         "ISACA term: the maximum time the organisation can operate in alternate process mode"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "example",
+       "title": "Example",
+       "text": "A payments process loses $200,000 per hour and breaches regulation after 4 hours. The business sets an RTO of 2 hours and an RPO of 5 minutes, which requires real-time replication and a hot site."
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Who sets RTO and RPO?",
+       "text": "Business process owners set recovery objectives based on the BIA; IT designs solutions to meet them. The lower the RTO and RPO, the higher the cost."
+      }
+     ]
+    },
+    {
+     "id": "bcp",
+     "title": "Business continuity plan (BCP)",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The BCP keeps critical business processes running (possibly in a degraded mode) during and after a disruption. Business continuity management is often run under ISO 22301."
+      },
+      {
+       "type": "list",
+       "items": [
+        "Scope and objectives from the BIA.",
+        "Continuity strategies for people, premises, technology, information and suppliers.",
+        "Crisis management structure and activation criteria.",
+        "Manual workarounds and alternate processes.",
+        "Communication plans for staff, customers, regulators and media.",
+        "Return-to-normal procedures."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "BCP vs DRP",
+       "text": "The BCP keeps the **business** running; the DRP restores **IT systems and data**. The DRP is one part of the overall continuity capability."
+      }
+     ]
+    },
+    {
+     "id": "drp",
+     "title": "Disaster recovery plan (DRP)",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Recovery site",
+        "Readiness",
+        "Typical RTO",
+        "Cost"
+       ],
+       "rows": [
+        [
+         "Mirrored / redundant site",
+         "Fully operational, real-time replication",
+         "Minutes",
+         "Highest"
+        ],
+        [
+         "Hot site",
+         "Fully equipped with hardware, software, network; data needs loading or sync",
+         "Hours",
+         "High"
+        ],
+        [
+         "Warm site",
+         "Partially equipped (network, some hardware)",
+         "Days",
+         "Medium"
+        ],
+        [
+         "Cold site",
+         "Space, power and cooling only",
+         "Weeks",
+         "Low"
+        ],
+        [
+         "Mobile site",
+         "Transportable facility",
+         "Varies",
+         "Medium"
+        ],
+        [
+         "Reciprocal agreement",
+         "Another organisation hosts you",
+         "Uncertain",
+         "Low, but hard to enforce and test"
+        ],
+        [
+         "Cloud / DRaaS",
+         "Recovery in cloud infrastructure",
+         "Minutes to hours",
+         "Pay as used"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Backup type",
+        "What it copies",
+        "Restore"
+       ],
+       "rows": [
+        [
+         "Full",
+         "All data",
+         "Fastest restore, largest backup"
+        ],
+        [
+         "Incremental",
+         "Changes since the last backup of any type",
+         "Needs the last full plus every incremental"
+        ],
+        [
+         "Differential",
+         "Changes since the last full backup",
+         "Needs the last full plus the latest differential"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Match site to RTO",
+       "text": "A short RTO needs a hot or mirrored site; a long RTO tolerates warm or cold. Choosing a more expensive site than the RTO requires isn't cost-effective."
+      }
+     ]
+    },
+    {
+     "id": "classify",
+     "title": "Incident classification and categorisation",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Category** by type: malware, unauthorised access, data breach, denial of service, insider misuse, loss or theft.",
+        "**Severity** by business impact: data sensitivity, number of people affected, criticality of systems, regulatory implications, financial impact.",
+        "**Priority** combines severity and urgency and drives response time and escalation.",
+        "Define clear **thresholds** that trigger escalation to executives, legal, regulators and the crisis team."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "table",
+       "headers": [
+        "Severity",
+        "Example criteria",
+        "Escalation"
+       ],
+       "rows": [
+        [
+         "Critical",
+         "Critical service down, confirmed breach of sensitive data, ransomware spreading",
+         "Immediate: CISO, executives, crisis team, legal"
+        ],
+        [
+         "High",
+         "Contained compromise of a sensitive system; significant data at risk",
+         "CISO within hours"
+        ],
+        [
+         "Medium",
+         "Limited malware outbreak, contained",
+         "Security management, next business day"
+        ],
+        [
+         "Low",
+         "Isolated policy violation, no data impact",
+         "Handled by the security team"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Why classify?",
+       "text": "Classification ensures the response is proportionate and the right people are involved at the right time. The PRIMARY purpose of severity levels is to prioritise response and escalation."
+      }
+     ]
+    },
+    {
+     "id": "testing",
+     "title": "Incident management training, testing and evaluation",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Test type",
+        "Description",
+        "Disruption"
+       ],
+       "rows": [
+        [
+         "Checklist review",
+         "Participants review the plan for completeness and accuracy",
+         "None"
+        ],
+        [
+         "Structured walkthrough / tabletop",
+         "Team talks through a scenario step by step",
+         "None"
+        ],
+        [
+         "Simulation",
+         "Scenario played out with realistic injects, without affecting operations",
+         "Low"
+        ],
+        [
+         "Parallel test",
+         "Recovery site brought up and processes run alongside production",
+         "Low to medium"
+        ],
+        [
+         "Full interruption test",
+         "Production is shut down and operations move to the recovery site",
+         "High; rarely used"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Test regularly (at least annually) and after significant change.",
+        "Define objectives and success criteria before each test.",
+        "Involve business owners, not just IT.",
+        "Record findings, assign actions and update the plans.",
+        "Train the incident team in their roles; run executive exercises for decision-makers."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Which test first?",
+       "text": "For a new plan, start with a checklist review or tabletop before more disruptive tests. The BEST test that validates recovery without disrupting operations is usually a simulation or parallel test."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Who should determine the RTO for a business process?",
+     "options": [
+      "The IT manager",
+      "The business process owner, based on the BIA",
+      "The security manager",
+      "The auditor"
+     ],
+     "answer": 1,
+     "explain": "Business owners set recovery objectives."
+    },
+    {
+     "q": "RPO primarily determines...",
+     "options": [
+      "Incident severity",
+      "Backup or replication frequency",
+      "Insurance premium",
+      "Recovery site type"
+     ],
+     "answer": 1,
+     "explain": "RPO is about acceptable data loss."
+    },
+    {
+     "q": "Which recovery site is MOST appropriate for an RTO of 2 hours?",
+     "options": [
+      "Warm site",
+      "Cold site",
+      "Hot site",
+      "Reciprocal agreement"
+     ],
+     "answer": 2,
+     "explain": "A hot or mirrored site."
+    },
+    {
+     "q": "Which backup approach requires the last full backup and only the latest backup of its type to restore?",
+     "options": [
+      "Differential",
+      "Incremental",
+      "Full",
+      "Snapshot"
+     ],
+     "answer": 0,
+     "explain": "Differential."
+    },
+    {
+     "q": "Which test is least disruptive?",
+     "options": [
+      "Simulation",
+      "Parallel",
+      "Full interruption",
+      "Checklist review"
+     ],
+     "answer": 3,
+     "explain": "A checklist review involves no operations."
+    },
+    {
+     "q": "What is the PRIMARY purpose of incident severity levels?",
+     "options": [
+      "To satisfy auditors",
+      "To prioritise response and escalation",
+      "To assign blame",
+      "To choose tools"
+     ],
+     "answer": 1,
+     "explain": "Proportionate response and escalation."
+    },
+    {
+     "q": "What should drive recovery priorities?",
+     "options": [
+      "The order systems were purchased",
+      "The BIA",
+      "The IT org chart",
+      "Vendor advice"
+     ],
+     "answer": 1,
+     "explain": "The BIA identifies criticality."
+    }
+   ]
+  },
+  {
+   "id": "d4b",
+   "title": "Domain 4B: Incident management operations",
+   "summary": "Tools and techniques, investigation and evidence, containment, communications, eradication and recovery, and post-incident review.",
+   "sections": [
+    {
+     "id": "tools",
+     "title": "Incident management tools and techniques",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Tool",
+        "Use"
+       ],
+       "rows": [
+        [
+         "SIEM",
+         "Collect and correlate logs; generate alerts"
+        ],
+        [
+         "EDR / XDR",
+         "Endpoint detection, investigation and isolation"
+        ],
+        [
+         "SOAR",
+         "Automate and orchestrate response playbooks"
+        ],
+        [
+         "Threat intelligence platforms",
+         "Enrich alerts with context on indicators and actors"
+        ],
+        [
+         "Forensic tools",
+         "Disk and memory imaging, analysis, timeline reconstruction"
+        ],
+        [
+         "Case management",
+         "Track incidents, actions, evidence and communications"
+        ],
+        [
+         "Out-of-band communications",
+         "Secure channels if email or chat is compromised"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Detection sources:** monitoring alerts, user reports, third parties, law enforcement, threat intelligence.",
+        "**Triage:** validate the alert, determine scope and severity, assign an owner.",
+        "**Metrics:** mean time to detect (MTTD), mean time to respond or contain, mean time to recover."
+       ],
+       "ordered": false
+      }
+     ]
+    },
+    {
+     "id": "investigate",
+     "title": "Incident investigation and evaluation",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Preserve evidence before changing systems** where possible; involve legal early if prosecution, regulatory action or litigation is possible.",
+        "**Chain of custody:** document who collected, handled and stored each item, when and how.",
+        "**Forensic soundness:** work on verified copies (images) using write blockers; hash originals and copies.",
+        "**Order of volatility:** collect the most volatile data first (CPU registers and cache, memory, network connections and running processes, temporary files, disk, remote logs, archival media).",
+        "**Legal hold:** suspend deletion of relevant data when litigation is expected.",
+        "**Determine scope and impact:** what systems, data and people are affected, and for how long."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Evidence first",
+       "text": "If an incident might lead to legal action, the priority before remediation steps that alter systems is to preserve evidence and maintain chain of custody, unless doing so would cause unacceptable harm."
+      }
+     ]
+    },
+    {
+     "id": "contain",
+     "title": "Incident containment methods",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Method",
+        "Example"
+       ],
+       "rows": [
+        [
+         "Isolate hosts",
+         "EDR network isolation of infected endpoints"
+        ],
+        [
+         "Segment networks",
+         "Block traffic between compromised and clean zones"
+        ],
+        [
+         "Disable accounts or reset credentials",
+         "Disable compromised accounts; revoke tokens and sessions"
+        ],
+        [
+         "Block indicators",
+         "Block malicious IPs, domains and hashes"
+        ],
+        [
+         "Take services offline",
+         "Shut down an exposed application temporarily"
+        ],
+        [
+         "Redirect",
+         "Sinkhole command-and-control traffic"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "Containment strategies should be **pre-approved** in playbooks, including who can authorise business-impacting actions.",
+        "Balance containment against evidence preservation and business impact.",
+        "Short-term containment (stop spread now) can be followed by long-term containment (temporary fixes while preparing eradication)."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Containment vs business",
+       "text": "Shutting down a critical system is a business decision. The security manager recommends; the authority defined in the plan (often the business owner or crisis team) decides."
+      }
+     ]
+    },
+    {
+     "id": "comms",
+     "title": "Incident response communications",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Audience",
+        "Considerations"
+       ],
+       "rows": [
+        [
+         "Senior management and board",
+         "Timely, factual briefings on impact and decisions needed"
+        ],
+        [
+         "Regulators",
+         "Legal notification deadlines (e.g. GDPR requires notifying the authority within 72 hours of becoming aware of a qualifying personal data breach); sector-specific rules"
+        ],
+        [
+         "Law enforcement",
+         "Decide with legal counsel and management; may affect evidence handling"
+        ],
+        [
+         "Customers and affected individuals",
+         "Clear, honest notification as law requires; guidance on what they should do"
+        ],
+        [
+         "Media and public",
+         "Only authorised spokespeople; pre-approved statements"
+        ],
+        [
+         "Staff",
+         "What to say and not say; where to direct inquiries"
+        ],
+        [
+         "Partners, suppliers, insurers",
+         "Contractual notification obligations; insurer approval of vendors and costs"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "items": [
+        "**Escalation** follows the thresholds in the plan.",
+        "**One source of truth:** a communications lead coordinates messages.",
+        "**Legal review** of external statements.",
+        "**Out-of-band channels** if corporate systems are compromised."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "Who speaks to the media?",
+       "text": "Only designated spokespersons (usually corporate communications), with legal review. The security team should not speak to the media directly."
+      }
+     ]
+    },
+    {
+     "id": "eradicate",
+     "title": "Incident eradication and recovery",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "**Eradication:** remove malware, persistence mechanisms and attacker access; close the entry point (patch, fix configuration); reset credentials.",
+        "**Recovery:** restore from known-good backups or rebuild; validate integrity; return to production in stages.",
+        "**Heightened monitoring** after recovery to detect re-infection.",
+        "**Business sign-off** that services are working correctly.",
+        "**Invoke the DRP or BCP** if recovery exceeds normal capability or RTOs are at risk."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "tip",
+       "title": "Don't restore the attacker",
+       "text": "Restoring backups taken after the initial compromise can restore the attacker's access too. Identify the intrusion date first and restore from before it, or rebuild."
+      }
+     ]
+    },
+    {
+     "id": "pir",
+     "title": "Post-incident review practices",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Hold a **blameless** review soon after the incident while details are fresh.",
+        "Reconstruct the **timeline**: what happened, when detected, how responded.",
+        "Identify **root causes** (technical, process and people) using techniques such as the 5 whys or fishbone diagrams.",
+        "Record **lessons learned**: what worked, what didn't.",
+        "Assign **corrective actions** with owners and dates; track to closure.",
+        "**Reassess risk** and update the risk register, plans, playbooks and training.",
+        "Report outcomes to senior management."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exam",
+       "title": "The PRIMARY purpose",
+       "text": "The PRIMARY purpose of a post-incident review is to improve the organisation's response and prevent recurrence, not to assign blame."
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "An incident may lead to prosecution. What should be ensured FIRST?",
+     "options": [
+      "Staff are disciplined",
+      "The media is informed",
+      "Evidence is preserved and chain of custody maintained",
+      "Systems are rebuilt quickly"
+     ],
+     "answer": 2,
+     "explain": "Preserve evidence before altering systems."
+    },
+    {
+     "q": "Which data should be collected FIRST in a forensic investigation?",
+     "options": [
+      "System memory",
+      "Printed reports",
+      "Archived backups",
+      "Hard disk contents"
+     ],
+     "answer": 0,
+     "explain": "Collect the most volatile data first."
+    },
+    {
+     "q": "Who should authorise shutting down a revenue-critical system during an incident?",
+     "options": [
+      "The authority defined in the incident plan, typically the business owner or crisis team",
+      "Any analyst",
+      "External auditors",
+      "The vendor"
+     ],
+     "answer": 0,
+     "explain": "Business-impacting decisions follow pre-defined authority."
+    },
+    {
+     "q": "What is the PRIMARY purpose of a post-incident review?",
+     "options": [
+      "Improve response and prevent recurrence",
+      "Assign blame",
+      "Satisfy the insurer",
+      "Close the ticket"
+     ],
+     "answer": 0,
+     "explain": "Learning and improvement."
+    },
+    {
+     "q": "Why should backups be checked before restoring after ransomware?",
+     "options": [
+      "To save storage",
+      "To reduce RTO",
+      "To satisfy auditors",
+      "They may contain malware or the attacker's persistence"
+     ],
+     "answer": 3,
+     "explain": "Restore from before the compromise."
+    },
+    {
+     "q": "Who should speak to the media about a breach?",
+     "options": [
+      "The designated corporate spokesperson",
+      "The SOC analyst",
+      "The IT help desk",
+      "Any executive who is asked"
+     ],
+     "answer": 0,
+     "explain": "Designated spokespeople with legal review."
+    }
+   ]
+  },
+  {
+   "id": "review",
+   "title": "Final review",
+   "summary": "One-page summaries of each domain, key formulas and terms, common traps, and last-week preparation.",
+   "sections": [
+    {
+     "id": "summary",
+     "title": "Domain summaries",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Domain",
+        "Core idea",
+        "Most tested"
+       ],
+       "rows": [
+        [
+         "1 Governance",
+         "Security serves business objectives; senior management is accountable",
+         "Six outcomes, roles, strategy inputs, business cases, policies"
+        ],
+        [
+         "2 Risk management",
+         "Manage risk to acceptable levels as defined by appetite; owners decide",
+         "Risk terms, ALE, treatment options, ownership, KRIs, reassessment triggers"
+        ],
+        [
+         "3 Programme",
+         "Deliver the strategy through resources, controls, metrics and third-party management",
+         "Classification, policies and exceptions, metrics, control testing, awareness, contracts"
+        ],
+        [
+         "4 Incident management",
+         "Prepare, detect, respond, recover and learn, aligned with BCP and DRP",
+         "BIA terms, recovery sites, test types, evidence, communication, post-incident review"
+        ],
+        [
+         "Architecture (from Nov 2026)",
+         "Architecture aligns and governs controls across the enterprise",
+         "EA and security architecture frameworks, principles, zero trust"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "formulas",
+     "title": "Formulas and must-know terms",
+     "blocks": [
+      {
+       "type": "table",
+       "headers": [
+        "Item",
+        "Formula or definition"
+       ],
+       "rows": [
+        [
+         "SLE",
+         "AV x EF"
+        ],
+        [
+         "ALE",
+         "SLE x ARO"
+        ],
+        [
+         "Control value",
+         "ALE before - ALE after - annual control cost"
+        ],
+        [
+         "ROSI",
+         "(Risk reduction - control cost) / control cost"
+        ],
+        [
+         "RTO",
+         "Target time to restore"
+        ],
+        [
+         "RPO",
+         "Maximum acceptable data loss in time"
+        ],
+        [
+         "MTD",
+         "Maximum tolerable downtime; RTO must be less"
+        ],
+        [
+         "Inherent vs residual risk",
+         "Before vs after controls"
+        ],
+        [
+         "KGI / KPI / KRI",
+         "Goal achieved / process performance / risk exposure"
+        ],
+        [
+         "Hot / warm / cold site",
+         "Hours / days / weeks to recover"
+        ],
+        [
+         "Incremental vs differential",
+         "Since last backup vs since last full"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "traps",
+     "title": "Common traps",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Choosing the technical fix instead of the governance or risk-based answer.",
+        "Letting the security manager accept risk (it's the owner's decision).",
+        "Thinking risk transfer removes accountability.",
+        "Acting before assessing (FIRST questions).",
+        "Reporting technical metrics to the board.",
+        "Changing policy when a standard or procedure should change.",
+        "Skipping the incident plan in the heat of an incident.",
+        "Treating compliance as the end goal instead of the minimum."
+       ],
+       "ordered": false
+      }
+     ]
+    },
+    {
+     "id": "lastweek",
+     "title": "The last week before the exam",
+     "blocks": [
+      {
+       "type": "list",
+       "items": [
+        "Do one full timed practice set (150 questions in 4 hours) to test pacing: about 1.6 minutes per question.",
+        "Review wrong answers by theme, not by question.",
+        "Re-read the mindset chapter and the traps list.",
+        "Check exam logistics: ID, test centre or remote proctoring setup, room rules.",
+        "Sleep well the night before. Judgement questions suffer more from fatigue than recall questions."
+       ],
+       "ordered": false
+      },
+      {
+       "type": "callout",
+       "style": "exec",
+       "title": "On the day",
+       "text": "Flag hard questions and move on. Many candidates run short of time on the last 30 questions. First instinct is often right when you applied the manager mindset."
+      }
+     ]
+    }
+   ],
+   "quiz": []
+  },
+  {
+   "id": "practice-exam",
+   "title": "Practice exam",
+   "summary": "30 scenario questions across all four domains, weighted like the real exam.",
+   "sections": [
+    {
+     "id": "instructions",
+     "title": "How to use the practice exam",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "The quiz for this chapter has 30 scenario questions spread across all four domains, running in order from governance through risk and programme to incident management."
+      },
+      {
+       "type": "list",
+       "items": [
+        "Time yourself: about 48 minutes (1.6 minutes per question).",
+        "Apply the method from the mindset chapter.",
+        "Aim for 24 or more (80%). Review every explanation, including for correct answers.",
+        "Retake after a week. Scores that rise because you understand the reasoning, not because you remember the answers, are what matter."
+       ],
+       "ordered": false
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "The board asks for assurance that information security supports the company's growth strategy. What should the security manager provide FIRST?",
+     "options": [
+      "The security budget",
+      "A mapping of the security strategy to business objectives",
+      "A list of deployed tools",
+      "The latest penetration test report"
+     ],
+     "answer": 1,
+     "explain": "Strategic alignment is shown by tracing security strategy to business objectives."
+    },
+    {
+     "q": "Which is the MOST important factor in determining the level of protection for an information asset?",
+     "options": [
+      "Its location",
+      "Its purchase cost",
+      "Its age",
+      "Its classification based on business value and sensitivity"
+     ],
+     "answer": 3,
+     "explain": "Protection is proportionate to value and sensitivity."
+    },
+    {
+     "q": "A new CISO finds security policies that haven't been updated in five years. What should be done FIRST?",
+     "options": [
+      "Rewrite them all",
+      "Adopt ISO 27001 wholesale",
+      "Delete them",
+      "Review them against current business objectives, risks and regulations"
+     ],
+     "answer": 3,
+     "explain": "Assess before acting."
+    },
+    {
+     "q": "Which is the BEST indicator of senior management commitment to security?",
+     "options": [
+      "A large firewall budget",
+      "Approval and funding of the security strategy and active participation in the steering committee",
+      "Staff completing training",
+      "Security posters in the office"
+     ],
+     "answer": 1,
+     "explain": "Commitment shows in approval, funding and involvement."
+    },
+    {
+     "q": "An organisation operating in several countries finds conflicting data retention laws. What should the security manager do?",
+     "options": [
+      "Ignore the smaller jurisdiction",
+      "Escalate to legal and senior management to decide a compliant approach",
+      "Apply the shortest retention everywhere",
+      "Keep all data forever"
+     ],
+     "answer": 1,
+     "explain": "Legal interpretation and risk decisions belong to legal and management."
+    },
+    {
+     "q": "A risk assessment shows a risk above appetite, but the business owner refuses to fund mitigation. What should the security manager do?",
+     "options": [
+      "Ignore it",
+      "Implement the control anyway",
+      "Escalate to senior management for a decision",
+      "Accept the risk on the owner's behalf"
+     ],
+     "answer": 2,
+     "explain": "Risks outside appetite are escalated."
+    },
+    {
+     "q": "What is the MAIN reason to perform risk assessments periodically?",
+     "options": [
+      "Auditors require it",
+      "To use budget",
+      "To test tools",
+      "Threats, vulnerabilities and business context change"
+     ],
+     "answer": 3,
+     "explain": "Risk changes over time."
+    },
+    {
+     "q": "A vulnerability affects a system whose owner accepts the risk. What must be ensured?",
+     "options": [
+      "Security overrides the decision",
+      "Nothing",
+      "The acceptance is documented, within appetite and approved by someone with authority",
+      "The system is shut down"
+     ],
+     "answer": 2,
+     "explain": "Formal acceptance keeps risk visible and accountable."
+    },
+    {
+     "q": "Which factor MOST influences the choice of risk treatment?",
+     "options": [
+      "Peer practices",
+      "Auditor preferences",
+      "The newest technology",
+      "Cost of treatment compared with risk reduction and appetite"
+     ],
+     "answer": 3,
+     "explain": "Cost-benefit within appetite."
+    },
+    {
+     "q": "A third party will process customer data. When should security requirements be defined?",
+     "options": [
+      "Before the contract is signed",
+      "During the first audit",
+      "After an incident",
+      "After go-live"
+     ],
+     "answer": 0,
+     "explain": "Contracts must include requirements."
+    },
+    {
+     "q": "What is the BEST way to measure the effectiveness of a security programme?",
+     "options": [
+      "Number of tools deployed",
+      "Metrics showing progress against objectives and risk reduction",
+      "Size of the security team",
+      "Number of policies"
+     ],
+     "answer": 1,
+     "explain": "Outcome and risk-based metrics."
+    },
+    {
+     "q": "Security staff spend most time on low-value tasks. What is the BEST first step?",
+     "options": [
+      "Analyse processes and prioritise based on risk and objectives",
+      "Outsource everything",
+      "Hire more staff",
+      "Buy automation"
+     ],
+     "answer": 0,
+     "explain": "Understand before choosing a fix."
+    },
+    {
+     "q": "Which is the PRIMARY objective of an information security awareness programme?",
+     "options": [
+      "Reducing help desk calls",
+      "Satisfying auditors",
+      "Changing behaviour to reduce risk",
+      "Completing mandatory training"
+     ],
+     "answer": 2,
+     "explain": "Behaviour change."
+    },
+    {
+     "q": "A developer requests an exception to the encryption standard for a legacy app. Who should approve it?",
+     "options": [
+      "The risk owner, after a risk assessment and with compensating controls",
+      "The developer's peer",
+      "The help desk",
+      "No one; exceptions aren't allowed"
+     ],
+     "answer": 0,
+     "explain": "Owners approve exceptions based on risk."
+    },
+    {
+     "q": "Which control type is a warning banner on a login page?",
+     "options": [
+      "Recovery",
+      "Corrective",
+      "Preventive",
+      "Deterrent"
+     ],
+     "answer": 3,
+     "explain": "It discourages misuse."
+    },
+    {
+     "q": "An internal audit finds that access reviews aren't performed. Who should own the remediation?",
+     "options": [
+      "The regulator",
+      "The control owner responsible for access reviews",
+      "Internal audit",
+      "External auditors"
+     ],
+     "answer": 1,
+     "explain": "Control owners remediate; audit verifies."
+    },
+    {
+     "q": "What is the BEST way to ensure security is considered in new projects?",
+     "options": [
+      "Annual audits",
+      "Integrate security requirements into the project methodology from initiation",
+      "Penetration tests after launch",
+      "Security testing before go-live"
+     ],
+     "answer": 1,
+     "explain": "Early integration."
+    },
+    {
+     "q": "Which is the MOST important element when outsourcing security monitoring to an MSSP?",
+     "options": [
+      "Clearly defined responsibilities, SLAs, incident notification and right to audit in the contract",
+      "Number of analysts",
+      "Lowest price",
+      "Brand reputation"
+     ],
+     "answer": 0,
+     "explain": "Contract terms that preserve oversight."
+    },
+    {
+     "q": "What does a SOC 2 Type I report cover?",
+     "options": [
+      "Financial controls",
+      "Penetration test results",
+      "Design of controls at a point in time",
+      "Operating effectiveness over a period"
+     ],
+     "answer": 2,
+     "explain": "Type I is design at a point in time."
+    },
+    {
+     "q": "The security programme struggles for budget. What is MOST likely to help?",
+     "options": [
+      "Showing how initiatives reduce risk to business objectives, with a business case",
+      "Comparing tool counts with peers",
+      "Presenting threat statistics",
+      "Reducing scope silently"
+     ],
+     "answer": 0,
+     "explain": "Business case in business terms."
+    },
+    {
+     "q": "What is the FIRST action when a potential incident is reported?",
+     "options": [
+      "Notify the media",
+      "Call law enforcement",
+      "Rebuild the system",
+      "Validate and classify it according to the incident response plan"
+     ],
+     "answer": 3,
+     "explain": "Triage per the plan."
+    },
+    {
+     "q": "What should the BIA primarily identify?",
+     "options": [
+      "Vulnerabilities",
+      "Critical processes, impact of disruption over time and recovery priorities",
+      "Insurance options",
+      "Threat actors"
+     ],
+     "answer": 1,
+     "explain": "The BIA focuses on business impact."
+    },
+    {
+     "q": "An RPO of zero requires...",
+     "options": [
+      "Differential backups",
+      "A cold site",
+      "Real-time replication or mirroring",
+      "Weekly backups"
+     ],
+     "answer": 2,
+     "explain": "No data loss requires continuous replication."
+    },
+    {
+     "q": "During a ransomware attack, email is compromised. How should the response team communicate?",
+     "options": [
+      "Stop communicating",
+      "Use pre-arranged out-of-band channels",
+      "Use personal social media",
+      "Continue using corporate email"
+     ],
+     "answer": 1,
+     "explain": "Out-of-band channels in the plan."
+    },
+    {
+     "q": "Which is MOST important when testing an incident response plan?",
+     "options": [
+      "Defined objectives, business participation and documented lessons",
+      "Testing only IT systems",
+      "Avoiding findings",
+      "Using the most disruptive test"
+     ],
+     "answer": 0,
+     "explain": "Purposeful tests with follow-up."
+    },
+    {
+     "q": "After an incident, the root cause is a missing patch process for a system type. What is the BEST corrective action?",
+     "options": [
+      "Fix the patch management process to cover that system type and reassess risk",
+      "Buy a new scanner",
+      "Discipline the admin",
+      "Patch that one server"
+     ],
+     "answer": 0,
+     "explain": "Fix the process, then reassess risk."
+    },
+    {
+     "q": "A breach of personal data is confirmed. Who should decide on regulatory notification?",
+     "options": [
+      "Legal and senior management, per the plan and applicable law",
+      "The SOC analyst",
+      "The vendor",
+      "The IT help desk"
+     ],
+     "answer": 0,
+     "explain": "Legal obligations need legal and management decisions."
+    },
+    {
+     "q": "Why is a hot site more suitable than a warm site for a critical payment system?",
+     "options": [
+      "It is cheaper",
+      "It needs no testing",
+      "It supports a short RTO",
+      "It is required by law"
+     ],
+     "answer": 2,
+     "explain": "Hot sites recover in hours."
+    },
+    {
+     "q": "Which document should guide containment decisions during an incident?",
+     "options": [
+      "The annual report",
+      "The acceptable use policy",
+      "The incident response plan and playbooks",
+      "The vendor manual"
+     ],
+     "answer": 2,
+     "explain": "Pre-approved plans and playbooks."
+    },
+    {
+     "q": "A lessons-learned review shows staff didn't know how to report incidents. What is the BEST action?",
+     "options": [
+      "Update awareness training and make the reporting process simple and visible",
+      "Outsource incident response",
+      "Punish staff",
+      "Remove reporting"
+     ],
+     "answer": 0,
+     "explain": "Improve awareness and process."
+    }
+   ]
+  }
+ ],
+ "flashcards": [
+  {
+   "front": "CISM exam format",
+   "back": "150 questions, 4 hours, scaled 200-800, pass at 450",
+   "tag": "Exam"
+  },
+  {
+   "front": "Domain weights (until 2 Nov 2026)",
+   "back": "D1 Governance 17%, D2 Risk 20%, D3 Program 33%, D4 Incident 30%",
+   "tag": "Exam"
+  },
+  {
+   "front": "Domain weights (from 3 Nov 2026)",
+   "back": "D1 18%, D2 20%, D3 33%, D4 29%; adds enterprise and security architecture",
+   "tag": "Exam"
+  },
+  {
+   "front": "Experience requirement",
+   "back": "5 years in information security, incl. 3 years security management across 3+ domains; up to 2 years can be substituted, not the management years",
+   "tag": "Exam"
+  },
+  {
+   "front": "CPE requirement",
+   "back": "20 hours per year, 120 per three-year cycle",
+   "tag": "Exam"
+  },
+  {
+   "front": "Six outcomes of security governance",
+   "back": "Strategic alignment, risk management, value delivery, resource optimisation, performance measurement, assurance process integration",
+   "tag": "D1"
+  },
+  {
+   "front": "Governance vs management",
+   "back": "Governance: evaluate, direct, monitor (board). Management: plan, build, run, monitor (executives)",
+   "tag": "D1"
+  },
+  {
+   "front": "Who is accountable for information security governance?",
+   "back": "The board and senior management",
+   "tag": "D1"
+  },
+  {
+   "front": "Data owner vs custodian",
+   "back": "Owner: accountable, classifies and approves access. Custodian: implements and operates protection",
+   "tag": "D1"
+  },
+  {
+   "front": "MOST important input to security strategy",
+   "back": "Business objectives (with risk appetite)",
+   "tag": "D1"
+  },
+  {
+   "front": "BMIS elements",
+   "back": "Organisation, people, process, technology",
+   "tag": "D1"
+  },
+  {
+   "front": "BMIS interconnections",
+   "back": "Governing, culture, enabling and support, emergence, human factors, architecture",
+   "tag": "D1"
+  },
+  {
+   "front": "Policy vs standard vs procedure vs guideline",
+   "back": "Intent / mandatory requirement / step-by-step / recommended",
+   "tag": "D1"
+  },
+  {
+   "front": "ROSI",
+   "back": "(Risk reduction - control cost) / control cost",
+   "tag": "D1"
+  },
+  {
+   "front": "Risk appetite vs tolerance vs capacity",
+   "back": "Amount willing to accept / acceptable deviation / maximum that can be absorbed",
+   "tag": "D2"
+  },
+  {
+   "front": "Inherent vs residual risk",
+   "back": "Before controls / after controls",
+   "tag": "D2"
+  },
+  {
+   "front": "SLE",
+   "back": "Asset value x exposure factor",
+   "tag": "D2"
+  },
+  {
+   "front": "ALE",
+   "back": "SLE x ARO",
+   "tag": "D2"
+  },
+  {
+   "front": "Four risk responses",
+   "back": "Mitigate, transfer (share), accept, avoid",
+   "tag": "D2"
+  },
+  {
+   "front": "Does transfer remove accountability?",
+   "back": "No. Insurance or outsourcing shifts some financial impact only",
+   "tag": "D2"
+  },
+  {
+   "front": "Who accepts residual risk?",
+   "back": "The risk owner (business) or senior management, never the security manager by default",
+   "tag": "D2"
+  },
+  {
+   "front": "KRI",
+   "back": "Key risk indicator: signals change in risk exposure",
+   "tag": "D2"
+  },
+  {
+   "front": "Triggers to reassess risk",
+   "back": "New systems, M&A, new regulations, new threats, major incidents, audit findings",
+   "tag": "D2"
+  },
+  {
+   "front": "Control functions",
+   "back": "Preventive, detective, corrective, deterrent, compensating, recovery",
+   "tag": "D3"
+  },
+  {
+   "front": "KGI / KPI / KRI",
+   "back": "Goal achieved / process performance / risk exposure",
+   "tag": "D3"
+  },
+  {
+   "front": "PRIMARY purpose of classification",
+   "back": "Protection proportionate to value and sensitivity",
+   "tag": "D3"
+  },
+  {
+   "front": "Design vs operating effectiveness",
+   "back": "Would it work if operated as designed / does it work consistently",
+   "tag": "D3"
+  },
+  {
+   "front": "SOC 2 Type I vs Type II",
+   "back": "Design at a point in time / operating effectiveness over a period",
+   "tag": "D3"
+  },
+  {
+   "front": "Best awareness metric",
+   "back": "Behaviour change (e.g. phishing report rate), not completion",
+   "tag": "D3"
+  },
+  {
+   "front": "TOGAF ADM phases",
+   "back": "Preliminary, A Vision, B Business, C Information Systems, D Technology, E Opportunities and Solutions, F Migration, G Implementation Governance, H Change Management; Requirements at centre",
+   "tag": "Architecture"
+  },
+  {
+   "front": "SABSA layers",
+   "back": "Contextual, Conceptual, Logical, Physical, Component, Service management",
+   "tag": "Architecture"
+  },
+  {
+   "front": "Zero trust components (SP 800-207)",
+   "back": "Policy engine decides, policy administrator sets up session, policy enforcement point enforces",
+   "tag": "Architecture"
+  },
+  {
+   "front": "RTO",
+   "back": "Target time to restore a process or system",
+   "tag": "D4"
+  },
+  {
+   "front": "RPO",
+   "back": "Maximum acceptable data loss in time; drives backup frequency",
+   "tag": "D4"
+  },
+  {
+   "front": "MTD",
+   "back": "Maximum tolerable downtime; RTO must be shorter",
+   "tag": "D4"
+  },
+  {
+   "front": "AIW / SDO / MTO",
+   "back": "Acceptable interruption window / service delivery objective in alternate mode / maximum tolerable outage in alternate mode",
+   "tag": "D4"
+  },
+  {
+   "front": "Recovery sites by speed",
+   "back": "Mirrored (minutes), hot (hours), warm (days), cold (weeks)",
+   "tag": "D4"
+  },
+  {
+   "front": "Incremental vs differential backup",
+   "back": "Changes since last backup / changes since last full backup",
+   "tag": "D4"
+  },
+  {
+   "front": "Plan tests, least to most disruptive",
+   "back": "Checklist, tabletop walkthrough, simulation, parallel, full interruption",
+   "tag": "D4"
+  },
+  {
+   "front": "SANS incident phases",
+   "back": "Preparation, Identification, Containment, Eradication, Recovery, Lessons learned",
+   "tag": "D4"
+  },
+  {
+   "front": "Order of volatility",
+   "back": "Registers and cache, memory, network and processes, temp files, disk, remote logs, archives",
+   "tag": "D4"
+  },
+  {
+   "front": "Chain of custody",
+   "back": "Documented record of who handled evidence, when and how",
+   "tag": "D4"
+  },
+  {
+   "front": "PRIMARY purpose of post-incident review",
+   "back": "Improve response and prevent recurrence",
+   "tag": "D4"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Acceptable interruption window (AIW)",
+   "definition": "The maximum period systems can be unavailable before business objectives are compromised."
+  },
+  {
+   "term": "Annualised loss expectancy (ALE)",
+   "definition": "Expected yearly loss from a risk: SLE x ARO."
+  },
+  {
+   "term": "Annualised rate of occurrence (ARO)",
+   "definition": "Expected number of times a loss event occurs per year."
+  },
+  {
+   "term": "Assurance process integration",
+   "definition": "Governance outcome where audit, risk, compliance, legal and other assurance functions work together."
+  },
+  {
+   "term": "Balanced scorecard",
+   "definition": "Performance tool covering financial, customer, internal process, and learning and growth perspectives."
+  },
+  {
+   "term": "BIA",
+   "definition": "Business impact analysis: identifies critical processes, impact of disruption over time, and recovery objectives."
+  },
+  {
+   "term": "BCP",
+   "definition": "Business continuity plan: keeps critical business processes running during and after disruption."
+  },
+  {
+   "term": "BMIS",
+   "definition": "ISACA's Business Model for Information Security: organisation, people, process and technology with six dynamic interconnections."
+  },
+  {
+   "term": "Business case",
+   "definition": "Justification for an investment with options, costs, benefits, risks and alignment to objectives."
+  },
+  {
+   "term": "Chain of custody",
+   "definition": "Documentation showing who handled evidence, when and how, to preserve its integrity."
+  },
+  {
+   "term": "CISO",
+   "definition": "Chief information security officer; leads the information security programme."
+  },
+  {
+   "term": "Compensating control",
+   "definition": "An alternative control used when the primary control isn't feasible."
+  },
+  {
+   "term": "Control objective",
+   "definition": "Statement of the result a control must achieve."
+  },
+  {
+   "term": "Data custodian",
+   "definition": "Person or team that implements and operates protection for data on behalf of the owner."
+  },
+  {
+   "term": "Data owner",
+   "definition": "Senior business manager accountable for a data set, its classification and access approval."
+  },
+  {
+   "term": "Defence in depth",
+   "definition": "Multiple independent layers of controls."
+  },
+  {
+   "term": "DRP",
+   "definition": "Disaster recovery plan: restores IT systems and data after a disruption."
+  },
+  {
+   "term": "Enterprise architecture",
+   "definition": "Structured description of business, information, application and technology components and how they evolve."
+  },
+  {
+   "term": "Exposure factor (EF)",
+   "definition": "Percentage of asset value lost in a single event."
+  },
+  {
+   "term": "Governance",
+   "definition": "Evaluating stakeholder needs, setting direction and monitoring performance and compliance."
+  },
+  {
+   "term": "Hot / warm / cold site",
+   "definition": "Recovery facilities that are fully equipped / partially equipped / space and power only."
+  },
+  {
+   "term": "Inherent risk",
+   "definition": "Risk before controls."
+  },
+  {
+   "term": "KGI",
+   "definition": "Key goal indicator: shows whether a goal was achieved."
+  },
+  {
+   "term": "KPI",
+   "definition": "Key performance indicator: shows how well a process performs."
+  },
+  {
+   "term": "KRI",
+   "definition": "Key risk indicator: signals changes in risk exposure."
+  },
+  {
+   "term": "Legal hold",
+   "definition": "Suspension of deletion of data relevant to expected litigation."
+  },
+  {
+   "term": "Maximum tolerable downtime (MTD)",
+   "definition": "The longest a process can be disrupted before unacceptable consequences."
+  },
+  {
+   "term": "Maximum tolerable outage (MTO)",
+   "definition": "The maximum time the organisation can operate in alternate process mode."
+  },
+  {
+   "term": "Order of volatility",
+   "definition": "Collecting the most short-lived evidence first."
+  },
+  {
+   "term": "Residual risk",
+   "definition": "Risk remaining after controls."
+  },
+  {
+   "term": "Risk appetite",
+   "definition": "Amount and type of risk an organisation is willing to accept to achieve objectives."
+  },
+  {
+   "term": "Risk capacity",
+   "definition": "The maximum risk an organisation can absorb."
+  },
+  {
+   "term": "Risk owner",
+   "definition": "Person accountable for a risk and for deciding its treatment."
+  },
+  {
+   "term": "Risk tolerance",
+   "definition": "Acceptable deviation from risk appetite."
+  },
+  {
+   "term": "ROSI",
+   "definition": "Return on security investment."
+  },
+  {
+   "term": "RPO",
+   "definition": "Recovery point objective: maximum acceptable data loss in time."
+  },
+  {
+   "term": "RTO",
+   "definition": "Recovery time objective: target time to restore after disruption."
+  },
+  {
+   "term": "SABSA",
+   "definition": "Business-driven security architecture framework with six layers."
+  },
+  {
+   "term": "Security steering committee",
+   "definition": "Cross-functional senior group that prioritises and oversees security."
+  },
+  {
+   "term": "Segregation of duties",
+   "definition": "Dividing sensitive tasks so no one person controls them end to end."
+  },
+  {
+   "term": "Service delivery objective (SDO)",
+   "definition": "Level of service to be reached during alternate processing."
+  },
+  {
+   "term": "Single loss expectancy (SLE)",
+   "definition": "Loss from one event: asset value x exposure factor."
+  },
+  {
+   "term": "SOC 2",
+   "definition": "AICPA attestation on controls; Type I design, Type II operating effectiveness."
+  },
+  {
+   "term": "TOGAF",
+   "definition": "The Open Group Architecture Framework; uses the Architecture Development Method (ADM)."
+  },
+  {
+   "term": "Zero trust",
+   "definition": "Security model with no implicit trust based on network location; every request is verified."
+  }
+ ]
+}
