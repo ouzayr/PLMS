@@ -256,8 +256,12 @@ def G(term, definition): return {"term":term,"definition":definition}
 | `itil-5-foundation` | ITIL (Version 5) Foundation (built in) | `#1C6E5E` |
 | `cis-controls-benchmarks` | CIS Controls and Benchmarks (imported) | `#8C4A1F` |
 | `isaca-cism` | ISACA CISM (imported) | `#7A2340` |
+| `nist-800-53` | NIST SP 800-53 Rev. 5 (imported) | `#35506B` |
+| `nist-800-53b` | NIST SP 800-53B (imported) | `#5C4B3B` |
 
-Ideas for future books: `iso-27001-2022`, `cobit-2019`, `iso-42001`, `eu-ai-act`, `pci-dss-4`, `isaca-crisc`, `isaca-cisa`, `togaf-10`, `iso-22301`, `nist-800-53`.
+Ideas for future books: `iso-27001-2022`, `cobit-2019`, `iso-42001`, `eu-ai-act`, `pci-dss-4`, `isaca-crisc`, `isaca-cisa`, `togaf-10`, `iso-22301`, `nist-800-53a`.
+
+**Large catalogs:** all imported books are stored in the browser's local storage (roughly 5 MB per site). Keep each book file under about 1 MB of minified JSON. For very large catalogs, cover base controls in full and list enhancements in tables, as the SP 800-53 book does.
 
 ---
 
