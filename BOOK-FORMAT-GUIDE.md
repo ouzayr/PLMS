@@ -7,11 +7,12 @@ This file tells an AI (or a person) how to write a new **book** for the Framewor
 ## 1. How the app works
 
 - **Framework Library** is a single, offline HTML file (`framework-library.html`). It is designed for phones first and works on laptops too.
-- It shows a **library shelf** of books. Some are built in; the user adds more by importing `.json` files (Settings, then Import books).
+- It shows a **library shelf** of books. The shelf starts empty; the user adds books by importing `.json` files (Library, then Import a book, or Settings, then Import books).
+- Each book can have one or more **categories** (e.g. "NIST", "Cloud"). The library filters by category. Categories come from the optional `categories` field and can be added or removed in the app on the book page.
 - Each book has **chapters**. Each chapter has **sections**, and each section is one reading page. Each chapter can also have a **quiz**. Each book can have **flashcards** and a **glossary**.
-- Progress is saved in the browser's local storage. That covers sections read, the last position including scroll, best quiz scores and flashcard mastery. It is saved per device; users move it between devices with Export backup and Restore backup.
+- Books and progress are saved in the browser's local storage. Progress covers sections read, the last position including scroll, best quiz scores and flashcard mastery. Users who connect a Google account (Settings) also get books, categories and progress synced through a private app folder in their Google Drive. Without Google, users move data between devices with Export backup and Restore backup.
 - **Search** covers every book's text, including control IDs. It also has a combined glossary.
-- Importing a book with an `id` that already exists asks the user whether to replace it, and progress is kept. The `id` of a built-in book cannot be reused.
+- Importing a book with an `id` that already exists asks the user whether to replace it; progress and categories are kept.
 - **Text is plain text, not HTML.** Only two inline formats are supported:
   - `**bold**`
   - `` `code` ``
@@ -35,6 +36,7 @@ This file tells an AI (or a person) how to write a new **book** for the Framewor
   "color": "#2F5D50",
   "estimatedMinutes": 240,
   "description": "One or two sentences shown on the book page. Supports **bold**.",
+  "categories": ["ISO", "Security"],
   "chapters": [ /* Chapter objects */ ],
   "flashcards": [ /* Flashcard objects */ ],
   "glossary": [ /* Glossary objects */ ]
@@ -52,6 +54,7 @@ This file tells an AI (or a person) how to write a new **book** for the Framewor
 | `color` | No | Cover colour as a hex value (`#RRGGBB`). Pick a darkish colour so white text is readable, and one not already on the shelf (see §6). |
 | `estimatedMinutes` | No | Total reading time in minutes |
 | `description` | No | Shown on the book page |
+| `categories` | No | Array of short labels (max 40 characters each, up to 20) used to group and filter books, e.g. `["NIST", "AI"]`. Reuse existing labels where they fit. Users can edit them in the app. |
 | `chapters` | **Yes** | Non-empty array |
 | `flashcards` | No | Array |
 | `glossary` | No | Array |
@@ -162,8 +165,8 @@ There are seven block types. Any other `type` fails validation.
 ## 3. Validation (the import fails if any of these fail)
 
 1. The file is valid JSON (UTF-8). The root is a book object, an array of books, or `{ "books": [...] }`.
-2. `id` matches `^[a-z0-9][a-z0-9-]{1,60}$` and is not one of the built-in ids (§6).
-3. `title` is a non-empty string, and `color`, if present, is `#` followed by 3 to 8 hex digits.
+2. `id` matches `^[a-z0-9][a-z0-9-]{1,60}$`. Pick one not already used (§6); an existing id replaces that book.
+3. `title` is a non-empty string, `color`, if present, is `#` followed by 3 to 8 hex digits, and `categories`, if present, is an array of strings.
 4. `chapters` is non-empty. Each chapter has a unique `id`, a `title` and a non-empty `sections` array.
 5. Each section has an `id` unique within its chapter, a `title` and a `blocks` array.
 6. Each block has a valid `type` and its required fields, as in §2.4.
@@ -246,22 +249,22 @@ def G(term, definition): return {"term":term,"definition":definition}
 
 ---
 
-## 6. Existing books (don't reuse these ids or colours)
+## 6. Existing books in the `Books` folder (don't reuse these ids or colours)
 
 | id | Title | Colour |
 |---|---|---|
-| `frameworks-101` | Frameworks 101 (built in) | `#4B5A2A` |
-| `nist-csf-2` | NIST CSF 2.0 (built in) | `#1F4E79` |
-| `nist-ai-rmf` | NIST AI RMF 1.0 (built in) | `#5B3F8C` |
-| `itil-5-foundation` | ITIL (Version 5) Foundation (built in) | `#1C6E5E` |
-| `cis-controls-benchmarks` | CIS Controls and Benchmarks (imported) | `#8C4A1F` |
-| `isaca-cism` | ISACA CISM (imported) | `#7A2340` |
-| `nist-800-53` | NIST SP 800-53 Rev. 5 (imported) | `#35506B` |
-| `nist-800-53b` | NIST SP 800-53B (imported) | `#5C4B3B` |
+| `frameworks-101` | Frameworks 101 | `#4B5A2A` |
+| `nist-csf-2` | NIST CSF 2.0 | `#1F4E79` |
+| `nist-ai-rmf` | NIST AI RMF 1.0 | `#5B3F8C` |
+| `itil-5-foundation` | ITIL (Version 5) Foundation | `#1C6E5E` |
+| `cis-controls-benchmarks` | CIS Controls and Benchmarks | `#8C4A1F` |
+| `isaca-cism` | ISACA CISM | `#7A2340` |
+| `nist-800-53` | NIST SP 800-53 Rev. 5 | `#35506B` |
+| `nist-800-53b` | NIST SP 800-53B | `#5C4B3B` |
 
 Ideas for future books: `iso-27001-2022`, `cobit-2019`, `iso-42001`, `eu-ai-act`, `pci-dss-4`, `isaca-crisc`, `isaca-cisa`, `togaf-10`, `iso-22301`, `nist-800-53a`.
 
-**Large catalogs:** all imported books are stored in the browser's local storage (roughly 5 MB per site). Keep each book file under about 1 MB of minified JSON. For very large catalogs, cover base controls in full and list enhancements in tables, as the SP 800-53 book does.
+**Large catalogs:** all imported books are stored in the browser's local storage (roughly 5 MB per site), and with Google sync each book is also one file in Drive. Keep each book file under about 1 MB of minified JSON. For very large catalogs, cover base controls in full and list enhancements in tables, as the SP 800-53 book does.
 
 ---
 

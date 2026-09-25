@@ -8,6 +8,9 @@
   "color": "#7A3E3E",
   "estimatedMinutes": 30,
   "description": "Short description shown on the book page. Supports **bold** and `code`.",
+  "categories": [
+    "Example category"
+  ],
   "chapters": [
     {
       "id": "ch-1",
