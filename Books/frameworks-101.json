@@ -1,0 +1,1291 @@
+{
+  "schema": "fwlib.book/1",
+  "id": "frameworks-101",
+  "title": "Frameworks 101",
+  "subtitle": "How cybersecurity and IT frameworks work",
+  "source": "Based on NIST CSWP 29, NIST SP 800-53 Rev. 5, NIST AI 100-1 and public framework documentation",
+  "version": "2026",
+  "color": "#4B5A2A",
+  "estimatedMinutes": 75,
+  "description": "Start here. What frameworks are, how they are structured, and how NIST CSF 2.0, SP 800-53 and the AI RMF fit together.",
+  "chapters": [
+    {
+      "id": "what",
+      "title": "What a framework is",
+      "summary": "Frameworks, standards, regulations and control catalogs, and why the difference matters.",
+      "sections": [
+        {
+          "id": "definition",
+          "title": "A framework in one sentence",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A **framework** is a structured, reusable way of organising what an organisation should achieve (and sometimes how) in a given domain, such as cybersecurity, IT service delivery or AI risk. It gives everyone a shared vocabulary, a shared structure and a shared yardstick."
+            },
+            {
+              "type": "p",
+              "text": "Think of it as the table of contents for a discipline. It tells you which topics must be covered and how they relate, so that a CISO, an auditor, a regulator and an engineer can point at the same box and mean the same thing."
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "Why executives care",
+              "text": "A framework turns a vague question (\"Are we secure?\") into a measurable one (\"How far are we from our target on each of these 106 outcomes, and what does closing the gap cost?\"). That is what makes security fundable and reportable to a board."
+            },
+            {
+              "type": "h",
+              "text": "What a framework is not"
+            },
+            {
+              "type": "list",
+              "items": [
+                "It is not a product. No tool makes you \"CSF compliant\" out of the box.",
+                "It is not a one-off project. Frameworks assume a cycle: assess, improve, re-assess.",
+                "It is not automatically a legal obligation. Most frameworks are voluntary until a regulator, contract or customer makes them mandatory."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "family",
+          "title": "Framework, standard, regulation, control catalog",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "These words get used interchangeably in meetings. They are not the same, and mixing them up leads to bad scoping decisions."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Term",
+                "What it is",
+                "Mandatory?",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Framework",
+                  "High-level structure of outcomes or practices. Flexible, adaptable.",
+                  "Usually voluntary",
+                  "NIST CSF 2.0, NIST AI RMF, COBIT 2019, ITIL"
+                ],
+                [
+                  "Standard",
+                  "Formal document with specific requirements, often certifiable by an accredited body.",
+                  "Voluntary, unless required by contract or law",
+                  "ISO/IEC 27001:2022, ISO/IEC 42001:2023, PCI DSS v4.0.1"
+                ],
+                [
+                  "Regulation / law",
+                  "Legal obligation with penalties.",
+                  "Yes, within its jurisdiction",
+                  "GDPR, EU AI Act, Mauritius Data Protection Act 2017, Saudi PDPL"
+                ],
+                [
+                  "Control catalog",
+                  "Detailed list of safeguards (controls) you can select from.",
+                  "Mandatory for US federal systems; voluntary elsewhere",
+                  "NIST SP 800-53 Rev. 5, CIS Controls v8.1, ISO/IEC 27002"
+                ],
+                [
+                  "Guideline / best practice",
+                  "Advice and recommended approaches.",
+                  "No",
+                  "NIST SP 800-61 (incident handling), ITIL practice guides"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Rule of thumb",
+              "text": "Frameworks tell you **what** good looks like. Control catalogs tell you **how** to get there. Standards let a third party **certify** that you got there. Regulations tell you what happens if you don't."
+            }
+          ]
+        },
+        {
+          "id": "why",
+          "title": "Why organisations adopt frameworks",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Common language.** Business, IT, security, audit and regulators discuss the same structure.",
+                "**Completeness.** A framework is a checklist of domains that mature organisations have learned the hard way not to forget (for example, supply chain risk or recovery communications).",
+                "**Prioritisation.** Comparing current state against a target shows where money and effort buy the most risk reduction.",
+                "**Assurance.** Customers, regulators and insurers accept evidence mapped to a known framework faster than a home-grown story.",
+                "**Benchmarking.** You can compare business units, subsidiaries or peers on the same scale.",
+                "**Career and hiring.** Roles, skills and certifications align to recognised frameworks, which simplifies building teams."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example: a regional bank",
+              "text": "A bank operating in several African markets faces different central-bank cyber directives in each country. Instead of running five separate programmes, it anchors on NIST CSF 2.0 as its internal operating model and maps each regulator's requirements to CSF subcategories. One programme, many reports."
+            }
+          ]
+        },
+        {
+          "id": "types",
+          "title": "Outcome-based vs prescriptive",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The single most useful distinction when you pick up any new framework is whether it describes **outcomes** or prescribes **activities and controls**."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "",
+                "Outcome-based",
+                "Prescriptive"
+              ],
+              "rows": [
+                [
+                  "Says",
+                  "What result must exist",
+                  "Exactly what to implement"
+                ],
+                [
+                  "Example wording",
+                  "\"Users, services and hardware are authenticated\" (CSF PR.AA-03)",
+                  "\"Implement multi-factor authentication for access to privileged accounts\" (SP 800-53 IA-2(1))"
+                ],
+                [
+                  "Strength",
+                  "Adapts to any size, sector, technology",
+                  "Easy to test and audit"
+                ],
+                [
+                  "Weakness",
+                  "Needs judgement to implement",
+                  "Can become box-ticking; may not fit your context"
+                ],
+                [
+                  "Examples",
+                  "NIST CSF 2.0, NIST AI RMF, COBIT objectives",
+                  "NIST SP 800-53, CIS Controls, PCI DSS"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Most real programmes combine both: an outcome framework to decide **what** matters and set targets, and a control catalog to decide **how** to meet each outcome."
+            }
+          ]
+        },
+        {
+          "id": "certify",
+          "title": "Certifiable vs non-certifiable",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Only some frameworks lead to an organisational certificate. This matters when a client asks \"Are you certified?\""
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Framework",
+                "Organisation can be certified?",
+                "What exists instead"
+              ],
+              "rows": [
+                [
+                  "ISO/IEC 27001",
+                  "Yes, by accredited certification bodies",
+                  "Surveillance audits yearly, recertification every 3 years"
+                ],
+                [
+                  "ISO/IEC 42001 (AI management system)",
+                  "Yes",
+                  "Same ISO audit model"
+                ],
+                [
+                  "NIST CSF 2.0",
+                  "No",
+                  "Self-assessment or third-party assessment against CSF"
+                ],
+                [
+                  "NIST AI RMF",
+                  "No",
+                  "Self-attestation, third-party assurance reports"
+                ],
+                [
+                  "NIST SP 800-53",
+                  "No certificate; US federal systems receive an Authorization to Operate (ATO)",
+                  "FedRAMP authorisation for cloud providers"
+                ],
+                [
+                  "COBIT 2019",
+                  "No; capability assessments exist",
+                  "Process capability ratings"
+                ],
+                [
+                  "ITIL",
+                  "No (only individuals are certified)",
+                  "ISO/IEC 20000-1 certifies the service management system"
+                ],
+                [
+                  "SOC 2",
+                  "Not a certification; an attestation report by a CPA firm",
+                  "Type I (design) or Type II (operating effectiveness)"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Common mistake",
+              "text": "\"We are NIST certified\" is a red flag in a proposal. NIST does not certify organisations. Say \"aligned to\" or \"assessed against\" NIST CSF 2.0."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which statement best describes a framework?",
+          "options": [
+            "A legal requirement with penalties",
+            "A structured, reusable way to organise outcomes or practices in a domain",
+            "A software tool that enforces controls",
+            "A list of technical settings"
+          ],
+          "answer": 1,
+          "explain": "Frameworks give structure and shared vocabulary. Laws carry penalties; tools and settings implement controls."
+        },
+        {
+          "q": "NIST SP 800-53 is best classified as a...",
+          "options": [
+            "Regulation",
+            "Control catalog",
+            "Certification scheme",
+            "Maturity model"
+          ],
+          "answer": 1,
+          "explain": "SP 800-53 is a catalog of security and privacy controls. It is mandatory for US federal systems, voluntary for everyone else."
+        },
+        {
+          "q": "Which of these can an organisation be formally certified against?",
+          "options": [
+            "NIST CSF 2.0",
+            "NIST AI RMF",
+            "ISO/IEC 27001",
+            "ITIL"
+          ],
+          "answer": 2,
+          "explain": "ISO/IEC 27001 has accredited third-party certification. NIST frameworks and ITIL do not certify organisations."
+        },
+        {
+          "q": "\"Users, services and hardware are authenticated\" is an example of...",
+          "options": [
+            "A prescriptive control",
+            "An outcome statement",
+            "A regulation",
+            "A maturity tier"
+          ],
+          "answer": 1,
+          "explain": "It describes a result, not the mechanism. This is CSF 2.0 subcategory PR.AA-03."
+        },
+        {
+          "q": "A client says their firm is 'NIST certified'. What is the most accurate response?",
+          "options": [
+            "That is the highest level of assurance",
+            "NIST does not certify organisations; ask what assessment was done and by whom",
+            "Only NIST CSF 1.1 was certifiable",
+            "It means they passed SOC 2"
+          ],
+          "answer": 1,
+          "explain": "NIST publishes frameworks; it does not run a certification scheme for organisations."
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "title": "How frameworks work",
+      "summary": "The anatomy shared by most frameworks: hierarchy, profiles, maturity, mappings and the improvement cycle.",
+      "sections": [
+        {
+          "id": "anatomy",
+          "title": "Anatomy: the hierarchy",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Almost every framework is a tree. Learn to spot the levels and you can read any new framework in an afternoon."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Level",
+                "NIST CSF 2.0",
+                "NIST SP 800-53",
+                "NIST AI RMF",
+                "ISO/IEC 27001:2022"
+              ],
+              "rows": [
+                [
+                  "Top",
+                  "6 Functions (e.g. PROTECT)",
+                  "20 control families (e.g. AC, Access Control)",
+                  "4 Functions (GOVERN, MAP, MEASURE, MANAGE)",
+                  "Clauses 4 to 10 + Annex A themes"
+                ],
+                [
+                  "Middle",
+                  "22 Categories (e.g. PR.AA)",
+                  "~1,000+ controls incl. enhancements (e.g. AC-2)",
+                  "19 Categories (e.g. MAP 1)",
+                  "93 Annex A controls"
+                ],
+                [
+                  "Bottom",
+                  "106 Subcategories (e.g. PR.AA-05)",
+                  "Control enhancements (e.g. AC-2(1))",
+                  "72 Subcategories (e.g. MAP 1.1)",
+                  "Implementation guidance in ISO/IEC 27002"
+                ],
+                [
+                  "Help layer",
+                  "Implementation Examples, Informative References",
+                  "Discussion, related controls, baselines (SP 800-53B)",
+                  "Playbook suggested actions",
+                  "ISO/IEC 27002 guidance"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Reading trick",
+              "text": "The identifier tells you where you are. PR.AA-05 = PROTECT function, Identity Management, Authentication and Access Control category, outcome 05. AC-2(1) = Access Control family, control 2 (Account Management), enhancement 1."
+            }
+          ]
+        },
+        {
+          "id": "profiles",
+          "title": "Profiles and tailoring",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "No organisation needs every outcome at the same strength. Frameworks handle this through **tailoring**, usually expressed as **profiles**."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Current profile:** where you are today for each outcome.",
+                "**Target profile:** where you need to be, driven by risk appetite, regulation and business priorities.",
+                "**Gap:** the difference, which becomes your roadmap.",
+                "**Community profile / baseline / overlay:** a pre-built target for a sector or use case, e.g. a CSF community profile for manufacturing, or the SP 800-53B moderate baseline."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "An oil & gas operator sets a high target for asset inventory and OT network monitoring (ID.AM, DE.CM) because of safety risk, and a moderate target for secure software development (PR.PS-06) because it buys most software rather than building it."
+            }
+          ]
+        },
+        {
+          "id": "maturity",
+          "title": "Maturity, tiers and capability levels",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Many frameworks include a way to express **how well** you do something, not just **whether** you do it."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Framework",
+                "Scale",
+                "Measures"
+              ],
+              "rows": [
+                [
+                  "NIST CSF 2.0",
+                  "Tiers 1 to 4: Partial, Risk Informed, Repeatable, Adaptive",
+                  "Rigor of risk governance and management practices"
+                ],
+                [
+                  "COBIT 2019",
+                  "Capability levels 0 to 5 per process",
+                  "Process capability"
+                ],
+                [
+                  "CMMI",
+                  "Maturity levels 1 to 5",
+                  "Organisational process maturity"
+                ],
+                [
+                  "ISO/IEC 27001",
+                  "None (conformant or not)",
+                  "Certification is pass/fail on requirements"
+                ],
+                [
+                  "NIST AI RMF",
+                  "None formally; profiles express current vs target",
+                  "Outcome achievement"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "CSF Tiers are not maturity levels",
+              "text": "NIST is explicit that Tiers describe the rigor of risk practices and are not meant to be scored like a maturity model. Many consultancies still build 0-5 maturity scales on top of CSF. That is fine, just be clear it is your scale, not NIST's."
+            }
+          ]
+        },
+        {
+          "id": "mappings",
+          "title": "Mappings and crosswalks",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Because organisations follow several frameworks at once, publishers provide **crosswalks** (mappings) that show where requirements overlap. NIST calls these **Informative References** and publishes them through the OLIR program (Online Informative References)."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "CSF 2.0 subcategory",
+                "SP 800-53 Rev. 5",
+                "ISO/IEC 27001:2022 Annex A",
+                "CIS Controls v8"
+              ],
+              "rows": [
+                [
+                  "PR.AA-05 Access permissions follow least privilege",
+                  "AC-2, AC-3, AC-5, AC-6",
+                  "5.15, 5.18, 8.2",
+                  "Controls 5 and 6"
+                ],
+                [
+                  "PR.DS-11 Backups created, protected, tested",
+                  "CP-9, CP-10",
+                  "8.13",
+                  "Control 11"
+                ],
+                [
+                  "DE.CM-01 Networks monitored",
+                  "SI-4, AU-12, CA-7",
+                  "8.16",
+                  "Control 13"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "A mapping is not an equivalence",
+              "text": "Two items mapped to each other overlap; they rarely say the same thing. Passing an ISO 27001 audit on control 8.13 does not prove you meet every aspect of CSF PR.DS-11 (e.g. testing restores). Use crosswalks to reduce duplicate effort, not to skip assessment."
+            }
+          ]
+        },
+        {
+          "id": "cycle",
+          "title": "The improvement cycle",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Frameworks assume a loop, usually a variant of Plan-Do-Check-Act (PDCA):"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Scope:** decide which business units, systems and services are in.",
+                "**Understand context:** mission, obligations, risk appetite, threats.",
+                "**Assess current state** against the framework.",
+                "**Set the target state** for each outcome.",
+                "**Analyse gaps** and estimate cost and risk reduction of closing each one.",
+                "**Build and execute a roadmap.**",
+                "**Measure and report** progress with metrics.",
+                "**Repeat** when threats, business or technology change."
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "Board framing",
+              "text": "Report the gap, the plan and the trend. Boards don't need 106 subcategories; they need the five or six risks that matter, what it costs to fix them and whether the trend is improving."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In the identifier PR.AA-05, what does 'PR' refer to?",
+          "options": [
+            "Privacy",
+            "The PROTECT function",
+            "Program requirement",
+            "Priority rating"
+          ],
+          "answer": 1,
+          "explain": "CSF identifiers start with the function code: GV, ID, PR, DE, RS, RC."
+        },
+        {
+          "q": "What is a target profile?",
+          "options": [
+            "A list of threat actors",
+            "The desired state of outcomes based on risk, obligations and priorities",
+            "A pre-built vendor configuration",
+            "The result of a penetration test"
+          ],
+          "answer": 1,
+          "explain": "Current profile = today. Target profile = where you need to be. The gap drives the roadmap."
+        },
+        {
+          "q": "NIST CSF Tiers are best described as...",
+          "options": [
+            "A scoring scale for certification",
+            "A description of the rigor of cybersecurity risk governance and management",
+            "A mandatory maturity level",
+            "A list of controls"
+          ],
+          "answer": 1,
+          "explain": "NIST says Tiers characterise rigor and are not a maturity model to be scored."
+        },
+        {
+          "q": "Two controls from different frameworks appear together in a crosswalk. This means...",
+          "options": [
+            "They are identical",
+            "Meeting one automatically meets the other",
+            "They overlap in intent, but each must still be assessed on its own terms",
+            "One replaces the other"
+          ],
+          "answer": 2,
+          "explain": "Mappings show relationships, not equivalence."
+        },
+        {
+          "q": "Which step comes immediately after assessing the current state?",
+          "options": [
+            "Measure and report",
+            "Set the target state",
+            "Scope",
+            "Buy tools"
+          ],
+          "answer": 1,
+          "explain": "You compare current to target to find gaps."
+        }
+      ]
+    },
+    {
+      "id": "nist",
+      "title": "The NIST trio: CSF, SP 800-53 and AI RMF",
+      "summary": "How the three NIST publications fit together: outcomes, controls and AI-specific risk.",
+      "sections": [
+        {
+          "id": "nist-who",
+          "title": "Who NIST is",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The **National Institute of Standards and Technology** is a US federal agency under the Department of Commerce. Its cybersecurity publications are free, public domain and widely used far outside the US, including across the Middle East and Africa, because they are vendor-neutral and well maintained."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Series",
+                "What it contains",
+                "Examples"
+              ],
+              "rows": [
+                [
+                  "CSWP (White Papers)",
+                  "Frameworks and major guidance",
+                  "CSWP 29: Cybersecurity Framework 2.0"
+                ],
+                [
+                  "SP 800",
+                  "Computer security special publications",
+                  "800-53 (controls), 800-37 (RMF), 800-61 (incident response), 800-218 (secure software)"
+                ],
+                [
+                  "AI 100",
+                  "AI publications",
+                  "AI 100-1: AI RMF 1.0; AI 600-1: Generative AI Profile"
+                ],
+                [
+                  "NIST IR",
+                  "Interagency / internal reports",
+                  "IR 8286 (cyber risk and ERM)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nist-roles",
+          "title": "Three documents, three jobs",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "",
+                "NIST CSF 2.0",
+                "NIST SP 800-53 Rev. 5",
+                "NIST AI RMF 1.0"
+              ],
+              "rows": [
+                [
+                  "Question it answers",
+                  "What cybersecurity outcomes should we achieve?",
+                  "Which specific safeguards do we implement?",
+                  "How do we govern and manage risk from AI systems?"
+                ],
+                [
+                  "Type",
+                  "Outcome framework",
+                  "Control catalog",
+                  "Outcome framework (risk management)"
+                ],
+                [
+                  "Structure",
+                  "6 Functions, 22 Categories, 106 Subcategories",
+                  "20 families, 1,000+ controls and enhancements",
+                  "4 Functions, 19 Categories, 72 Subcategories"
+                ],
+                [
+                  "Audience",
+                  "Any organisation, board to engineer",
+                  "Security architects, control owners, auditors",
+                  "AI developers, deployers, risk and governance teams"
+                ],
+                [
+                  "Published",
+                  "Feb 2024 (v2.0)",
+                  "Sept 2020 (Rev. 5), with later minor releases",
+                  "Jan 2023 (v1.0)"
+                ],
+                [
+                  "Mandatory?",
+                  "No",
+                  "Yes for US federal systems; voluntary otherwise",
+                  "No"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Think of it as a building. **CSF** is the architect's brief: rooms the building must have and what they must do. **SP 800-53** is the building code and bill of materials: exact specifications you pick from. **AI RMF** is a specialist brief for a new kind of room (the AI system) whose risks behave differently: they are socio-technical, probabilistic and can change after deployment."
+            }
+          ]
+        },
+        {
+          "id": "nist-flow",
+          "title": "How they connect in practice",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A worked example shows the chain from outcome to control to AI-specific risk."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**CSF outcome (what):** PR.AA-05: Access permissions, entitlements and authorizations are defined in a policy, managed, enforced and reviewed, and incorporate the principles of least privilege and separation of duties.",
+                "**800-53 controls (how):** AC-2 Account Management, AC-5 Separation of Duties, AC-6 Least Privilege, including enhancement AC-6(5) Privileged Accounts.",
+                "**AI RMF lens (AI-specific):** if an AI agent is given access to the core banking system, GOVERN 1.4 and MAP 3.5 ask who approved its permissions, what human oversight exists, and MANAGE 2.4 asks how you would disengage it if it behaves outside its intended use."
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Where AI meets cyber",
+              "text": "AI RMF covers the full range of AI harms (bias, safety, privacy, explainability), not just security. For the security of AI systems specifically, you use CSF and 800-53 controls alongside it. NIST has been developing AI-specific control overlays for SP 800-53 and a Cyber AI profile of CSF to bridge the two; check NIST's site for their current status."
+            }
+          ]
+        },
+        {
+          "id": "nist-800-53",
+          "title": "SP 800-53 up close",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "You will not study all of SP 800-53 here, but you need to know how it is built because CSF and AI RMF implementations lean on it."
+            },
+            {
+              "type": "h",
+              "text": "The 20 control families"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "ID",
+                "Family",
+                "ID",
+                "Family"
+              ],
+              "rows": [
+                [
+                  "AC",
+                  "Access Control",
+                  "PE",
+                  "Physical and Environmental Protection"
+                ],
+                [
+                  "AT",
+                  "Awareness and Training",
+                  "PL",
+                  "Planning"
+                ],
+                [
+                  "AU",
+                  "Audit and Accountability",
+                  "PM",
+                  "Program Management"
+                ],
+                [
+                  "CA",
+                  "Assessment, Authorization and Monitoring",
+                  "PS",
+                  "Personnel Security"
+                ],
+                [
+                  "CM",
+                  "Configuration Management",
+                  "PT",
+                  "PII Processing and Transparency"
+                ],
+                [
+                  "CP",
+                  "Contingency Planning",
+                  "RA",
+                  "Risk Assessment"
+                ],
+                [
+                  "IA",
+                  "Identification and Authentication",
+                  "SA",
+                  "System and Services Acquisition"
+                ],
+                [
+                  "IR",
+                  "Incident Response",
+                  "SC",
+                  "System and Communications Protection"
+                ],
+                [
+                  "MA",
+                  "Maintenance",
+                  "SI",
+                  "System and Information Integrity"
+                ],
+                [
+                  "MP",
+                  "Media Protection",
+                  "SR",
+                  "Supply Chain Risk Management"
+                ]
+              ]
+            },
+            {
+              "type": "h",
+              "text": "Anatomy of one control"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Control statement:** the requirement, often with organisation-defined parameters in brackets, e.g. \"Review accounts for compliance with account management requirements [Assignment: organization-defined frequency]\".",
+                "**Discussion:** rationale and implementation notes.",
+                "**Related controls:** links to other controls.",
+                "**Control enhancements:** stronger versions, e.g. AC-2(1) Automated System Account Management.",
+                "**References:** source standards."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "h",
+              "text": "Baselines and assessment"
+            },
+            {
+              "type": "p",
+              "text": "**SP 800-53B** defines starting sets of controls (baselines) for systems categorised as Low, Moderate or High impact, plus a privacy baseline. **SP 800-53A** explains how to assess each control (examine, interview, test)."
+            }
+          ]
+        },
+        {
+          "id": "nist-rmf",
+          "title": "The Risk Management Framework (SP 800-37)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Don't confuse **RMF** (SP 800-37, for managing security risk of information systems) with **AI RMF**. The RMF is the process that puts 800-53 controls to work on a specific system. It has seven steps:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Step",
+                "What happens"
+              ],
+              "rows": [
+                [
+                  "Prepare",
+                  "Establish context, roles, risk strategy at organisation and system level"
+                ],
+                [
+                  "Categorize",
+                  "Rate the system's impact (Low / Moderate / High) using FIPS 199 and SP 800-60"
+                ],
+                [
+                  "Select",
+                  "Pick a baseline from 800-53B and tailor it"
+                ],
+                [
+                  "Implement",
+                  "Build and document the controls"
+                ],
+                [
+                  "Assess",
+                  "Test whether controls are implemented correctly and effective (800-53A)"
+                ],
+                [
+                  "Authorize",
+                  "A senior official accepts residual risk and issues an Authorization to Operate (ATO)"
+                ],
+                [
+                  "Monitor",
+                  "Continuously track controls, changes and threats"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Remember",
+              "text": "CSF = organisation-wide outcomes. RMF = system-level lifecycle that selects and authorises 800-53 controls. AI RMF = AI-specific risk management across the AI lifecycle."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which NIST publication is a catalog of security and privacy controls?",
+          "options": [
+            "CSWP 29",
+            "SP 800-53",
+            "AI 100-1",
+            "SP 800-37"
+          ],
+          "answer": 1,
+          "explain": "SP 800-53 is the control catalog. CSWP 29 is CSF 2.0; AI 100-1 is AI RMF; SP 800-37 is the RMF process."
+        },
+        {
+          "q": "How many functions does the NIST AI RMF Core have?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "answer": 0,
+          "explain": "GOVERN, MAP, MEASURE, MANAGE."
+        },
+        {
+          "q": "In SP 800-53, what is AC-6?",
+          "options": [
+            "Account Management",
+            "Least Privilege",
+            "Separation of Duties",
+            "Access Enforcement"
+          ],
+          "answer": 1,
+          "explain": "AC-2 Account Management, AC-3 Access Enforcement, AC-5 Separation of Duties, AC-6 Least Privilege."
+        },
+        {
+          "q": "What does the 'Authorize' step of SP 800-37 produce?",
+          "options": [
+            "A risk register",
+            "An Authorization to Operate by a senior official accepting residual risk",
+            "A CSF target profile",
+            "A penetration test report"
+          ],
+          "answer": 1,
+          "explain": "The authorising official formally accepts residual risk."
+        },
+        {
+          "q": "Which statement about AI RMF and CSF is most accurate?",
+          "options": [
+            "AI RMF replaces CSF for AI systems",
+            "AI RMF covers broad AI harms; CSF and 800-53 still apply to securing the AI system",
+            "CSF 2.0 already covers bias and fairness",
+            "They cannot be used together"
+          ],
+          "answer": 1,
+          "explain": "They complement each other: AI RMF for trustworthiness and AI harms, CSF and 800-53 for cybersecurity outcomes and controls."
+        },
+        {
+          "q": "SP 800-53B provides...",
+          "options": [
+            "Assessment procedures",
+            "Control baselines for Low, Moderate and High impact systems",
+            "Privacy law guidance",
+            "The CSF Core"
+          ],
+          "answer": 1,
+          "explain": "800-53A = assessment procedures; 800-53B = baselines."
+        }
+      ]
+    },
+    {
+      "id": "landscape",
+      "title": "The wider landscape",
+      "summary": "Where ISO 27001, COBIT, ITIL, CIS, SOC 2 and ISO 42001 fit, and how to choose.",
+      "sections": [
+        {
+          "id": "map",
+          "title": "Landscape map",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Framework",
+                "Owner",
+                "Domain",
+                "Core structure",
+                "Use it when"
+              ],
+              "rows": [
+                [
+                  "NIST CSF 2.0",
+                  "NIST",
+                  "Cybersecurity outcomes",
+                  "6 Functions, 22 Categories, 106 Subcategories",
+                  "You need an organisation-wide security operating model and board reporting"
+                ],
+                [
+                  "ISO/IEC 27001:2022",
+                  "ISO/IEC",
+                  "Information security management system (ISMS)",
+                  "Clauses 4-10 + Annex A: 93 controls in 4 themes (Organizational 37, People 8, Physical 14, Technological 34)",
+                  "You need certification to win or keep clients"
+                ],
+                [
+                  "NIST SP 800-53 Rev. 5",
+                  "NIST",
+                  "Security and privacy controls",
+                  "20 families",
+                  "You need detailed control specifications or serve US government"
+                ],
+                [
+                  "CIS Controls v8.1",
+                  "Center for Internet Security",
+                  "Prioritised technical safeguards",
+                  "18 Controls, Implementation Groups IG1-IG3",
+                  "You want a pragmatic, prioritised starting list, especially for SMEs"
+                ],
+                [
+                  "COBIT 2019",
+                  "ISACA",
+                  "Enterprise governance of information and technology",
+                  "40 objectives in 5 domains: EDM, APO, BAI, DSS, MEA",
+                  "You need board-level IT governance and audit alignment"
+                ],
+                [
+                  "ITIL (Version 5)",
+                  "PeopleCert",
+                  "Digital product and service management",
+                  "Value System, 4 dimensions, 8 lifecycle activities, 34 practices",
+                  "You run IT services and want reliable, value-focused operations"
+                ],
+                [
+                  "NIST AI RMF 1.0",
+                  "NIST",
+                  "AI risk management",
+                  "4 Functions, 19 Categories, 72 Subcategories",
+                  "You build, buy or deploy AI and need governance"
+                ],
+                [
+                  "ISO/IEC 42001:2023",
+                  "ISO/IEC",
+                  "AI management system (AIMS)",
+                  "Clauses 4-10 + Annex A AI controls",
+                  "You need a certifiable AI governance system"
+                ],
+                [
+                  "SOC 2",
+                  "AICPA",
+                  "Service organisation assurance",
+                  "Trust Services Criteria: Security, Availability, Processing Integrity, Confidentiality, Privacy",
+                  "US customers ask for an attestation report"
+                ],
+                [
+                  "PCI DSS v4.0.1",
+                  "PCI SSC",
+                  "Cardholder data security",
+                  "12 requirements",
+                  "You store, process or transmit card data"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "layers",
+          "title": "How they stack",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A useful mental model is three layers:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Governance layer** (why and who decides): COBIT, CSF GOVERN, AI RMF GOVERN, ISO management-system clauses 4-10.",
+                "**Management layer** (what and how it's run): CSF functions, ITIL practices, ISO 27001 ISMS processes, AI RMF MAP/MEASURE/MANAGE.",
+                "**Control layer** (how, specifically): SP 800-53, ISO/IEC 27002, CIS Controls, PCI DSS requirements."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example stack for a bank in MENA",
+              "text": "COBIT for board-level IT governance, ISO/IEC 27001 for certification demanded by international correspondents, NIST CSF 2.0 as the internal security operating model and reporting language, CIS Controls to prioritise technical hardening, ITIL for service operations, and AI RMF plus ISO/IEC 42001 as AI use grows. Local regulation (e.g. SAMA Cyber Security Framework in Saudi Arabia) is mapped on top."
+            }
+          ]
+        },
+        {
+          "id": "choose",
+          "title": "Choosing and combining",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Start from obligations.** Regulation and contracts are non-negotiable; map them first.",
+                "**Pick one anchor.** Choose a single framework as your internal operating model (CSF is a common choice) and map everything else to it.",
+                "**Add depth where needed.** Use a control catalog for implementation detail.",
+                "**Certify only when it pays.** Certification costs time and money; do it when clients or regulators value it.",
+                "**Avoid framework soup.** Running four frameworks as four separate programmes multiplies audits and confuses owners."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Pitfalls",
+              "text": "Checkbox compliance (evidence without risk reduction), treating a framework as a project with an end date, copying a target profile from another organisation, and letting the tool vendor define your framework interpretation."
+            }
+          ]
+        },
+        {
+          "id": "next",
+          "title": "What to study next",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "This library continues with the full NIST CSF 2.0, the full NIST AI RMF and ITIL (Version 5) Foundation. As you read, keep asking three questions of every outcome or practice:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "What risk does this reduce?",
+                "What evidence would prove it is working?",
+                "Who owns it?"
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Build your own books",
+              "text": "ISO/IEC 27001, COBIT 2019 and ISO/IEC 42001 are natural next books. Use the template in Settings to add them in the same format."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many Annex A controls does ISO/IEC 27001:2022 contain?",
+          "options": [
+            "114",
+            "93",
+            "106",
+            "72"
+          ],
+          "answer": 1,
+          "explain": "93 controls in 4 themes. The 2013 edition had 114."
+        },
+        {
+          "q": "Which framework is primarily about enterprise governance of information and technology?",
+          "options": [
+            "ITIL",
+            "COBIT 2019",
+            "CIS Controls",
+            "PCI DSS"
+          ],
+          "answer": 1,
+          "explain": "COBIT, from ISACA, targets governance and management of enterprise IT."
+        },
+        {
+          "q": "Which is a certifiable AI management system standard?",
+          "options": [
+            "NIST AI RMF",
+            "ISO/IEC 42001",
+            "NIST AI 600-1",
+            "ITIL AI Governance"
+          ],
+          "answer": 1,
+          "explain": "ISO/IEC 42001:2023 supports third-party certification."
+        },
+        {
+          "q": "What is the recommended way to handle several frameworks?",
+          "options": [
+            "Run each as a separate programme",
+            "Pick one anchor framework and map the others to it",
+            "Only follow the newest",
+            "Let each department choose"
+          ],
+          "answer": 1,
+          "explain": "An anchor plus mappings reduces duplication and keeps one language."
+        },
+        {
+          "q": "In the three-layer model, CIS Controls sit in which layer?",
+          "options": [
+            "Governance",
+            "Management",
+            "Control",
+            "Assurance"
+          ],
+          "answer": 2,
+          "explain": "CIS Controls are specific technical safeguards."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Framework vs control catalog",
+      "back": "A framework states what outcomes to achieve (e.g. CSF). A control catalog specifies the safeguards to implement (e.g. SP 800-53).",
+      "tag": "Basics"
+    },
+    {
+      "front": "Outcome-based framework",
+      "back": "Describes the result that must exist, not how to achieve it. Flexible across sizes and sectors.",
+      "tag": "Basics"
+    },
+    {
+      "front": "Current profile",
+      "back": "The organisation's present state against each framework outcome.",
+      "tag": "Profiles"
+    },
+    {
+      "front": "Target profile",
+      "back": "The desired state for each outcome, driven by risk appetite, obligations and priorities.",
+      "tag": "Profiles"
+    },
+    {
+      "front": "Informative Reference",
+      "back": "NIST's term for a mapping from a CSF outcome to another standard or control set.",
+      "tag": "Mappings"
+    },
+    {
+      "front": "Is a crosswalk an equivalence?",
+      "back": "No. It shows overlap in intent. Each requirement still needs to be assessed on its own terms.",
+      "tag": "Mappings"
+    },
+    {
+      "front": "CSF Tiers",
+      "back": "1 Partial, 2 Risk Informed, 3 Repeatable, 4 Adaptive. Describe rigor of risk practices, not a scored maturity model.",
+      "tag": "CSF"
+    },
+    {
+      "front": "SP 800-53 families",
+      "back": "20 families, e.g. AC Access Control, IA Identification and Authentication, SR Supply Chain Risk Management.",
+      "tag": "800-53"
+    },
+    {
+      "front": "SP 800-53A vs 800-53B",
+      "back": "A = assessment procedures. B = control baselines (Low, Moderate, High, Privacy).",
+      "tag": "800-53"
+    },
+    {
+      "front": "RMF steps (SP 800-37)",
+      "back": "Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor.",
+      "tag": "RMF"
+    },
+    {
+      "front": "AI RMF functions",
+      "back": "GOVERN, MAP, MEASURE, MANAGE.",
+      "tag": "AI RMF"
+    },
+    {
+      "front": "ISO/IEC 27001:2022 Annex A",
+      "back": "93 controls in 4 themes: Organizational 37, People 8, Physical 14, Technological 34.",
+      "tag": "ISO"
+    },
+    {
+      "front": "COBIT 2019 domains",
+      "back": "EDM (Evaluate, Direct, Monitor), APO (Align, Plan, Organise), BAI (Build, Acquire, Implement), DSS (Deliver, Service, Support), MEA (Monitor, Evaluate, Assess).",
+      "tag": "COBIT"
+    },
+    {
+      "front": "Which frameworks certify organisations?",
+      "back": "ISO/IEC 27001, ISO/IEC 42001, ISO/IEC 20000-1. Not NIST CSF, AI RMF or ITIL.",
+      "tag": "Assurance"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Framework",
+      "definition": "A structured, reusable way of organising outcomes or practices in a domain."
+    },
+    {
+      "term": "Standard",
+      "definition": "A formal document with specific requirements, often certifiable (e.g. ISO/IEC 27001)."
+    },
+    {
+      "term": "Control",
+      "definition": "A safeguard or countermeasure that modifies risk."
+    },
+    {
+      "term": "Control catalog",
+      "definition": "A structured list of controls to select from (e.g. SP 800-53, CIS Controls)."
+    },
+    {
+      "term": "Control enhancement",
+      "definition": "In SP 800-53, a strengthened version of a base control, written as AC-2(1)."
+    },
+    {
+      "term": "Baseline",
+      "definition": "A predefined starting set of controls for a given impact level."
+    },
+    {
+      "term": "Overlay",
+      "definition": "A tailored set of controls for a specific technology, sector or use case, applied on top of a baseline."
+    },
+    {
+      "term": "Crosswalk",
+      "definition": "A mapping between requirements of two frameworks."
+    },
+    {
+      "term": "OLIR",
+      "definition": "NIST Online Informative References program, which publishes mappings to NIST frameworks."
+    },
+    {
+      "term": "ATO",
+      "definition": "Authorization to Operate: a senior official's formal acceptance of a system's residual risk (SP 800-37)."
+    },
+    {
+      "term": "PDCA",
+      "definition": "Plan-Do-Check-Act, the improvement cycle behind most management frameworks."
+    },
+    {
+      "term": "ISMS",
+      "definition": "Information Security Management System, the management system required by ISO/IEC 27001."
+    },
+    {
+      "term": "AIMS",
+      "definition": "AI Management System, the management system required by ISO/IEC 42001."
+    },
+    {
+      "term": "SOC 2",
+      "definition": "AICPA attestation report on controls relevant to security, availability, processing integrity, confidentiality and privacy."
+    }
+  ]
+}

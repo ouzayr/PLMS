@@ -1,0 +1,2046 @@
+{
+  "schema": "fwlib.book/1",
+  "id": "nist-ai-rmf",
+  "title": "NIST AI RMF 1.0",
+  "subtitle": "AI Risk Management Framework, all 72 outcomes",
+  "source": "NIST AI 100-1 (January 2023) and NIST AI 600-1 Generative AI Profile (July 2024)",
+  "version": "1.0",
+  "color": "#5B3F8C",
+  "estimatedMinutes": 200,
+  "description": "Framing AI risk, the seven characteristics of trustworthy AI, every GOVERN, MAP, MEASURE and MANAGE subcategory with examples, and the Generative AI Profile.",
+  "chapters": [
+    {
+      "id": "foundations",
+      "title": "Foundations of the AI RMF",
+      "summary": "Purpose, scope, how AI risk differs, and who the AI actors are.",
+      "sections": [
+        {
+          "id": "what",
+          "title": "What the AI RMF is",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The **NIST AI Risk Management Framework 1.0** (NIST AI 100-1) was released on **26 January 2023**. It was mandated by the US National AI Initiative Act of 2020 and developed through an open, consensus-driven process."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Voluntary** and non-sector-specific.",
+                "**Rights-preserving:** it aims to protect individuals, groups, communities and society.",
+                "**Use-case agnostic:** it applies to any organisation that designs, develops, deploys, evaluates or uses AI.",
+                "**Living document:** NIST planned a formal review and publishes companion resources (Playbook, Roadmap, Crosswalks, Profiles)."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "p",
+              "text": "The framework has two parts. **Part 1** frames AI risk and describes the characteristics of trustworthy AI. **Part 2** is the **Core** (GOVERN, MAP, MEASURE, MANAGE) plus Profiles."
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "One-line pitch",
+              "text": "AI RMF helps an organisation use AI to create value while keeping harms to people, the organisation and the wider ecosystem within its risk tolerance."
+            }
+          ]
+        },
+        {
+          "id": "harms",
+          "title": "Framing AI risk: who can be harmed",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "AI RMF defines risk as the composite measure of an event's probability and the magnitude of its consequences. It groups potential harms into three categories:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Harm to",
+                "Examples"
+              ],
+              "rows": [
+                [
+                  "People",
+                  "Individual civil liberties, rights, physical or psychological safety, economic opportunity; group discrimination; societal harm to democratic participation or education access"
+                ],
+                [
+                  "An organisation",
+                  "Business operations, security breaches, monetary loss, reputational damage"
+                ],
+                [
+                  "An ecosystem",
+                  "Interconnected elements and resources, the global financial system, supply chains, natural resources and the environment"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "challenges",
+          "title": "Challenges for AI risk management",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Risk measurement:** third-party components, tracking emergent risks, lack of reliable metrics, differences between lab and real-world performance, human baseline comparison.",
+                "**Risk tolerance:** depends on context, legal and societal norms, and changes over time. The framework does not prescribe tolerance.",
+                "**Risk prioritisation:** not all risks can be eliminated. Higher-risk systems deserve more urgent attention; in some cases development or deployment should stop.",
+                "**Organisational integration:** AI risk should be part of broader enterprise risk management, alongside cybersecurity and privacy."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "different",
+          "title": "How AI risk differs from traditional software risk",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Characteristic of AI",
+                "Why it adds risk"
+              ],
+              "rows": [
+                [
+                  "Data dependence",
+                  "Training data may be biased, unrepresentative, outdated or poisoned"
+                ],
+                [
+                  "Changes after deployment",
+                  "Models can drift as data or context changes, even without code changes"
+                ],
+                [
+                  "Scale and complexity",
+                  "Billions of parameters make behaviour hard to predict and explain"
+                ],
+                [
+                  "Pre-trained / third-party models",
+                  "Unknown training data and limited visibility into how they were built"
+                ],
+                [
+                  "Opacity",
+                  "Hard to explain outputs, reproduce results or audit decisions"
+                ],
+                [
+                  "Emergent behaviour",
+                  "New capabilities or failure modes appear in unexpected contexts"
+                ],
+                [
+                  "Privacy leakage",
+                  "Models may memorise and reveal training data"
+                ],
+                [
+                  "Testing limits",
+                  "Traditional software testing standards don't fully cover AI; underdeveloped measurement science"
+                ],
+                [
+                  "Environmental cost",
+                  "Significant compute and energy use"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Socio-technical",
+              "text": "The key phrase in AI RMF is **socio-technical**: AI risk comes from the interaction of the technical system with people, organisations and society. A technically accurate model can still cause harm in the wrong context."
+            }
+          ]
+        },
+        {
+          "id": "actors",
+          "title": "AI lifecycle and AI actors",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The framework adapts the OECD AI lifecycle. Each stage has different AI actors with different responsibilities."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Lifecycle stage",
+                "Key dimension",
+                "Typical AI actors"
+              ],
+              "rows": [
+                [
+                  "Plan and Design",
+                  "Application Context",
+                  "System operators, domain experts, compliance, product owners"
+                ],
+                [
+                  "Collect and Process Data",
+                  "Data and Input",
+                  "Data scientists, data engineers, data owners"
+                ],
+                [
+                  "Build and Use Model",
+                  "AI Model",
+                  "Modellers, ML engineers, developers"
+                ],
+                [
+                  "Verify and Validate",
+                  "AI Model",
+                  "TEVV experts, auditors, red teams"
+                ],
+                [
+                  "Deploy and Use",
+                  "Task and Output",
+                  "System integrators, operators, deployers"
+                ],
+                [
+                  "Operate and Monitor",
+                  "Application Context",
+                  "Operators, monitoring teams, compliance"
+                ],
+                [
+                  "Use or Impacted by",
+                  "People and Planet",
+                  "End users, affected communities, the public, civil society"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "**TEVV** (test, evaluation, verification and validation) is expected throughout the lifecycle, not only before deployment."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the NIST publication number for AI RMF 1.0?",
+          "options": [
+            "AI 600-1",
+            "AI 100-1",
+            "SP 800-218",
+            "CSWP 29"
+          ],
+          "answer": 1,
+          "explain": "AI 100-1. AI 600-1 is the Generative AI Profile."
+        },
+        {
+          "q": "Which is NOT one of the three categories of harm in the AI RMF?",
+          "options": [
+            "Harm to people",
+            "Harm to an organisation",
+            "Harm to an ecosystem",
+            "Harm to a model"
+          ],
+          "answer": 3,
+          "explain": "People, organisation and ecosystem."
+        },
+        {
+          "q": "Why is AI described as socio-technical?",
+          "options": [
+            "It is built by social media firms",
+            "Its risks come from interaction of technology with people, organisations and society",
+            "It needs social login",
+            "It is only about ethics"
+          ],
+          "answer": 1,
+          "explain": "Context of use shapes risk as much as the model does."
+        },
+        {
+          "q": "Which is a reason AI risk differs from traditional software?",
+          "options": [
+            "AI never changes after deployment",
+            "Models can drift as data or context changes",
+            "AI is always open source",
+            "AI cannot use third-party data"
+          ],
+          "answer": 1,
+          "explain": "Drift after deployment is a defining AI risk."
+        },
+        {
+          "q": "Does the AI RMF prescribe risk tolerance?",
+          "options": [
+            "Yes, with a numeric threshold",
+            "No, tolerance is set by the organisation and context",
+            "Only for GenAI",
+            "Only for government"
+          ],
+          "answer": 1,
+          "explain": "The framework leaves tolerance to organisations, laws and norms."
+        }
+      ]
+    },
+    {
+      "id": "trustworthy",
+      "title": "Characteristics of trustworthy AI",
+      "summary": "The seven characteristics, how they relate, and the trade-offs between them.",
+      "sections": [
+        {
+          "id": "seven",
+          "title": "The seven characteristics",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "AI RMF lists seven characteristics of trustworthy AI. **Valid and reliable** is the base; **accountable and transparent** spans all others."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Characteristic",
+                "Meaning"
+              ],
+              "rows": [
+                [
+                  "Valid and reliable",
+                  "Meets requirements for its intended use (validation) and performs without failure under expected conditions over time (reliability). Includes accuracy and robustness."
+                ],
+                [
+                  "Safe",
+                  "Does not, under defined conditions, lead to a state endangering human life, health, property or the environment."
+                ],
+                [
+                  "Secure and resilient",
+                  "Withstands unexpected adverse events or changes, and maintains confidentiality, integrity and availability against attacks such as data poisoning, model extraction and adversarial examples."
+                ],
+                [
+                  "Accountable and transparent",
+                  "Information about the system and its outputs is available to those interacting with it; accountability requires transparency."
+                ],
+                [
+                  "Explainable and interpretable",
+                  "Explainability: how the system produces outputs. Interpretability: what the output means in context."
+                ],
+                [
+                  "Privacy-enhanced",
+                  "Safeguards autonomy, identity and dignity; uses privacy-enhancing technologies and data minimisation."
+                ],
+                [
+                  "Fair, with harmful bias managed",
+                  "Addresses equality and equity by managing systemic, computational/statistical and human-cognitive bias."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bias",
+          "title": "Three categories of bias",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Type",
+                "Description",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Systemic",
+                  "Present in datasets, organisational norms and broader society",
+                  "Historical lending data reflecting past discrimination"
+                ],
+                [
+                  "Computational and statistical",
+                  "From non-representative samples or algorithmic processes",
+                  "A model trained mainly on urban customers performs poorly for rural ones"
+                ],
+                [
+                  "Human-cognitive",
+                  "How individuals or groups perceive AI output and make decisions",
+                  "Automation bias: staff accept AI recommendations without scrutiny"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Bias is not only a data problem",
+              "text": "Removing a protected attribute from training data rarely removes bias. Proxy variables (postcode, school, device type) can reintroduce it."
+            }
+          ]
+        },
+        {
+          "id": "tradeoffs",
+          "title": "Trade-offs",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Characteristics often pull against each other. Managing AI risk means making these trade-offs explicit and documenting them."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Interpretability vs accuracy:** simpler models are easier to explain but may be less accurate.",
+                "**Privacy vs fairness:** privacy techniques such as data minimisation can limit the demographic data needed to test for bias.",
+                "**Security vs transparency:** publishing model details can help attackers.",
+                "**Safety vs usefulness:** strict guardrails can reduce harmful outputs but also block legitimate uses."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A bank's credit model uses gradient boosting for accuracy but must explain declines to customers. It adds SHAP-based reason codes (explainable), tests fairness across groups using a controlled demographic dataset under strict access (privacy-enhanced), and documents why the chosen trade-off is acceptable (accountable)."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which characteristic is described as the base for the others?",
+          "options": [
+            "Safe",
+            "Valid and reliable",
+            "Fair",
+            "Privacy-enhanced"
+          ],
+          "answer": 1,
+          "explain": "Valid and reliable is the necessary condition of trustworthiness."
+        },
+        {
+          "q": "Which characteristic spans all the others?",
+          "options": [
+            "Secure and resilient",
+            "Accountable and transparent",
+            "Explainable and interpretable",
+            "Safe"
+          ],
+          "answer": 1,
+          "explain": "Accountability and transparency relate to all characteristics."
+        },
+        {
+          "q": "Automation bias is an example of which bias category?",
+          "options": [
+            "Systemic",
+            "Computational",
+            "Human-cognitive",
+            "Statistical"
+          ],
+          "answer": 2,
+          "explain": "It relates to how people perceive and act on AI output."
+        },
+        {
+          "q": "Explainability answers...",
+          "options": [
+            "What the output means in context",
+            "How the system produced the output",
+            "Whether the output is fair",
+            "Who owns the model"
+          ],
+          "answer": 1,
+          "explain": "Explainability = how; interpretability = what it means (why it matters)."
+        },
+        {
+          "q": "Model extraction and data poisoning threaten which characteristic most directly?",
+          "options": [
+            "Secure and resilient",
+            "Fair",
+            "Safe",
+            "Explainable"
+          ],
+          "answer": 0,
+          "explain": "These are security attacks."
+        }
+      ]
+    },
+    {
+      "id": "govern",
+      "title": "GOVERN",
+      "summary": "6 categories, 19 outcomes: culture, accountability, diversity, engagement and third parties.",
+      "sections": [
+        {
+          "id": "gov-intro",
+          "title": "GOVERN in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "GOVERN is a cross-cutting function infused throughout AI risk management. It cultivates a risk-aware culture, sets policies and accountability, and connects technical work to organisational values. Unlike the others, it applies to all stages of the lifecycle."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "GOVERN 1",
+                  "Policies, processes, procedures and practices"
+                ],
+                [
+                  "GOVERN 2",
+                  "Accountability structures"
+                ],
+                [
+                  "GOVERN 3",
+                  "Workforce diversity, equity, inclusion and accessibility"
+                ],
+                [
+                  "GOVERN 4",
+                  "Culture that considers and communicates AI risk"
+                ],
+                [
+                  "GOVERN 5",
+                  "Engagement with relevant AI actors"
+                ],
+                [
+                  "GOVERN 6",
+                  "Third-party software, data and supply chain"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gov-1",
+          "title": "GOVERN 1: Policies and processes",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Policies, processes, procedures and practices across the organisation related to the mapping, measuring and managing of AI risks are in place, transparent and implemented effectively."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.1",
+              "text": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
+              "practice": "AI obligations register covering data protection, sector rules, EU AI Act (if relevant), anti-discrimination law.",
+              "example": "A fintech records that its credit model falls in the EU AI Act high-risk category for an EU customer segment."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.2",
+              "text": "The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices.",
+              "practice": "Responsible AI policy mapping the seven characteristics to concrete requirements.",
+              "example": "The AI policy requires bias testing and explainability for all customer-facing decision models."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.3",
+              "text": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance.",
+              "practice": "Risk tiering of AI use cases (e.g. low, medium, high) that scales controls.",
+              "example": "An internal meeting summariser is Tier 3 (light review); an AI hiring screener is Tier 1 (full review)."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.4",
+              "text": "The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities.",
+              "practice": "Documented AI risk process with stage gates and approval authorities.",
+              "example": "New AI use cases pass an intake form, a risk assessment and an AI review board decision."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.5",
+              "text": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review.",
+              "practice": "Review calendar by risk tier; owner for each review.",
+              "example": "High-risk models are reviewed quarterly, low-risk ones yearly."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.6",
+              "text": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
+              "practice": "AI inventory (including vendor and embedded AI) with owner, purpose, risk tier, data used.",
+              "example": "The inventory reveals 47 AI uses, 19 of them inside SaaS products no one had registered."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 1.7",
+              "text": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization's trustworthiness.",
+              "practice": "Retirement plan: data retention and deletion, user communication, fallback process.",
+              "example": "When retiring a chatbot, the company deletes conversation logs per policy and routes users to live agents."
+            }
+          ]
+        },
+        {
+          "id": "gov-2",
+          "title": "GOVERN 2: Accountability",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible and trained for mapping, measuring and managing AI risks."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 2.1",
+              "text": "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization.",
+              "practice": "RACI across data science, risk, legal, business owners; named accountable owner per AI system.",
+              "example": "Each model card names a business owner, a technical owner and a risk reviewer."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 2.2",
+              "text": "The organization's personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
+              "practice": "Role-based AI risk training for developers, reviewers, business users and partners.",
+              "example": "Loan officers are trained on the model's limitations and when to override it."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 2.3",
+              "text": "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment.",
+              "practice": "Executive sign-off for high-risk AI; AI risk on the executive and board agenda.",
+              "example": "The Chief Risk Officer signs acceptance of residual risk before a high-risk model goes live."
+            }
+          ]
+        },
+        {
+          "id": "gov-3",
+          "title": "GOVERN 3: Diversity and inclusion",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Workforce diversity, equity, inclusion and accessibility processes are prioritised in the mapping, measuring and managing of AI risks throughout the lifecycle."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 3.1",
+              "text": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds).",
+              "practice": "Review boards include legal, ethics, domain experts and people with different backgrounds.",
+              "example": "A health AI review includes clinicians, patients' representatives and data scientists."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 3.2",
+              "text": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
+              "practice": "Define human-in-the-loop, on-the-loop or out-of-the-loop for each system, and who can override.",
+              "example": "Fraud alerts from AI are reviewed by an analyst before blocking a customer's account."
+            }
+          ]
+        },
+        {
+          "id": "gov-4",
+          "title": "GOVERN 4: Risk culture",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Organisational teams are committed to a culture that considers and communicates AI risk."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 4.1",
+              "text": "Organizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts.",
+              "practice": "Encourage challenge; red-teaming; no penalty for raising concerns.",
+              "example": "Engineers can halt a release through a documented \"stop the line\" process."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 4.2",
+              "text": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly.",
+              "practice": "Model cards, datasheets, impact assessments shared with stakeholders.",
+              "example": "Each model is released with a model card describing intended use, limits and known risks."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 4.3",
+              "text": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
+              "practice": "AI incident process, test environments, sharing of lessons internally and externally.",
+              "example": "AI incidents (e.g. harmful chatbot outputs) are logged in the same incident system as security events."
+            }
+          ]
+        },
+        {
+          "id": "gov-5",
+          "title": "GOVERN 5: Stakeholder engagement",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Processes are in place for robust engagement with relevant AI actors."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 5.1",
+              "text": "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
+              "practice": "External feedback channels: user research, community consultation, complaints analysis.",
+              "example": "A city's smart-traffic AI project holds public consultations before deploying camera analytics."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 5.2",
+              "text": "Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
+              "practice": "Feedback triaged, decided on and fed into the backlog.",
+              "example": "Complaints about a biased résumé screener lead to retraining with a rebalanced dataset."
+            }
+          ]
+        },
+        {
+          "id": "gov-6",
+          "title": "GOVERN 6: Third parties",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 6.1",
+              "text": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party's intellectual property or other rights.",
+              "practice": "Vendor AI due diligence, contract clauses on training data use, IP indemnity, model change notification.",
+              "example": "Contracts with an LLM provider prohibit training on the bank's prompts and require notice of model changes."
+            },
+            {
+              "type": "control",
+              "id": "GOVERN 6.2",
+              "text": "Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk.",
+              "practice": "Fallback providers or manual processes; incident coordination with the vendor.",
+              "example": "If the external LLM API fails, the service desk falls back to a rules-based triage."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which GOVERN subcategory requires an AI inventory?",
+          "options": [
+            "GOVERN 1.1",
+            "GOVERN 1.6",
+            "GOVERN 2.1",
+            "GOVERN 6.1"
+          ],
+          "answer": 1,
+          "explain": "GOVERN 1.6: mechanisms to inventory AI systems."
+        },
+        {
+          "q": "Safe decommissioning of AI systems is covered by...",
+          "options": [
+            "GOVERN 1.7",
+            "MANAGE 2.4",
+            "MAP 3.5",
+            "GOVERN 6.2"
+          ],
+          "answer": 0,
+          "explain": "GOVERN 1.7. MANAGE 2.4 covers disengaging systems that behave outside intended use."
+        },
+        {
+          "q": "Who takes responsibility for AI risk decisions under GOVERN 2.3?",
+          "options": [
+            "Data scientists",
+            "Executive leadership",
+            "Vendors",
+            "End users"
+          ],
+          "answer": 1,
+          "explain": "Executive leadership."
+        },
+        {
+          "q": "Human-AI configurations and oversight roles are in...",
+          "options": [
+            "GOVERN 3.2",
+            "GOVERN 4.1",
+            "MAP 3.5",
+            "MEASURE 2.8"
+          ],
+          "answer": 0,
+          "explain": "GOVERN 3.2 defines roles; MAP 3.5 defines oversight processes for a specific system."
+        },
+        {
+          "q": "How many subcategories are in GOVERN?",
+          "options": [
+            "19",
+            "18",
+            "22",
+            "13"
+          ],
+          "answer": 0,
+          "explain": "7 + 3 + 2 + 3 + 2 + 2 = 19."
+        },
+        {
+          "q": "Contract clauses about IP infringement by third-party AI map to...",
+          "options": [
+            "GOVERN 6.1",
+            "MAP 4.1",
+            "MANAGE 3.1",
+            "GOVERN 1.1"
+          ],
+          "answer": 0,
+          "explain": "GOVERN 6.1 addresses third-party risks including IP. MAP 4.1 maps component-level legal risk for a specific system."
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "MAP",
+      "summary": "5 categories, 18 outcomes: context, categorisation, capabilities, components and impacts.",
+      "sections": [
+        {
+          "id": "map-intro",
+          "title": "MAP in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "MAP establishes the context to frame risks related to an AI system. Without context, you cannot measure or manage the right risks. The output of MAP is the knowledge to decide whether to design, develop or deploy the system at all, and the basis for MEASURE and MANAGE."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "MAP 1",
+                  "Context is established and understood"
+                ],
+                [
+                  "MAP 2",
+                  "Categorisation of the AI system"
+                ],
+                [
+                  "MAP 3",
+                  "Capabilities, usage, goals, benefits and costs"
+                ],
+                [
+                  "MAP 4",
+                  "Risks and benefits of all components incl. third parties"
+                ],
+                [
+                  "MAP 5",
+                  "Impacts to individuals, groups, communities, organisations and society"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "map-1",
+          "title": "MAP 1: Context",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MAP 1.1",
+              "text": "Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics.",
+              "practice": "Use-case definition document: purpose, users, setting, applicable laws, assumptions, limits.",
+              "example": "A predictive maintenance model for pipelines documents that it advises engineers and does not trigger automatic shutdowns."
+            },
+            {
+              "type": "control",
+              "id": "MAP 1.2",
+              "text": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized.",
+              "practice": "Record who participated in context-setting and what expertise they brought.",
+              "example": "The context workshop included operations, HSE, data science and a field technician."
+            },
+            {
+              "type": "control",
+              "id": "MAP 1.3",
+              "text": "The organization's mission and relevant goals for AI technology are understood and documented.",
+              "practice": "Link the use case to strategy and AI objectives.",
+              "example": "The use case supports the goal of reducing unplanned downtime by 20%."
+            },
+            {
+              "type": "control",
+              "id": "MAP 1.4",
+              "text": "The business value or context of business use has been clearly defined or, in the case of assessing existing AI systems, re-evaluated.",
+              "practice": "Business case with measurable value; re-evaluate for legacy systems.",
+              "example": "A 3-year-old churn model is re-evaluated and found to add little value over a simple rule."
+            },
+            {
+              "type": "control",
+              "id": "MAP 1.5",
+              "text": "Organizational risk tolerances are determined and documented.",
+              "practice": "Explicit tolerances for errors, bias gaps, downtime per use case.",
+              "example": "False negative rate for fraud detection must stay below 2%; approval-rate gap across groups below 5 percentage points."
+            },
+            {
+              "type": "control",
+              "id": "MAP 1.6",
+              "text": "System requirements (e.g., \"the system shall respect the privacy of its users\") are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks.",
+              "practice": "Requirements include trustworthiness requirements, not only functional ones.",
+              "example": "Requirement: the chatbot shall never request full card numbers; design adds input filters."
+            }
+          ]
+        },
+        {
+          "id": "map-2",
+          "title": "MAP 2: Categorisation",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MAP 2.1",
+              "text": "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders).",
+              "practice": "Document the technical approach and task type.",
+              "example": "The system is a binary classifier (fraud / not fraud) using gradient-boosted trees."
+            },
+            {
+              "type": "control",
+              "id": "MAP 2.2",
+              "text": "Information about the AI system's knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions.",
+              "practice": "Known limits, out-of-scope inputs, guidance for human reviewers.",
+              "example": "The model card states it was not trained on corporate accounts and should not be used for them."
+            },
+            {
+              "type": "control",
+              "id": "MAP 2.3",
+              "text": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation.",
+              "practice": "Test plan and data suitability analysis before building.",
+              "example": "The team checks that training data covers all regions and seasons before training a demand forecast."
+            }
+          ]
+        },
+        {
+          "id": "map-3",
+          "title": "MAP 3: Capabilities, benefits and costs",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MAP 3.1",
+              "text": "Potential benefits of intended AI system functionality and performance are examined and documented.",
+              "practice": "Quantify expected benefits.",
+              "example": "AI triage expected to cut average IT ticket resolution by 30%."
+            },
+            {
+              "type": "control",
+              "id": "MAP 3.2",
+              "text": "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness—as connected to organizational risk tolerance—are examined and documented.",
+              "practice": "Cost of errors including reputational, customer and societal costs.",
+              "example": "A wrong loan decline costs a lost customer and potential discrimination claims."
+            },
+            {
+              "type": "control",
+              "id": "MAP 3.3",
+              "text": "Targeted application scope is specified and documented based on the system's capability, established context, and AI system categorization.",
+              "practice": "Clear boundaries of where the system may be used.",
+              "example": "The HR assistant may answer policy questions but not advise on individual disciplinary cases."
+            },
+            {
+              "type": "control",
+              "id": "MAP 3.4",
+              "text": "Processes for operator and practitioner proficiency with AI system performance and trustworthiness—and relevant technical standards and certifications—are defined, assessed, and documented.",
+              "practice": "Training and competence checks for operators.",
+              "example": "Radiologists using AI support complete a certification module before access."
+            },
+            {
+              "type": "control",
+              "id": "MAP 3.5",
+              "text": "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function.",
+              "practice": "Specific oversight design: review thresholds, override, escalation.",
+              "example": "Transactions scored above 0.9 are blocked only after analyst confirmation."
+            }
+          ]
+        },
+        {
+          "id": "map-4",
+          "title": "MAP 4: Components and third parties",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MAP 4.1",
+              "text": "Approaches for mapping AI technology and legal risks of its components—including the use of third-party data or software—are in place, followed, and documented, as are risks of infringement of a third party's intellectual property or other rights.",
+              "practice": "Component inventory (models, datasets, libraries, APIs) with licence and legal risk.",
+              "example": "A GenAI app lists its foundation model, embedding model, vector DB and scraped datasets with licence status."
+            },
+            {
+              "type": "control",
+              "id": "MAP 4.2",
+              "text": "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented.",
+              "practice": "Controls per component (e.g. output filtering on the vendor model, access controls on the vector store).",
+              "example": "Retrieval results are filtered by the user's document permissions before reaching the LLM."
+            }
+          ]
+        },
+        {
+          "id": "map-5",
+          "title": "MAP 5: Impacts",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MAP 5.1",
+              "text": "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented.",
+              "practice": "Impact assessment rating each impact; use public AI incident databases.",
+              "example": "An impact assessment rates \"wrongful account freeze\" as likely and moderate, \"medical harm\" as not applicable."
+            },
+            {
+              "type": "control",
+              "id": "MAP 5.2",
+              "text": "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented.",
+              "practice": "Ongoing engagement plan with users and affected groups.",
+              "example": "Quarterly sessions with branch staff capture unexpected model behaviours."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which MAP subcategory documents organisational risk tolerances?",
+          "options": [
+            "MAP 1.5",
+            "MAP 3.2",
+            "MAP 5.1",
+            "GOVERN 1.3"
+          ],
+          "answer": 0,
+          "explain": "MAP 1.5 for the specific system context; GOVERN 1.3 sets the overall process."
+        },
+        {
+          "q": "Defining whether a system is a classifier, generative model or recommender is...",
+          "options": [
+            "MAP 1.1",
+            "MAP 2.1",
+            "MAP 3.3",
+            "MEASURE 2.1"
+          ],
+          "answer": 1,
+          "explain": "MAP 2.1: tasks and methods defined."
+        },
+        {
+          "q": "Human oversight processes for a specific system are in...",
+          "options": [
+            "GOVERN 3.2",
+            "MAP 3.5",
+            "MANAGE 2.4",
+            "MEASURE 3.3"
+          ],
+          "answer": 1,
+          "explain": "MAP 3.5, following GOVERN policies."
+        },
+        {
+          "q": "Rating likelihood and magnitude of each identified impact is...",
+          "options": [
+            "MAP 5.1",
+            "MEASURE 1.1",
+            "MANAGE 1.2",
+            "MAP 3.2"
+          ],
+          "answer": 0,
+          "explain": "MAP 5.1."
+        },
+        {
+          "q": "A key possible outcome of MAP is...",
+          "options": [
+            "Certification",
+            "A decision on whether the AI system should be built or deployed at all",
+            "Model training",
+            "Incident closure"
+          ],
+          "answer": 1,
+          "explain": "MAP informs the go / no-go decision (formalised in MANAGE 1.1)."
+        },
+        {
+          "q": "How many subcategories are in MAP?",
+          "options": [
+            "18",
+            "19",
+            "22",
+            "13"
+          ],
+          "answer": 0,
+          "explain": "6 + 3 + 5 + 2 + 2 = 18."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "title": "MEASURE",
+      "summary": "4 categories, 22 outcomes: methods and metrics, trustworthiness evaluation, tracking and feedback.",
+      "sections": [
+        {
+          "id": "mea-intro",
+          "title": "MEASURE in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "MEASURE uses quantitative, qualitative or mixed methods to analyse, assess, benchmark and monitor AI risk and related impacts. It relies on the risks identified in MAP and informs MANAGE. Measurement should be rigorous, documented and, where possible, independent."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "MEASURE 1",
+                  "Methods and metrics identified and applied"
+                ],
+                [
+                  "MEASURE 2",
+                  "Systems evaluated for trustworthy characteristics"
+                ],
+                [
+                  "MEASURE 3",
+                  "Tracking identified risks over time"
+                ],
+                [
+                  "MEASURE 4",
+                  "Feedback about measurement efficacy"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mea-1",
+          "title": "MEASURE 1: Methods and metrics",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MEASURE 1.1",
+              "text": "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not—or cannot—be measured are properly documented.",
+              "practice": "Metric plan per risk, prioritised; document what cannot be measured.",
+              "example": "Metrics chosen: AUC, false positive rate by region, latency; \"long-term customer trust\" documented as not directly measurable."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 1.2",
+              "text": "Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
+              "practice": "Review whether metrics still reflect real risk.",
+              "example": "Accuracy looked fine but complaints rose; the team adds a per-segment error metric."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 1.3",
+              "text": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
+              "practice": "Independent model validation (second line).",
+              "example": "Model risk management validates every high-risk model before approval."
+            }
+          ]
+        },
+        {
+          "id": "mea-2",
+          "title": "MEASURE 2: Trustworthiness evaluation",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MEASURE 2.1",
+              "text": "Test sets, metrics, and details about the tools used during TEVV are documented.",
+              "practice": "Reproducible test documentation.",
+              "example": "Test datasets are versioned and the evaluation notebook is stored with the model."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.2",
+              "text": "Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population.",
+              "practice": "Ethics approval, consent and representative sampling for user studies.",
+              "example": "A usability study of an Arabic-English chatbot recruits users from both language groups."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.3",
+              "text": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
+              "practice": "Test in realistic conditions, not only on a clean test split.",
+              "example": "A vision model for defect detection is tested on images from the actual factory lighting."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.4",
+              "text": "The functionality and behavior of the AI system and its components—as identified in the MAP function—are monitored when in production.",
+              "practice": "Production monitoring for drift, performance and anomalies.",
+              "example": "Dashboards track input data drift and alert when it exceeds a threshold."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.5",
+              "text": "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
+              "practice": "Validation evidence and known generalisation limits.",
+              "example": "The model is validated for retail customers in two countries and documented as not validated elsewhere."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.6",
+              "text": "The AI system is evaluated regularly for safety risks—as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
+              "practice": "Safety testing, fail-safe design, safety metrics.",
+              "example": "An autonomous inspection drone returns to base when confidence drops or GPS is lost."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.7",
+              "text": "AI system security and resilience—as identified in the MAP function—are evaluated and documented.",
+              "practice": "Adversarial testing, prompt injection testing, model supply chain checks.",
+              "example": "A red team tests the customer chatbot for prompt injection and data leakage."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.8",
+              "text": "Risks associated with transparency and accountability—as identified in the MAP function—are examined and documented.",
+              "practice": "Check documentation, disclosure to users, audit trails.",
+              "example": "Users are told they are talking to an AI and can request a human."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.9",
+              "text": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context—as identified in the MAP function—to inform responsible use and governance.",
+              "practice": "Explanation methods and interpretation guidance.",
+              "example": "Reason codes explain the top factors behind each credit decision."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.10",
+              "text": "Privacy risk of the AI system—as identified in the MAP function—is examined and documented.",
+              "practice": "Privacy impact assessment, membership-inference testing, PII leakage tests.",
+              "example": "Tests confirm the fine-tuned model does not reproduce customer phone numbers."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.11",
+              "text": "Fairness and bias—as identified in the MAP function—are evaluated and results are documented.",
+              "practice": "Fairness metrics (e.g. demographic parity, equalised odds) across relevant groups.",
+              "example": "Approval rates and error rates compared across gender and age groups each quarter."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.12",
+              "text": "Environmental impact and sustainability of AI model training and management activities—as identified in the MAP function—are assessed and documented.",
+              "practice": "Estimate energy use and emissions; consider smaller models.",
+              "example": "The team chooses a smaller model with 90% of the accuracy at 20% of the inference energy."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 2.13",
+              "text": "Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.",
+              "practice": "Meta-review of testing: are tests finding real problems?",
+              "example": "A post-incident review shows the bias tests missed a proxy variable; the test suite is extended."
+            }
+          ]
+        },
+        {
+          "id": "mea-3",
+          "title": "MEASURE 3: Tracking risks over time",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MEASURE 3.1",
+              "text": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts.",
+              "practice": "AI risk register with regular updates from monitoring.",
+              "example": "A new jailbreak technique is added to the chatbot risk register within a week of publication."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 3.2",
+              "text": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.",
+              "practice": "Qualitative tracking, expert panels, proxies where metrics don't exist.",
+              "example": "An expert panel reviews societal impacts of a public-sector AI twice a year."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 3.3",
+              "text": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
+              "practice": "Appeal and complaint channels feeding metrics.",
+              "example": "Customers can appeal an automated decision; appeal outcomes are tracked as a quality metric."
+            }
+          ]
+        },
+        {
+          "id": "mea-4",
+          "title": "MEASURE 4: Feedback on measurement",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MEASURE 4.1",
+              "text": "Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented.",
+              "practice": "Validate metrics with domain experts.",
+              "example": "Clinicians confirm which error types matter most clinically."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 4.2",
+              "text": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented.",
+              "practice": "Expert review of results in context.",
+              "example": "Branch managers review model outputs for a month and confirm alignment with policy."
+            },
+            {
+              "type": "control",
+              "id": "MEASURE 4.3",
+              "text": "Measurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about context-relevant risks and trustworthiness characteristics are identified and documented.",
+              "practice": "Trend reporting from field data and consultation.",
+              "example": "Field data shows false positives fell 15% after retraining."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which subcategory requires independent assessors?",
+          "options": [
+            "MEASURE 1.1",
+            "MEASURE 1.3",
+            "MEASURE 2.1",
+            "MEASURE 4.2"
+          ],
+          "answer": 1,
+          "explain": "MEASURE 1.3: internal experts who were not front-line developers and/or independent assessors."
+        },
+        {
+          "q": "Fairness and bias evaluation is...",
+          "options": [
+            "MEASURE 2.9",
+            "MEASURE 2.10",
+            "MEASURE 2.11",
+            "MEASURE 2.12"
+          ],
+          "answer": 2,
+          "explain": "2.9 explainability, 2.10 privacy, 2.11 fairness, 2.12 environment."
+        },
+        {
+          "q": "Production monitoring of behaviour is...",
+          "options": [
+            "MEASURE 2.4",
+            "MEASURE 3.1",
+            "MANAGE 4.1",
+            "MEASURE 2.5"
+          ],
+          "answer": 0,
+          "explain": "MEASURE 2.4. MANAGE 4.1 covers the post-deployment monitoring plan."
+        },
+        {
+          "q": "Appeal channels for users map to...",
+          "options": [
+            "MEASURE 3.3",
+            "GOVERN 5.1",
+            "MAP 5.2",
+            "MANAGE 4.3"
+          ],
+          "answer": 0,
+          "explain": "MEASURE 3.3 integrates appeals into evaluation metrics."
+        },
+        {
+          "q": "What must MEASURE 1.1 document besides chosen metrics?",
+          "options": [
+            "Vendor names",
+            "Risks that will not or cannot be measured",
+            "Budget",
+            "Model weights"
+          ],
+          "answer": 1,
+          "explain": "Unmeasured risks must be documented."
+        },
+        {
+          "q": "How many subcategories does MEASURE have?",
+          "options": [
+            "13",
+            "18",
+            "22",
+            "19"
+          ],
+          "answer": 2,
+          "explain": "3 + 13 + 3 + 3 = 22."
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "title": "MANAGE",
+      "summary": "4 categories, 13 outcomes: prioritise and respond, maximise benefit, third parties, monitor and communicate.",
+      "sections": [
+        {
+          "id": "man-intro",
+          "title": "MANAGE in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "MANAGE allocates resources to mapped and measured risks on a regular basis, as defined by GOVERN. It includes treatment plans, response and recovery, communication, and continual improvement."
+            }
+          ]
+        },
+        {
+          "id": "man-1",
+          "title": "MANAGE 1: Prioritise and respond",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MANAGE 1.1",
+              "text": "A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed.",
+              "practice": "Formal go / no-go decision.",
+              "example": "The AI review board rejects a facial recognition use case because risks exceed tolerance."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 1.2",
+              "text": "Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods.",
+              "practice": "Prioritised treatment plan.",
+              "example": "Prompt injection risk is treated before minor tone inconsistencies."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 1.3",
+              "text": "Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting.",
+              "practice": "Documented response per high risk.",
+              "example": "Risk of hallucinated policy answers is mitigated with retrieval grounding and citations."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 1.4",
+              "text": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
+              "practice": "Residual risk statement shared with deployers and users.",
+              "example": "The vendor's documentation lists known residual risks for customers deploying the model."
+            }
+          ]
+        },
+        {
+          "id": "man-2",
+          "title": "MANAGE 2: Maximise benefits, minimise harm",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MANAGE 2.1",
+              "text": "Resources required to manage AI risks are taken into account—along with viable non-AI alternative systems, approaches, or methods—to reduce the magnitude or likelihood of potential impacts.",
+              "practice": "Compare with non-AI alternatives and cost of controls.",
+              "example": "A rules engine is chosen over ML for a simple eligibility check."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 2.2",
+              "text": "Mechanisms are in place and applied to sustain the value of deployed AI systems.",
+              "practice": "Retraining schedules, performance SLAs, ownership.",
+              "example": "The model is retrained quarterly with fresh data and revalidated."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 2.3",
+              "text": "Procedures are followed to respond to and recover from a previously unknown risk when it is identified.",
+              "practice": "AI incident response playbooks.",
+              "example": "A new jailbreak is patched with an updated system prompt and output filter within 24 hours."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 2.4",
+              "text": "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
+              "practice": "Kill switch, feature flags, fallback, named authority.",
+              "example": "A feature flag lets the product owner disable the AI assistant instantly and revert to the standard form."
+            }
+          ]
+        },
+        {
+          "id": "man-3",
+          "title": "MANAGE 3: Third-party risks",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MANAGE 3.1",
+              "text": "AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented.",
+              "practice": "Ongoing vendor model monitoring.",
+              "example": "The team re-runs its evaluation suite each time the LLM provider releases a new model version."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 3.2",
+              "text": "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance.",
+              "practice": "Track pre-trained model versions, vulnerabilities and licence changes.",
+              "example": "An open-weights model used internally is checked for newly published vulnerabilities and licence updates."
+            }
+          ]
+        },
+        {
+          "id": "man-4",
+          "title": "MANAGE 4: Monitor, improve, communicate",
+          "blocks": [
+            {
+              "type": "control",
+              "id": "MANAGE 4.1",
+              "text": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
+              "practice": "Complete post-deployment plan.",
+              "example": "The monitoring plan defines metrics, alert thresholds, appeal handling, incident response and retirement criteria."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 4.2",
+              "text": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
+              "practice": "Improvement backlog with measurable goals.",
+              "example": "Each release must improve or hold fairness metrics."
+            },
+            {
+              "type": "control",
+              "id": "MANAGE 4.3",
+              "text": "Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented.",
+              "practice": "Incident communication including to affected people.",
+              "example": "Customers wrongly declined are contacted and their applications re-reviewed."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which subcategory is the formal go / no-go decision?",
+          "options": [
+            "MANAGE 1.1",
+            "MAP 1.4",
+            "GOVERN 1.4",
+            "MANAGE 2.1"
+          ],
+          "answer": 0,
+          "explain": "MANAGE 1.1."
+        },
+        {
+          "q": "A kill switch for an AI system maps to...",
+          "options": [
+            "MANAGE 2.3",
+            "MANAGE 2.4",
+            "GOVERN 1.7",
+            "MANAGE 4.1"
+          ],
+          "answer": 1,
+          "explain": "MANAGE 2.4: supersede, disengage or deactivate."
+        },
+        {
+          "q": "Considering non-AI alternatives is in...",
+          "options": [
+            "MANAGE 2.1",
+            "MAP 3.1",
+            "MANAGE 1.3",
+            "MAP 1.4"
+          ],
+          "answer": 0,
+          "explain": "MANAGE 2.1."
+        },
+        {
+          "q": "Monitoring pre-trained models is...",
+          "options": [
+            "MANAGE 3.1",
+            "MANAGE 3.2",
+            "MEASURE 2.4",
+            "GOVERN 6.1"
+          ],
+          "answer": 1,
+          "explain": "MANAGE 3.2."
+        },
+        {
+          "q": "How many subcategories does MANAGE have?",
+          "options": [
+            "13",
+            "18",
+            "19",
+            "22"
+          ],
+          "answer": 0,
+          "explain": "4 + 4 + 2 + 3 = 13."
+        }
+      ]
+    },
+    {
+      "id": "profiles-genai",
+      "title": "Profiles, Playbook and the GenAI Profile",
+      "summary": "Use-case and temporal profiles, the Playbook, AI 600-1 and crosswalks.",
+      "sections": [
+        {
+          "id": "profiles",
+          "title": "AI RMF Profiles",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Use-case profiles:** implementations of the AI RMF for a specific setting or application (e.g. hiring, fair housing).",
+                "**Temporal profiles:** Current Profile vs Target Profile, as in CSF.",
+                "**Cross-sectoral profiles:** risks common across uses or sectors, such as large language models or cloud services. The Generative AI Profile is one of these."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "playbook",
+          "title": "The Playbook",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The **AI RMF Playbook** is an online companion that gives, for each subcategory, suggested actions, transparency and documentation questions, and references. It is not a checklist; organisations pick what fits their context."
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "How to use it",
+              "text": "When implementing a subcategory, open its Playbook entry and use the suggested actions as a menu and the documentation questions as your assessment interview script."
+            }
+          ]
+        },
+        {
+          "id": "genai",
+          "title": "Generative AI Profile (NIST AI 600-1)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Published in **July 2024**, NIST AI 600-1 describes risks that are unique to or made worse by generative AI, and suggests actions mapped to AI RMF subcategories. It lists **12 risks**:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Risk",
+                "Short description"
+              ],
+              "rows": [
+                [
+                  "CBRN information or capabilities",
+                  "Easier access to information that could help chemical, biological, radiological or nuclear weapons"
+                ],
+                [
+                  "Confabulation",
+                  "Confidently stated false content (\"hallucinations\")"
+                ],
+                [
+                  "Dangerous, violent or hateful content",
+                  "Generation of content inciting violence or hate, or promoting self-harm"
+                ],
+                [
+                  "Data privacy",
+                  "Leakage or inference of personal data, including training data"
+                ],
+                [
+                  "Environmental impacts",
+                  "High compute and energy use in training and inference"
+                ],
+                [
+                  "Harmful bias and homogenization",
+                  "Amplified bias and loss of diversity in outputs and decisions"
+                ],
+                [
+                  "Human-AI configuration",
+                  "Over-reliance, automation bias, anthropomorphism, emotional entanglement"
+                ],
+                [
+                  "Information integrity",
+                  "Mis- and disinformation, deepfakes, lowered trust in information"
+                ],
+                [
+                  "Information security",
+                  "Lowered barriers to cyberattacks; new attack surfaces such as prompt injection and data poisoning"
+                ],
+                [
+                  "Intellectual property",
+                  "Reproduction of copyrighted or trademarked content, exposure of trade secrets"
+                ],
+                [
+                  "Obscene, degrading and/or abusive content",
+                  "Including synthetic child sexual abuse material and non-consensual intimate imagery"
+                ],
+                [
+                  "Value chain and component integration",
+                  "Opaque third-party components, data provenance and supplier issues"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A company deploying an internal GenAI assistant prioritises confabulation (grounding with retrieval and citations), data privacy (no training on prompts, PII redaction), information security (prompt injection testing), and human-AI configuration (training staff to verify outputs)."
+            }
+          ]
+        },
+        {
+          "id": "crosswalks",
+          "title": "Crosswalks and regulation",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Instrument",
+                "Relationship to AI RMF"
+              ],
+              "rows": [
+                [
+                  "ISO/IEC 42001:2023",
+                  "Certifiable AI management system; NIST publishes a crosswalk. Many organisations use AI RMF for risk practice and 42001 for certification."
+                ],
+                [
+                  "ISO/IEC 23894:2023",
+                  "AI risk management guidance aligned with ISO 31000"
+                ],
+                [
+                  "EU AI Act",
+                  "Risk-based law (prohibited, high-risk, limited, minimal). AI RMF practices help produce evidence for high-risk obligations, but alignment is not compliance."
+                ],
+                [
+                  "OECD AI Principles",
+                  "AI RMF's lifecycle and trustworthiness concepts are adapted from OECD work"
+                ],
+                [
+                  "NIST CSF 2.0 / SP 800-53",
+                  "Use for the cybersecurity of AI systems"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Currency check",
+              "text": "US federal AI policy has changed several times since 2023 through executive orders. AI RMF itself remains a voluntary NIST framework. Check nist.gov/itl/ai-risk-management-framework for the latest companion resources and any revision."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "NIST AI 600-1 is...",
+          "options": [
+            "The AI RMF",
+            "The Generative AI Profile",
+            "The Playbook",
+            "The EU AI Act guide"
+          ],
+          "answer": 1,
+          "explain": "AI 600-1 = Generative AI Profile, July 2024."
+        },
+        {
+          "q": "How many risks does the GenAI Profile list?",
+          "options": [
+            "7",
+            "10",
+            "12",
+            "19"
+          ],
+          "answer": 2,
+          "explain": "12 risks."
+        },
+        {
+          "q": "'Confabulation' in the GenAI Profile refers to...",
+          "options": [
+            "Data leakage",
+            "Confidently stated false content",
+            "Deepfakes",
+            "Copyright issues"
+          ],
+          "answer": 1,
+          "explain": "Commonly called hallucination."
+        },
+        {
+          "q": "Which is certifiable?",
+          "options": [
+            "NIST AI RMF",
+            "ISO/IEC 42001",
+            "AI 600-1",
+            "The Playbook"
+          ],
+          "answer": 1,
+          "explain": "ISO/IEC 42001."
+        },
+        {
+          "q": "The AI RMF Playbook is best described as...",
+          "options": [
+            "A mandatory checklist",
+            "Suggested actions and documentation questions per subcategory",
+            "A certification guide",
+            "A threat catalog"
+          ],
+          "answer": 1,
+          "explain": "It is a flexible companion resource."
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "title": "Applying the AI RMF",
+      "summary": "A practical roadmap, an AI risk register and how AI RMF works with CSF.",
+      "sections": [
+        {
+          "id": "roadmap",
+          "title": "Implementation roadmap",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Set governance first:** AI policy, risk tiering method, AI review board, executive owner (GOVERN 1, 2).",
+                "**Build the AI inventory** including vendor and embedded AI (GOVERN 1.6).",
+                "**Intake and tiering:** every new use case goes through a short intake that assigns a risk tier (GOVERN 1.3).",
+                "**Map each medium or high-risk use case:** purpose, users, tolerances, components, impacts (MAP).",
+                "**Measure proportionately:** metric plan, independent validation for high-risk, security and fairness testing (MEASURE).",
+                "**Decide and treat:** go / no-go, treatment plans, residual risk acceptance, kill switch (MANAGE 1, 2).",
+                "**Operate:** monitoring, incident process, retraining, vendor change tracking (MANAGE 3, 4; MEASURE 2.4, 3).",
+                "**Report and improve:** AI risk dashboard to the executive committee and board."
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Proportionality",
+              "text": "Apply the full framework to high-risk use cases only. A lightweight track for low-risk productivity tools keeps the process credible and avoids shadow AI."
+            }
+          ]
+        },
+        {
+          "id": "register",
+          "title": "AI risk register: sample rows",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Use case",
+                "Risk",
+                "Trustworthiness characteristic",
+                "AI RMF link",
+                "Treatment",
+                "Residual"
+              ],
+              "rows": [
+                [
+                  "Customer chatbot",
+                  "Prompt injection exposes internal data",
+                  "Secure and resilient",
+                  "MEASURE 2.7, MANAGE 1.3",
+                  "Input/output filters, least-privilege retrieval, red teaming",
+                  "Medium"
+                ],
+                [
+                  "Credit scoring",
+                  "Lower approval rates for a demographic group",
+                  "Fair, bias managed",
+                  "MEASURE 2.11, MAP 1.5",
+                  "Rebalanced training, fairness threshold, quarterly review",
+                  "Low"
+                ],
+                [
+                  "Pipeline maintenance model",
+                  "Missed failure prediction",
+                  "Valid and reliable; Safe",
+                  "MEASURE 2.5, 2.6",
+                  "Human inspection retained, fail-safe alerts",
+                  "Low"
+                ],
+                [
+                  "HR assistant (GenAI)",
+                  "Confabulated policy answers",
+                  "Valid and reliable; Accountable and transparent",
+                  "MANAGE 1.3, MEASURE 2.8",
+                  "Retrieval grounding, citations, disclaimer, escalation to HR",
+                  "Medium"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "with-csf",
+          "title": "AI RMF and CSF together",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Question",
+                "Framework"
+              ],
+              "rows": [
+                [
+                  "Is the model fair, explainable, safe, fit for purpose?",
+                  "AI RMF"
+                ],
+                [
+                  "Is the AI system and its data secure?",
+                  "CSF 2.0 + SP 800-53 (plus AI RMF MEASURE 2.7)"
+                ],
+                [
+                  "Is AI used to improve security operations (e.g. AI in the SOC)?",
+                  "CSF outcomes, with AI RMF governing the AI tool itself"
+                ],
+                [
+                  "Who governs AI and cyber risk at board level?",
+                  "CSF GOVERN + AI RMF GOVERN, ideally one risk committee"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "Executive view",
+              "text": "Treat AI risk as an enterprise risk, not an IT topic. One inventory, one intake, one risk committee, with cyber and AI specialists feeding it."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a sensible first step in implementing AI RMF?",
+          "options": [
+            "Buy an AI monitoring tool",
+            "Establish governance: policy, tiering, owner",
+            "Retrain all models",
+            "Publish model weights"
+          ],
+          "answer": 1,
+          "explain": "GOVERN comes first."
+        },
+        {
+          "q": "Why tier AI use cases?",
+          "options": [
+            "To apply controls proportionately to risk",
+            "To rank vendors",
+            "To comply with CSF Tiers",
+            "To reduce model size"
+          ],
+          "answer": 0,
+          "explain": "Proportionality keeps effort focused on high-risk uses."
+        },
+        {
+          "q": "Securing the infrastructure hosting an AI model is primarily covered by...",
+          "options": [
+            "AI RMF MAP",
+            "CSF 2.0 and SP 800-53",
+            "ISO 42001 Annex B",
+            "The Playbook"
+          ],
+          "answer": 1,
+          "explain": "Cybersecurity of the system uses CSF and 800-53, with AI RMF MEASURE 2.7 on AI-specific security."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "AI RMF functions",
+      "back": "GOVERN (cross-cutting), MAP, MEASURE, MANAGE",
+      "tag": "Core"
+    },
+    {
+      "front": "AI RMF counts",
+      "back": "4 Functions, 19 Categories, 72 Subcategories (GOVERN 19, MAP 18, MEASURE 22, MANAGE 13)",
+      "tag": "Core"
+    },
+    {
+      "front": "AI RMF release",
+      "back": "NIST AI 100-1, 26 January 2023",
+      "tag": "History"
+    },
+    {
+      "front": "Seven trustworthy characteristics",
+      "back": "Valid and reliable; Safe; Secure and resilient; Accountable and transparent; Explainable and interpretable; Privacy-enhanced; Fair with harmful bias managed",
+      "tag": "Trustworthy"
+    },
+    {
+      "front": "Base characteristic",
+      "back": "Valid and reliable",
+      "tag": "Trustworthy"
+    },
+    {
+      "front": "Characteristic that spans all others",
+      "back": "Accountable and transparent",
+      "tag": "Trustworthy"
+    },
+    {
+      "front": "Three bias categories",
+      "back": "Systemic; computational and statistical; human-cognitive",
+      "tag": "Trustworthy"
+    },
+    {
+      "front": "Three harm categories",
+      "back": "Harm to people; harm to an organisation; harm to an ecosystem",
+      "tag": "Framing"
+    },
+    {
+      "front": "TEVV",
+      "back": "Test, evaluation, verification and validation, performed throughout the lifecycle",
+      "tag": "Terms"
+    },
+    {
+      "front": "GOVERN 1.6",
+      "back": "Mechanisms to inventory AI systems",
+      "tag": "Govern"
+    },
+    {
+      "front": "GOVERN 1.7",
+      "back": "Safe decommissioning and phase-out of AI systems",
+      "tag": "Govern"
+    },
+    {
+      "front": "GOVERN 6",
+      "back": "Third-party software, data and supply chain AI risks",
+      "tag": "Govern"
+    },
+    {
+      "front": "MAP 1.5",
+      "back": "Organisational risk tolerances are determined and documented",
+      "tag": "Map"
+    },
+    {
+      "front": "MAP 3.5",
+      "back": "Human oversight processes defined, assessed and documented",
+      "tag": "Map"
+    },
+    {
+      "front": "MEASURE 1.3",
+      "back": "Independent assessors / non-front-line experts involved in assessments",
+      "tag": "Measure"
+    },
+    {
+      "front": "MEASURE 2.7 / 2.10 / 2.11",
+      "back": "Security and resilience / privacy / fairness and bias",
+      "tag": "Measure"
+    },
+    {
+      "front": "MEASURE 3.3",
+      "back": "User and community feedback, problem reporting and appeals",
+      "tag": "Measure"
+    },
+    {
+      "front": "MANAGE 1.1",
+      "back": "Go / no-go: does the system achieve its purpose and should it proceed?",
+      "tag": "Manage"
+    },
+    {
+      "front": "MANAGE 2.4",
+      "back": "Supersede, disengage or deactivate AI systems acting outside intended use",
+      "tag": "Manage"
+    },
+    {
+      "front": "Risk response options (MANAGE 1.3)",
+      "back": "Mitigate, transfer, avoid, accept",
+      "tag": "Manage"
+    },
+    {
+      "front": "NIST AI 600-1",
+      "back": "Generative AI Profile, July 2024, 12 GenAI risks",
+      "tag": "GenAI"
+    },
+    {
+      "front": "Confabulation",
+      "back": "GenAI risk of confidently stated false content",
+      "tag": "GenAI"
+    },
+    {
+      "front": "Human-AI configuration (GenAI risk)",
+      "back": "Over-reliance, automation bias, anthropomorphism and emotional entanglement",
+      "tag": "GenAI"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "AI system",
+      "definition": "An engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations or decisions influencing real or virtual environments."
+    },
+    {
+      "term": "AI actor",
+      "definition": "Anyone who plays an active role in the AI lifecycle, including organisations and individuals that deploy or operate AI."
+    },
+    {
+      "term": "Socio-technical",
+      "definition": "Describes how AI risk emerges from the interplay of technical aspects with societal dynamics and human behaviour."
+    },
+    {
+      "term": "TEVV",
+      "definition": "Test, evaluation, verification and validation."
+    },
+    {
+      "term": "Residual risk",
+      "definition": "Risk remaining after risk treatment."
+    },
+    {
+      "term": "Risk tolerance (AI RMF)",
+      "definition": "The organisation's or AI actor's readiness to bear risk in order to achieve its objectives."
+    },
+    {
+      "term": "Model card",
+      "definition": "Documentation describing a model's intended use, performance, limitations and ethical considerations."
+    },
+    {
+      "term": "Data drift",
+      "definition": "Change in the statistical properties of input data over time, degrading model performance."
+    },
+    {
+      "term": "Automation bias",
+      "definition": "Tendency of people to over-rely on automated outputs."
+    },
+    {
+      "term": "Confabulation",
+      "definition": "Generation of confident but false content by generative AI."
+    },
+    {
+      "term": "Prompt injection",
+      "definition": "Attack that inserts instructions into input to make a model ignore its intended instructions."
+    },
+    {
+      "term": "Data poisoning",
+      "definition": "Manipulation of training data to influence model behaviour."
+    },
+    {
+      "term": "Red teaming",
+      "definition": "Structured adversarial testing to find flaws and vulnerabilities."
+    },
+    {
+      "term": "Playbook",
+      "definition": "NIST's online companion offering suggested actions per AI RMF subcategory."
+    },
+    {
+      "term": "ISO/IEC 42001",
+      "definition": "International standard for AI management systems, certifiable."
+    }
+  ]
+}

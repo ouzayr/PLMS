@@ -263,22 +263,22 @@
      "q": "What kind of organisation is CIS?",
      "options": [
       "A US federal agency",
-      "A non-profit organisation",
       "An ISO technical committee",
-      "A private consultancy"
+      "A private consultancy",
+      "A non-profit organisation"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "CIS is a US-based non-profit founded in 2000."
     },
     {
      "q": "Which CIS resource tells you exactly how to configure Windows Server securely?",
      "options": [
+      "CIS Community Defense Model",
       "CIS Controls",
-      "CIS Benchmarks",
       "CIS RAM",
-      "CIS Community Defense Model"
+      "CIS Benchmarks"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Benchmarks are technology-specific configuration guides; the Controls describe what the programme must do."
     },
     {
@@ -296,22 +296,22 @@
      "q": "Which statement about CIS content is correct?",
      "options": [
       "It is public domain and can be resold freely",
-      "It is free to use internally, but commercial redistribution needs checking against CIS licence terms",
       "It requires ISO certification to use",
+      "It is free to use internally, but commercial redistribution needs checking against CIS licence terms",
       "It is only available to US organisations"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "The Controls use a Creative Commons NonCommercial-NoDerivatives licence; commercial embedding needs a licence."
     },
     {
      "q": "What does CIS-CAT do?",
      "options": [
+      "Shares threat intelligence",
       "Maps Controls to ISO",
       "Assesses system configurations against CIS Benchmarks",
-      "Shares threat intelligence",
       "Certifies organisations"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "CIS-CAT is the configuration assessment tool."
     }
    ]
@@ -651,32 +651,32 @@
     {
      "q": "What did v8.1 add?",
      "options": [
+      "Control 15 Service Provider Management",
       "Implementation Groups",
       "The Govern security function and the Documentation asset class",
-      "Control 15 Service Provider Management",
       "Safeguards replacing sub-controls"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "IGs came in v7.1; Safeguards and Control 15 in v8."
     },
     {
      "q": "Which design principle means Safeguards are chosen from data about real attacks?",
      "options": [
-      "Focus",
       "Feasible",
-      "Offense informs defense",
-      "Align"
+      "Align",
+      "Focus",
+      "Offense informs defense"
      ],
-     "answer": 2,
+     "answer": 3,
      "explain": "Offense informs defense."
     },
     {
      "q": "Which Controls have no IG1 Safeguards?",
      "options": [
-      "1, 2 and 3",
-      "13, 16 and 18",
       "5, 6 and 7",
-      "14, 15 and 17"
+      "13, 16 and 18",
+      "14, 15 and 17",
+      "1, 2 and 3"
      ],
      "answer": 1,
      "explain": "Network Monitoring and Defense, Application Software Security, and Penetration Testing need specialised skills."
@@ -684,23 +684,23 @@
     {
      "q": "\"Review monthly, or more frequently\" means...",
      "options": [
-      "Review exactly once a month",
-      "Monthly is the minimum frequency",
+      "Review yearly",
       "Review whenever convenient",
-      "Review yearly"
+      "Review exactly once a month",
+      "Monthly is the minimum frequency"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Frequencies in the Safeguards are minimums."
     },
     {
      "q": "Which is NOT a v8.1 asset class?",
      "options": [
-      "Devices",
+      "Users",
       "Documentation",
-      "Suppliers",
-      "Users"
+      "Devices",
+      "Suppliers"
      ],
-     "answer": 2,
+     "answer": 3,
      "explain": "Asset classes: Devices, Software, Data, Users, Network, Documentation."
     }
    ]
@@ -926,12 +926,12 @@
     {
      "q": "CIS describes IG1 as...",
      "options": [
+      "Regulatory compliance",
       "Advanced threat defence",
       "Essential cyber hygiene",
-      "Regulatory compliance",
       "Zero trust"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "IG1 is essential cyber hygiene, the minimum for every enterprise."
     },
     {
@@ -948,10 +948,10 @@
     {
      "q": "Which organisation most clearly fits IG3?",
      "options": [
-      "A 20-person accounting firm",
-      "A national payment switch operator with a specialist security team",
       "A small retail shop",
-      "A school with one IT technician"
+      "A national payment switch operator with a specialist security team",
+      "A school with one IT technician",
+      "A 20-person accounting firm"
      ],
      "answer": 1,
      "explain": "Sensitive regulated data, potential public harm and specialist staff point to IG3."
@@ -1296,12 +1296,12 @@
     {
      "q": "How often should unauthorised assets be addressed under Safeguard 1.2?",
      "options": [
+      "Monthly",
       "Daily",
       "Weekly",
-      "Monthly",
       "Annually"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "At least weekly: remove, deny remote connection or quarantine."
     },
     {
@@ -1320,8 +1320,8 @@
      "options": [
       "IG1",
       "IG2",
-      "IG3",
-      "It is not in the Controls"
+      "It is not in the Controls",
+      "IG3"
      ],
      "answer": 1,
      "explain": "2.5 Allowlist Authorized Software is IG2; scripts (2.7) is IG3."
@@ -1329,34 +1329,34 @@
     {
      "q": "Which Safeguard requires encryption on end-user devices holding sensitive data, and at what IG?",
      "options": [
+      "3.13, IG3",
       "3.6, IG1",
-      "3.9, IG2",
       "3.11, IG2",
-      "3.13, IG3"
+      "3.9, IG2"
      ],
-     "answer": 0,
+     "answer": 1,
      "explain": "3.6 Encrypt Data on End-User Devices is IG1."
     },
     {
      "q": "Data retention under 3.4 must include...",
      "options": [
-      "Only a maximum period",
-      "Only a minimum period",
+      "Indefinite retention",
       "Both minimum and maximum timelines",
-      "Indefinite retention"
+      "Only a minimum period",
+      "Only a maximum period"
      ],
-     "answer": 2,
+     "answer": 1,
      "explain": "Both minimum and maximum."
     },
     {
      "q": "A passive asset discovery tool (1.5) is part of...",
      "options": [
-      "IG1",
+      "None",
       "IG2",
-      "IG3",
-      "None"
+      "IG1",
+      "IG3"
      ],
-     "answer": 2,
+     "answer": 3,
      "explain": "1.5 is IG3; active discovery (1.3) is IG2."
     }
    ]
@@ -1689,11 +1689,11 @@
      "q": "What is the maximum inactivity before automatic session lock on a general-purpose OS (4.3)?",
      "options": [
       "5 minutes",
-      "10 minutes",
       "15 minutes",
+      "10 minutes",
       "30 minutes"
      ],
-     "answer": 2,
+     "answer": 1,
      "explain": "15 minutes for general-purpose OS; 2 minutes for mobile devices."
     },
     {
@@ -1711,11 +1711,11 @@
      "q": "Good practice password length for accounts without MFA under 5.2 is at least...",
      "options": [
       "8 characters",
-      "12 characters",
       "14 characters",
-      "20 characters"
+      "20 characters",
+      "12 characters"
      ],
-     "answer": 2,
+     "answer": 1,
      "explain": "14 characters without MFA; 8 characters with MFA."
     },
     {
@@ -1732,21 +1732,21 @@
     {
      "q": "How many failed login attempts may a laptop allow before lockout under 4.10?",
      "options": [
-      "5",
-      "10",
       "20",
+      "10",
+      "5",
       "No limit"
      ],
-     "answer": 2,
+     "answer": 0,
      "explain": "No more than 20 for laptops, no more than 10 for tablets and smartphones."
     },
     {
      "q": "Role-based access control (6.8) is in which IG?",
      "options": [
       "IG1",
-      "IG2",
+      "All IGs",
       "IG3",
-      "All IGs"
+      "IG2"
      ],
      "answer": 2,
      "explain": "6.8 is IG3."
@@ -2174,34 +2174,34 @@
     {
      "q": "How often should internal vulnerability scans run under 7.5?",
      "options": [
+      "Quarterly",
       "Weekly",
       "Monthly",
-      "Quarterly",
       "Annually"
      ],
-     "answer": 2,
+     "answer": 0,
      "explain": "Quarterly or more often, authenticated and unauthenticated. External scans (7.6) are monthly."
     },
     {
      "q": "What is the minimum audit log retention in 8.10?",
      "options": [
-      "30 days",
-      "60 days",
+      "1 year",
       "90 days",
-      "1 year"
+      "30 days",
+      "60 days"
      ],
-     "answer": 2,
+     "answer": 1,
      "explain": "90 days minimum."
     },
     {
      "q": "Standardised time synchronisation (8.4) requires at least...",
      "options": [
-      "One time source",
       "Two synchronised time sources",
       "A GPS clock on every server",
-      "Manual checks"
+      "Manual checks",
+      "One time source"
      ],
-     "answer": 1,
+     "answer": 0,
      "explain": "At least two synchronised time sources, where supported."
     },
     {
@@ -2218,23 +2218,23 @@
     {
      "q": "Which Safeguard is IG1?",
      "options": [
-      "8.11 Conduct Audit Log Reviews",
       "9.2 Use DNS Filtering Services",
+      "8.11 Conduct Audit Log Reviews",
       "10.7 Use Behavior-Based Anti-Malware Software",
       "7.6 External vulnerability scans"
      ],
-     "answer": 1,
+     "answer": 0,
      "explain": "9.2 is IG1. The others are IG2."
     },
     {
      "q": "How often should OS patching run under 7.3?",
      "options": [
       "Weekly",
-      "Monthly or more often",
       "Quarterly",
+      "Monthly or more often",
       "When convenient"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "Automated OS patch management monthly or more often."
     }
    ]
@@ -2552,9 +2552,9 @@
     {
      "q": "How often should backup recovery be tested under 11.5?",
      "options": [
-      "Monthly",
-      "Quarterly",
       "Annually",
+      "Quarterly",
+      "Monthly",
       "Every two years"
      ],
      "answer": 1,
@@ -2563,23 +2563,23 @@
     {
      "q": "An isolated instance of recovery data (11.4) is in which IG?",
      "options": [
-      "IG1",
+      "None",
       "IG2",
-      "IG3",
-      "None"
+      "IG1",
+      "IG3"
      ],
-     "answer": 0,
+     "answer": 2,
      "explain": "11.4 is IG1, reflecting how often attackers target backups."
     },
     {
      "q": "How often should automated backups run at minimum under 11.2?",
      "options": [
-      "Daily",
-      "Weekly",
       "Monthly",
-      "Quarterly"
+      "Quarterly",
+      "Daily",
+      "Weekly"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Weekly or more often, based on data sensitivity."
     },
     {
@@ -2983,12 +2983,12 @@
     {
      "q": "Which Control 15 Safeguard is IG1?",
      "options": [
-      "15.1 Inventory of service providers",
-      "15.2 Policy",
+      "15.5 Assess",
       "15.4 Contracts",
-      "15.5 Assess"
+      "15.1 Inventory of service providers",
+      "15.2 Policy"
      ],
-     "answer": 0,
+     "answer": 2,
      "explain": "Only 15.1 is IG1."
     },
     {
@@ -3005,10 +3005,10 @@
     {
      "q": "Threat modelling (16.14) is in which IG?",
      "options": [
-      "IG1",
       "IG2",
+      "All",
       "IG3",
-      "All"
+      "IG1"
      ],
      "answer": 2,
      "explain": "16.12-16.14 are IG3."
@@ -3017,9 +3017,9 @@
      "q": "Which type of report does 15.5 mention for assessing providers?",
      "options": [
       "SOC 2 and PCI Attestation of Compliance",
-      "ISO 9001 certificates",
       "Annual financial statements",
-      "Marketing brochures"
+      "Marketing brochures",
+      "ISO 9001 certificates"
      ],
      "answer": 0,
      "explain": "Standardised reports such as SOC 2 and PCI AoC, questionnaires or other rigorous processes."
@@ -3027,10 +3027,10 @@
     {
      "q": "Control 16 applies from which IG?",
      "options": [
-      "IG1",
+      "It is optional",
       "IG2",
       "IG3",
-      "It is optional"
+      "IG1"
      ],
      "answer": 1,
      "explain": "Control 16 has no IG1 Safeguards; it starts at IG2."
@@ -3235,45 +3235,45 @@
     {
      "q": "Safeguard 17.1 requires...",
      "options": [
-      "A full-time SOC",
       "One key person and at least one backup to manage incident handling",
-      "An external IR retainer",
-      "A cyber insurance policy"
+      "A full-time SOC",
+      "A cyber insurance policy",
+      "An external IR retainer"
      ],
-     "answer": 1,
+     "answer": 0,
      "explain": "Designate a key person and a backup; if a third party is used, an internal person oversees it."
     },
     {
      "q": "Which incident response Safeguards are IG1?",
      "options": [
-      "17.1, 17.2, 17.3",
-      "17.4, 17.5, 17.6",
+      "All nine",
       "17.7, 17.8, 17.9",
-      "All nine"
+      "17.4, 17.5, 17.6",
+      "17.1, 17.2, 17.3"
      ],
-     "answer": 0,
+     "answer": 3,
      "explain": "Personnel, contacts, and the workforce reporting process."
     },
     {
      "q": "How often should incident response exercises run under 17.7?",
      "options": [
-      "Monthly",
       "Quarterly",
       "At least annually",
+      "Monthly",
       "Every three years"
      ],
-     "answer": 2,
+     "answer": 1,
      "explain": "At least annually."
     },
     {
      "q": "External penetration tests (18.2) must happen at least...",
      "options": [
-      "Monthly",
-      "Quarterly",
       "Annually",
-      "Every two years"
+      "Every two years",
+      "Quarterly",
+      "Monthly"
      ],
-     "answer": 2,
+     "answer": 0,
      "explain": "No less than annually, by a qualified party."
     },
     {
@@ -3499,45 +3499,45 @@
     {
      "q": "Approximately how many CIS Benchmarks exist?",
      "options": [
+      "Exactly 153",
       "About 20",
       "More than 100",
-      "About 1,000",
-      "Exactly 153"
+      "About 1,000"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "More than 100 across 25+ vendor product families."
     },
     {
      "q": "Where are CIS Benchmarks developed through consensus?",
      "options": [
+      "NIST OLIR",
       "CIS WorkBench",
-      "CIS-CAT Pro Dashboard",
       "MITRE ATT&CK",
-      "NIST OLIR"
+      "CIS-CAT Pro Dashboard"
      ],
-     "answer": 0,
+     "answer": 1,
      "explain": "CIS WorkBench is the community platform."
     },
     {
      "q": "Which profile is the practical base that should not extensively impact performance or functionality?",
      "options": [
+      "Level 3",
       "Level 1",
-      "Level 2",
       "STIG",
-      "Level 3"
+      "Level 2"
      ],
-     "answer": 0,
+     "answer": 1,
      "explain": "Level 1."
     },
     {
      "q": "What replaced the former Level 3 profile?",
      "options": [
-      "Level 2",
-      "STIG profile",
       "NG profile",
-      "BitLocker profile"
+      "Level 2",
+      "BitLocker profile",
+      "STIG profile"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "The STIG profile."
     },
     {
@@ -3554,12 +3554,12 @@
     {
      "q": "Which Benchmark formats are free to everyone?",
      "options": [
-      "PDF",
-      "XCCDF",
+      "Build Kits",
       "Excel",
-      "Build Kits"
+      "PDF",
+      "XCCDF"
      ],
-     "answer": 0,
+     "answer": 2,
      "explain": "PDF is free; other formats are for SecureSuite members."
     }
    ]
@@ -3825,23 +3825,23 @@
     {
      "q": "Which section should you read to learn what might break?",
      "options": [
-      "Rationale",
-      "Impact",
       "References",
-      "Default Value"
+      "Rationale",
+      "Default Value",
+      "Impact"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Impact describes side effects."
     },
     {
      "q": "'Automated' replaced which older term?",
      "options": [
       "Level 1",
-      "Scored",
       "Recommended",
-      "Mandatory"
+      "Mandatory",
+      "Scored"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Scored became Automated; Not Scored became Manual."
     },
     {
@@ -4110,8 +4110,8 @@
      "options": [
       "Nothing, deploy immediately",
       "Test in a pilot group or non-production environment",
-      "Apply Level 2 everywhere",
-      "Disable logging"
+      "Disable logging",
+      "Apply Level 2 everywhere"
      ],
      "answer": 1,
      "explain": "Testing catches breaking changes described in the Impact section."
@@ -4119,9 +4119,9 @@
     {
      "q": "A deviation from a Benchmark should be...",
      "options": [
-      "Hidden from auditors",
-      "Documented with reason, compensating controls, owner and review date",
       "Applied only to Level 2",
+      "Documented with reason, compensating controls, owner and review date",
+      "Hidden from auditors",
       "Ignored"
      ],
      "answer": 1,
@@ -4130,10 +4130,10 @@
     {
      "q": "kube-bench is an open-source tool for checking...",
      "options": [
-      "Windows",
-      "The CIS Kubernetes Benchmark",
       "AWS IAM",
-      "Cisco IOS"
+      "The CIS Kubernetes Benchmark",
+      "Cisco IOS",
+      "Windows"
      ],
      "answer": 1,
      "explain": "kube-bench checks Kubernetes against the CIS Kubernetes Benchmark."
@@ -4141,23 +4141,23 @@
     {
      "q": "Which organisation publishes STIGs?",
      "options": [
-      "CIS",
-      "DISA",
       "NIST",
-      "ISO"
+      "ISO",
+      "CIS",
+      "DISA"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "The US Defense Information Systems Agency."
     },
     {
      "q": "Cloud Foundations Benchmarks mainly cover...",
      "options": [
-      "Application code quality",
       "The provider control plane: identity, logging, networking, storage",
-      "Physical data centre security",
-      "Employee training"
+      "Employee training",
+      "Application code quality",
+      "Physical data centre security"
      ],
-     "answer": 1,
+     "answer": 0,
      "explain": "They cover how you configure the cloud account."
     }
    ]
@@ -4305,12 +4305,12 @@
     {
      "q": "Which CIS-CAT edition is free?",
      "options": [
-      "CIS-CAT Lite",
       "CIS-CAT Pro Assessor",
-      "CIS-CAT Pro Dashboard",
-      "None"
+      "None",
+      "CIS-CAT Lite",
+      "CIS-CAT Pro Dashboard"
      ],
-     "answer": 0,
+     "answer": 2,
      "explain": "Lite is free for a selected set of technologies."
     },
     {
@@ -4327,34 +4327,34 @@
     {
      "q": "CIS Hardened Images are...",
      "options": [
-      "Container scanning tools",
-      "VM images pre-configured to CIS Benchmarks on cloud marketplaces",
+      "ISO certificates",
       "Training courses",
-      "ISO certificates"
+      "Container scanning tools",
+      "VM images pre-configured to CIS Benchmarks on cloud marketplaces"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Pre-hardened images on AWS, Azure, Google Cloud and Oracle Cloud."
     },
     {
      "q": "Who remains responsible for patching a system built from a CIS Hardened Image?",
      "options": [
-      "CIS",
-      "The cloud provider",
       "The customer",
+      "The cloud provider",
+      "CIS",
       "Nobody"
      ],
-     "answer": 2,
+     "answer": 0,
      "explain": "Hardened images give a secure start; ongoing patching and configuration are yours."
     },
     {
      "q": "What are CIS Build Kits?",
      "options": [
-      "Hardware appliances",
-      "GPOs and scripts that apply Benchmark settings",
       "Penetration testing tools",
-      "Risk assessment workbooks"
+      "Hardware appliances",
+      "Risk assessment workbooks",
+      "GPOs and scripts that apply Benchmark settings"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "Build Kits apply settings in bulk for SecureSuite members."
     }
    ]
@@ -4582,45 +4582,45 @@
     {
      "q": "Which four questions does CSAT ask per Safeguard?",
      "options": [
+      "Identify, protect, detect, respond",
       "Who, what, when, where",
       "Policy defined, implemented, automated or technically enforced, reported to the business",
-      "Likelihood, impact, cost, benefit",
-      "Identify, protect, detect, respond"
+      "Likelihood, impact, cost, benefit"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "The four dimensions show where the gap is."
     },
     {
      "q": "The CIS Controls Assessment Specification provides...",
      "options": [
       "Legal contracts",
+      "Threat intelligence",
       "Dependencies, inputs, operations, measures and metrics per Safeguard",
-      "Hardened images",
-      "Threat intelligence"
+      "Hardened images"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "It turns each Safeguard into a measurable test."
     },
     {
      "q": "CIS RAM is based on which standard?",
      "options": [
-      "ISO 31000",
-      "Duty of Care Risk Analysis (DoCRA)",
       "FAIR",
-      "NIST SP 800-30"
+      "ISO 31000",
+      "NIST SP 800-30",
+      "Duty of Care Risk Analysis (DoCRA)"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "CIS RAM builds on DoCRA."
     },
     {
      "q": "Where can you browse official CIS mappings to other frameworks?",
      "options": [
-      "CIS Controls Navigator",
       "CIS-CAT Lite",
       "CIS WorkBench only",
-      "MITRE ATT&CK"
+      "MITRE ATT&CK",
+      "CIS Controls Navigator"
      ],
-     "answer": 0,
+     "answer": 3,
      "explain": "The Controls Navigator shows mappings."
     },
     {
@@ -4628,8 +4628,8 @@
      "options": [
       "5.9 Inventory",
       "8.9 Configuration management",
-      "8.13 Information backup",
-      "6.3 Awareness"
+      "6.3 Awareness",
+      "8.13 Information backup"
      ],
      "answer": 1,
      "explain": "Secure configuration process corresponds to configuration management."
@@ -4764,45 +4764,45 @@
     {
      "q": "Which should come first in a CIS roadmap?",
      "options": [
-      "Penetration testing",
       "Asset and software inventories",
-      "DLP",
-      "Threat modelling"
+      "Threat modelling",
+      "Penetration testing",
+      "DLP"
      ],
-     "answer": 1,
+     "answer": 0,
      "explain": "Inventories underpin almost every other Safeguard."
     },
     {
      "q": "A good board headline for a CIS programme is...",
      "options": [
-      "The number of firewall rules",
-      "IG1 and IG2 implementation percentage and trend",
       "The SIEM vendor's name",
-      "The count of Benchmark recommendations"
+      "The count of Benchmark recommendations",
+      "IG1 and IG2 implementation percentage and trend",
+      "The number of firewall rules"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "IG progress is understandable and trackable."
     },
     {
      "q": "How do CIS and NIST CSF 2.0 typically work together?",
      "options": [
       "CIS replaces CSF",
-      "CSF for governance and reporting, CIS Safeguards as implementation checklist",
+      "CSF is only for the US",
       "They conflict and cannot be combined",
-      "CSF is only for the US"
+      "CSF for governance and reporting, CIS Safeguards as implementation checklist"
      ],
-     "answer": 1,
+     "answer": 3,
      "explain": "They complement each other via official mappings."
     },
     {
      "q": "Which is a common pitfall?",
      "options": [
+      "Assigning owners",
       "Documenting deviations",
       "Chasing CIS-CAT scores while ignoring Manual recommendations",
-      "Testing Level 2 in a pilot",
-      "Assigning owners"
+      "Testing Level 2 in a pilot"
      ],
-     "answer": 1,
+     "answer": 2,
      "explain": "Manual items still need evidence."
     }
    ]

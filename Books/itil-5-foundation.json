@@ -1,0 +1,2681 @@
+{
+  "schema": "fwlib.book/1",
+  "id": "itil-5-foundation",
+  "title": "ITIL (Version 5) Foundation",
+  "subtitle": "Digital product and service management",
+  "source": "Structured on the official ITIL Foundation (Version 5) syllabus, PeopleCert, February 2026. Definitions paraphrased.",
+  "version": "5",
+  "color": "#1C6E5E",
+  "estimatedMinutes": 210,
+  "description": "Every syllabus category for the ITIL Foundation (Version 5) exam: terms, relationships, four dimensions, lifecycle, Value System, 34 practices, continual improvement, value streams, AI, DevOps and PRINCE2.",
+  "chapters": [
+    {
+      "id": "about",
+      "title": "About ITIL (Version 5) and the exam",
+      "summary": "What ITIL is, what changed from ITIL 4, and how the Foundation exam works.",
+      "sections": [
+        {
+          "id": "what",
+          "title": "What ITIL is",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "ITIL is the most widely used body of guidance for managing IT-enabled products and services. It started in the UK government in the late 1980s, moved to AXELOS in 2013 and is owned by **PeopleCert** since 2021. **ITIL (Version 5)** was launched in early 2026; the Foundation exam went live on **12 February 2026**."
+            },
+            {
+              "type": "p",
+              "text": "Version 5 reframes ITIL from IT service management to **digital product and service management (DPSM)**: managing products and services together, across their whole lifecycle, with value co-created with consumers."
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "About this book",
+              "text": "This book follows the official ITIL Foundation (Version 5) syllabus (February 2026). Definitions are paraphrased, not quoted from the copyrighted official book. The exam uses the book's exact wording, so check key definitions against the official ITIL Foundation (Version 5) publication before your exam."
+            }
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "What changed from ITIL 4",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Area",
+                "ITIL 4",
+                "ITIL (Version 5)"
+              ],
+              "rows": [
+                [
+                  "Scope",
+                  "Service management",
+                  "Digital product and service management"
+                ],
+                [
+                  "Core model",
+                  "Service Value System with 6 value-chain activities (plan, improve, engage, design and transition, obtain/build, deliver and support)",
+                  "ITIL Value System, with the ITIL Product and Service Lifecycle: 8 activities (discover, design, acquire, build, transition, operate, deliver, support)"
+                ],
+                [
+                  "Four dimensions",
+                  "Of service management",
+                  "Of product and service management; AI included in the dimensions"
+                ],
+                [
+                  "Guiding principles",
+                  "7",
+                  "Same 7"
+                ],
+                [
+                  "Practices",
+                  "34",
+                  "34, regrouped into two groups: general, and product and service management"
+                ],
+                [
+                  "Experience",
+                  "Limited",
+                  "Experience, UX, CX, experience level agreements, human-centred design"
+                ],
+                [
+                  "AI",
+                  "Not covered",
+                  "AI, GenAI, agentic AI, AI governance, ITIL AI Capability Model (6C)"
+                ],
+                [
+                  "Other frameworks",
+                  "Implicit",
+                  "Explicit links to DevOps and PRINCE2"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Don't mix versions",
+              "text": "If you studied ITIL 4, the biggest trap is the value chain. In Version 5 the syllabus ties value-chain success metrics to the eight lifecycle activities. Don't answer Version 5 questions with the six ITIL 4 value-chain activities."
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "title": "The Foundation exam",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Item",
+                "Detail"
+              ],
+              "rows": [
+                [
+                  "Format",
+                  "40 multiple-choice questions, 1 mark each, no negative marking"
+                ],
+                [
+                  "Duration",
+                  "60 minutes (75 if not in your native or working language)"
+                ],
+                [
+                  "Pass mark",
+                  "26 of 40 (65%)"
+                ],
+                [
+                  "Book allowed",
+                  "No, closed book"
+                ],
+                [
+                  "Levels",
+                  "Bloom's level 1 (recall) and 2 (understanding)"
+                ],
+                [
+                  "Question styles",
+                  "Standard; Missing word(s); List (pick the 2 correct statements of 4); occasionally Negative (\"Which is NOT...\")"
+                ]
+              ]
+            },
+            {
+              "type": "h",
+              "text": "Syllabus weighting"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Weight",
+                "~Questions"
+              ],
+              "rows": [
+                [
+                  "1. Key ITIL terms and definitions",
+                  "30%",
+                  "12"
+                ],
+                [
+                  "2. The ITIL Four Dimensions of Product and Service Management",
+                  "10%",
+                  "4"
+                ],
+                [
+                  "3. The ITIL Product and Service Lifecycle",
+                  "10%",
+                  "4"
+                ],
+                [
+                  "4. The ITIL Value System",
+                  "40%",
+                  "16"
+                ],
+                [
+                  "5. Value stream identification, mapping and management",
+                  "5%",
+                  "2"
+                ],
+                [
+                  "6. ITIL and AI",
+                  "2.5%",
+                  "1"
+                ],
+                [
+                  "7. ITIL and other frameworks",
+                  "2.5%",
+                  "1"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "Where to spend time",
+              "text": "70% of marks come from terms and the Value System (guiding principles, governance, value chain terms, practices, continual improvement). Master those first."
+            }
+          ]
+        },
+        {
+          "id": "benefits",
+          "title": "Who benefits from ITIL",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Audience",
+                "Benefit"
+              ],
+              "rows": [
+                [
+                  "Enterprises",
+                  "Align digital products and services with business outcomes, reduce cost of failure, common language across teams"
+                ],
+                [
+                  "Managed service providers",
+                  "Consistent, measurable service quality and credible SLAs and XLAs with customers"
+                ],
+                [
+                  "Digital product vendors",
+                  "Better understanding of how customers consume and operate their products, which improves adoption and retention"
+                ],
+                [
+                  "Professionals",
+                  "Recognised vocabulary and credentials, portable across employers and sectors"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many questions are in the ITIL Foundation (Version 5) exam?",
+          "options": [
+            "30",
+            "40",
+            "50",
+            "60"
+          ],
+          "answer": 1,
+          "explain": "40 questions in 60 minutes."
+        },
+        {
+          "q": "What is the pass mark?",
+          "options": [
+            "50%",
+            "60%",
+            "65% (26/40)",
+            "70%"
+          ],
+          "answer": 2,
+          "explain": "26 correct answers out of 40."
+        },
+        {
+          "q": "Which category carries the most weight?",
+          "options": [
+            "Key terms and definitions",
+            "The ITIL Value System",
+            "The Four Dimensions",
+            "ITIL and AI"
+          ],
+          "answer": 1,
+          "explain": "The ITIL Value System is 40%."
+        },
+        {
+          "q": "Which describes a 'List' question?",
+          "options": [
+            "Choose one of four answers",
+            "Choose the two correct statements from four",
+            "Fill in a blank",
+            "Order steps"
+          ],
+          "answer": 1,
+          "explain": "List questions have four statements, two correct."
+        },
+        {
+          "q": "Which lifecycle list belongs to ITIL (Version 5)?",
+          "options": [
+            "Plan, improve, engage, design and transition, obtain/build, deliver and support",
+            "Discover, design, acquire, build, transition, operate, deliver, support",
+            "Strategy, design, transition, operation, CSI",
+            "Plan, do, check, act"
+          ],
+          "answer": 1,
+          "explain": "Eight lifecycle activities. The first list is ITIL 4; the third is ITIL v3."
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "title": "Key terms: products, services and value",
+      "summary": "The vocabulary behind 30% of the exam: products, services, goods, value, outcomes, costs, risks, utility, warranty.",
+      "sections": [
+        {
+          "id": "dpsm",
+          "title": "Digital product and service management",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Digital product and service management (DPSM)",
+              "text": "The management of products and services that are created, delivered or enabled by digital technology, across their lifecycle, so that value is co-created with consumers."
+            },
+            {
+              "type": "def",
+              "term": "Product",
+              "text": "A configuration of an organisation's resources designed to offer value to a consumer. A product is what the provider has; services are how consumers get value from it."
+            },
+            {
+              "type": "def",
+              "term": "Service",
+              "text": "A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks."
+            },
+            {
+              "type": "def",
+              "term": "Digital product",
+              "text": "A product whose value is created or delivered mainly through digital technology (software, data, platforms)."
+            },
+            {
+              "type": "def",
+              "term": "Digital service",
+              "text": "A service delivered and consumed through digital channels and technology."
+            },
+            {
+              "type": "def",
+              "term": "Good",
+              "text": "A tangible or intangible resource whose ownership is transferred to the consumer, who then takes responsibility for its use (e.g. a laptop, a licence)."
+            },
+            {
+              "type": "def",
+              "term": "Continual improvement",
+              "text": "A recurring organisational activity at all levels to ensure performance continually meets stakeholders' expectations."
+            },
+            {
+              "type": "def",
+              "term": "ITIL Product and Service Lifecycle",
+              "text": "The model of eight activities (discover, design, acquire, build, transition, operate, deliver, support) that organisations combine to manage products and services from idea to retirement."
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Product vs service",
+              "text": "A bank's mobile app platform is a **product** (a configuration of software, infrastructure, people and data). \"Pay a merchant by QR code\" is a **service** enabled by it: the customer gets the outcome without managing the costs and risks of running payment infrastructure."
+            }
+          ]
+        },
+        {
+          "id": "value",
+          "title": "Value, outcomes, outputs, costs and risks",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Value",
+              "text": "The perceived benefits, usefulness and importance of something. Value is subjective and depends on the stakeholder."
+            },
+            {
+              "type": "def",
+              "term": "Value co-creation",
+              "text": "Value is created jointly by the provider and consumer through their interactions, not delivered one-way."
+            },
+            {
+              "type": "def",
+              "term": "Output",
+              "text": "A tangible or intangible deliverable of an activity."
+            },
+            {
+              "type": "def",
+              "term": "Outcome",
+              "text": "A result for a stakeholder enabled by one or more outputs."
+            },
+            {
+              "type": "def",
+              "term": "Cost",
+              "text": "The amount of money spent on a specific activity or resource. Services can remove costs from the consumer (e.g. no servers to buy) or impose them (e.g. licence fees, training)."
+            },
+            {
+              "type": "def",
+              "term": "Risk",
+              "text": "A possible event that could cause harm or loss, or make it more difficult to achieve objectives; also defined as uncertainty of outcome. Services remove some risks from consumers and may introduce others."
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Output vs outcome",
+              "text": "Output = what is produced (a report, a configured laptop). Outcome = the result the stakeholder cares about (a better decision, an employee productive on day one). Exam questions test this distinction often."
+            }
+          ]
+        },
+        {
+          "id": "utility",
+          "title": "Utility, warranty, experience and sustainability",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Term",
+                "Meaning",
+                "Question it answers"
+              ],
+              "rows": [
+                [
+                  "Utility",
+                  "The functionality offered by a product or service to meet a particular need",
+                  "What does it do? (fit for purpose)"
+                ],
+                [
+                  "Warranty",
+                  "Assurance that a product or service will meet agreed requirements, such as availability, capacity, security, continuity",
+                  "How well does it do it? (fit for use)"
+                ],
+                [
+                  "User experience (UX)",
+                  "How the user perceives and responds to using the product or service",
+                  "How does it feel to use?"
+                ],
+                [
+                  "Sustainability",
+                  "Meeting present needs without compromising the future: environmental, social and economic",
+                  "Can it be provided responsibly over time?"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "All four contribute to value co-creation: a service with great utility but poor warranty (often down) or poor experience will not be perceived as valuable."
+            }
+          ]
+        },
+        {
+          "id": "offering",
+          "title": "Service offerings and interactions",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Service offering",
+              "text": "A formal description of one or more services designed to address the needs of a target consumer group. It may include goods, access to resources and service actions."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Component",
+                "Meaning",
+                "Example (cloud email service)"
+              ],
+              "rows": [
+                [
+                  "Goods",
+                  "Ownership is transferred to the consumer",
+                  "A hardware security key shipped to each user"
+                ],
+                [
+                  "Access to resources",
+                  "Ownership is not transferred; access is granted under agreed terms",
+                  "Access to mailboxes and storage"
+                ],
+                [
+                  "Service actions",
+                  "Actions performed by the provider to address a consumer need",
+                  "Mailbox migration, user support"
+                ]
+              ]
+            },
+            {
+              "type": "def",
+              "term": "Service interaction",
+              "text": "Any interaction between provider and consumer during which value is co-created, such as onboarding, requesting, using, getting support or giving feedback."
+            }
+          ]
+        },
+        {
+          "id": "experience",
+          "title": "Experience, strategy and transformation terms",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Term",
+                "Short meaning"
+              ],
+              "rows": [
+                [
+                  "Experience",
+                  "A person's perception of and response to their interactions with an organisation, product or service"
+                ],
+                [
+                  "Digital experience",
+                  "Experience formed through digital channels and technology"
+                ],
+                [
+                  "Trust",
+                  "Confidence that a party will act as expected; built over repeated interactions"
+                ],
+                [
+                  "User experience (UX)",
+                  "Experience of the person using the product or service"
+                ],
+                [
+                  "Customer experience (CX)",
+                  "Experience of the customer across all interactions with the provider, including buying and billing"
+                ],
+                [
+                  "Experience level agreement (XLA)",
+                  "An agreement defining targets based on experience (e.g. user satisfaction, productivity), complementing SLAs based on technical metrics"
+                ],
+                [
+                  "Human-centred design",
+                  "Designing products and services around the needs, abilities and behaviour of the people who use them"
+                ],
+                [
+                  "Strategy",
+                  "A plan of how to achieve long-term goals"
+                ],
+                [
+                  "Business strategy / digital strategy",
+                  "How the organisation competes and creates value / how it uses digital technology to do so"
+                ],
+                [
+                  "Mission, vision, purpose",
+                  "What we do now / where we want to be / why we exist"
+                ],
+                [
+                  "VUCA",
+                  "Volatility, uncertainty, complexity, ambiguity: the conditions organisations operate in"
+                ],
+                [
+                  "Leadership",
+                  "Guiding people towards goals and shaping culture"
+                ],
+                [
+                  "Change",
+                  "Addition, modification or removal of anything that could affect products or services"
+                ],
+                [
+                  "Transformation",
+                  "A significant, organisation-wide change to how value is created"
+                ],
+                [
+                  "Business as usual (BAU)",
+                  "Normal day-to-day operations, as opposed to change or transformation work"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which term means 'functionality offered by a product or service to meet a particular need'?",
+          "options": [
+            "Warranty",
+            "Utility",
+            "Output",
+            "Experience"
+          ],
+          "answer": 1,
+          "explain": "Utility = fit for purpose. Warranty = fit for use."
+        },
+        {
+          "q": "An employee being productive on day one is a(n)...",
+          "options": [
+            "Output",
+            "Outcome",
+            "Good",
+            "Cost"
+          ],
+          "answer": 1,
+          "explain": "It is a result for a stakeholder, enabled by outputs such as a configured laptop."
+        },
+        {
+          "q": "Which service offering component transfers ownership to the consumer?",
+          "options": [
+            "Access to resources",
+            "Service actions",
+            "Goods",
+            "Service interaction"
+          ],
+          "answer": 2,
+          "explain": "Goods transfer ownership."
+        },
+        {
+          "q": "What is an XLA?",
+          "options": [
+            "An SLA for suppliers",
+            "An agreement with targets based on experience",
+            "A legal contract clause",
+            "A capacity plan"
+          ],
+          "answer": 1,
+          "explain": "Experience level agreement."
+        },
+        {
+          "q": "Which statement about value is correct?",
+          "options": [
+            "Value is objective and fixed",
+            "Value is created by the provider and delivered to the consumer",
+            "Value is perceived and co-created by provider and consumer",
+            "Value equals price"
+          ],
+          "answer": 2,
+          "explain": "Value is subjective and co-created."
+        },
+        {
+          "q": "VUCA stands for...",
+          "options": [
+            "Value, utility, cost, availability",
+            "Volatility, uncertainty, complexity, ambiguity",
+            "Vision, users, customers, agreements",
+            "Verification, usability, capacity, audit"
+          ],
+          "answer": 1,
+          "explain": "It describes the operating environment."
+        }
+      ]
+    },
+    {
+      "id": "relationships",
+      "title": "Service relationships",
+      "summary": "Providers, consumers, vendors, roles, relationship types, journeys, quality and SLAs.",
+      "sections": [
+        {
+          "id": "parties",
+          "title": "Organisations and parties",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Organisation",
+              "text": "A person or group of people that has its own functions with responsibilities, authorities and relationships to achieve its objectives."
+            },
+            {
+              "type": "def",
+              "term": "Service provider",
+              "text": "The role an organisation plays when it provides services to consumers."
+            },
+            {
+              "type": "def",
+              "term": "Service consumer",
+              "text": "The role an organisation plays when it consumes services."
+            },
+            {
+              "type": "def",
+              "term": "Digital product vendor",
+              "text": "An organisation that creates and sells digital products (e.g. software, platforms) that others use to provide or consume services, without necessarily providing the service itself."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Difference",
+                "Key point"
+              ],
+              "rows": [
+                [
+                  "Provider vs consumer",
+                  "Roles, not organisation types. The same organisation is a provider to its customers and a consumer of its suppliers."
+                ],
+                [
+                  "Provider vs product vendor",
+                  "A provider operates services for consumers; a vendor supplies products that someone else may operate."
+                ],
+                [
+                  "Consumer vs product vendor",
+                  "A consumer uses services to achieve outcomes; a vendor sells products and may never see how they are used."
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A telecom operator buys a billing platform from a software vendor (digital product vendor), runs it in its own data centre, and provides mobile services to customers (service provider). It is also a service consumer of its cloud and energy suppliers."
+            }
+          ]
+        },
+        {
+          "id": "roles",
+          "title": "Sponsor, customer, user",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Role",
+                "Definition",
+                "Example in a hospital buying a scheduling service"
+              ],
+              "rows": [
+                [
+                  "Sponsor",
+                  "Authorises budget for service consumption",
+                  "The hospital CFO"
+                ],
+                [
+                  "Customer",
+                  "Defines requirements for the service and takes responsibility for outcomes of service consumption",
+                  "Head of outpatient operations"
+                ],
+                [
+                  "User",
+                  "Uses the service",
+                  "Receptionists and doctors"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Tip",
+              "text": "One person can hold all three roles (e.g. an individual buying a streaming service). Questions often describe a person and ask which role they play."
+            }
+          ]
+        },
+        {
+          "id": "types",
+          "title": "Basic, cooperative and collaborative relationships",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Type",
+                "Characteristics",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Basic",
+                  "Standard products and services; provider defines them; limited interaction and customisation",
+                  "A public cloud storage subscription bought online"
+                ],
+                [
+                  "Cooperative",
+                  "Services tailored to some degree; more interaction, agreed service levels, shared targets",
+                  "A managed desktop service for a mid-size company with agreed SLAs"
+                ],
+                [
+                  "Collaborative",
+                  "Strategic partnership; shared goals and risks; joint design and improvement",
+                  "A bank and a technology partner co-designing a digital banking platform"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "journey",
+          "title": "Service journey, quality and SLAs",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Service journey",
+              "text": "The end-to-end sequence of interactions a consumer has with a provider and its products and services, from first contact through use to the end of the relationship."
+            },
+            {
+              "type": "def",
+              "term": "Service quality",
+              "text": "The totality of a service's characteristics relevant to its ability to satisfy stated and implied needs."
+            },
+            {
+              "type": "def",
+              "term": "Service level",
+              "text": "One or more metrics that define expected or achieved service quality."
+            },
+            {
+              "type": "def",
+              "term": "Service level agreement (SLA)",
+              "text": "A documented agreement between a service provider and a customer that identifies both the services required and the expected level of service."
+            },
+            {
+              "type": "h",
+              "text": "Feedback and value co-creation"
+            },
+            {
+              "type": "p",
+              "text": "Feedback from consumers at every interaction tells the provider whether value is being realised. It is the bridge between service interactions and improvement: without it, providers optimise what they measure, not what consumers value."
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "The watermelon effect",
+              "text": "SLAs can be green while users are unhappy (green outside, red inside). This is why ITIL (Version 5) pairs SLAs with experience measures such as XLAs and feedback."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Who authorises budget for service consumption?",
+          "options": [
+            "User",
+            "Customer",
+            "Sponsor",
+            "Provider"
+          ],
+          "answer": 2,
+          "explain": "Sponsor."
+        },
+        {
+          "q": "Who defines requirements and takes responsibility for outcomes of service consumption?",
+          "options": [
+            "User",
+            "Customer",
+            "Sponsor",
+            "Supplier"
+          ],
+          "answer": 1,
+          "explain": "Customer."
+        },
+        {
+          "q": "A strategic partnership with shared goals and joint design is a...",
+          "options": [
+            "Basic relationship",
+            "Cooperative relationship",
+            "Collaborative relationship",
+            "Transactional relationship"
+          ],
+          "answer": 2,
+          "explain": "Collaborative."
+        },
+        {
+          "q": "Which statement is correct?",
+          "options": [
+            "Provider and consumer are fixed organisation types",
+            "An organisation can be both a provider and a consumer",
+            "A digital product vendor always operates the service",
+            "Users always pay for services"
+          ],
+          "answer": 1,
+          "explain": "Provider and consumer are roles."
+        },
+        {
+          "q": "An SLA identifies...",
+          "options": [
+            "Only penalties",
+            "The services required and the expected level of service",
+            "The product roadmap",
+            "The organisation's mission"
+          ],
+          "answer": 1,
+          "explain": "That's the core of the SLA definition."
+        }
+      ]
+    },
+    {
+      "id": "dimensions",
+      "title": "The Four Dimensions",
+      "summary": "Organisations and people, information and technology, partners and suppliers, value streams and processes, plus PESTLE.",
+      "sections": [
+        {
+          "id": "four",
+          "title": "The four dimensions",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "To manage products and services holistically, ITIL requires every product, service, practice and value stream to be considered from four dimensions. Neglect one and the others fail."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Dimension",
+                "Covers",
+                "Typical questions"
+              ],
+              "rows": [
+                [
+                  "Organisations and people",
+                  "Structures, roles, culture, competencies, leadership, and how people work with AI",
+                  "Who is accountable? Do people have the skills? Does the culture support collaboration?"
+                ],
+                [
+                  "Information and technology",
+                  "Information, knowledge, data, and the technologies (including AI) used to create and manage products and services",
+                  "What data is needed? Which platforms and tools? How is AI used and governed?"
+                ],
+                [
+                  "Partners and suppliers",
+                  "Relationships with other organisations involved in design, delivery and support",
+                  "What do we source? What are the contracts, dependencies and risks?"
+                ],
+                [
+                  "Value streams and processes",
+                  "How parts of the organisation work together to create value; workflows and activities",
+                  "What steps turn demand into value? Where are the delays?"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "AI in the dimensions",
+              "text": "In Version 5, AI appears in the dimensions: organisations and people covers how people and AI work together; information and technology introduces the ITIL AI Capability Model."
+            }
+          ]
+        },
+        {
+          "id": "holistic",
+          "title": "Why a holistic approach matters",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The dimensions are interdependent. Buying a new ITSM tool (information and technology) fails if roles aren't clear (organisations and people), the vendor contract lacks support terms (partners and suppliers), or the incident workflow isn't redesigned (value streams and processes)."
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A company rolls out an AI service-desk assistant. Technology works, but agents don't trust it and bypass it (people), the vendor changes the model without notice (suppliers), and the escalation path to humans is unclear (processes). Value isn't realised until all four are addressed."
+            }
+          ]
+        },
+        {
+          "id": "pestle",
+          "title": "External factors: PESTLE",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "External factors constrain and influence all four dimensions:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Factor",
+                "Example influence"
+              ],
+              "rows": [
+                [
+                  "Political",
+                  "Government digital policies, data localisation priorities"
+                ],
+                [
+                  "Economic",
+                  "Budgets, currency fluctuations, cost of cloud"
+                ],
+                [
+                  "Social",
+                  "User expectations for mobile-first, 24/7 service; workforce demographics"
+                ],
+                [
+                  "Technological",
+                  "AI, cloud, automation, new security threats"
+                ],
+                [
+                  "Legal",
+                  "Data protection law, AI regulation, sector rules"
+                ],
+                [
+                  "Environmental",
+                  "Energy use of data centres, sustainability reporting"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is NOT one of the four dimensions?",
+          "options": [
+            "Organisations and people",
+            "Information and technology",
+            "Governance and compliance",
+            "Partners and suppliers"
+          ],
+          "answer": 2,
+          "explain": "The fourth is value streams and processes."
+        },
+        {
+          "q": "A company's workflows and handoffs belong to which dimension?",
+          "options": [
+            "Value streams and processes",
+            "Organisations and people",
+            "Partners and suppliers",
+            "Information and technology"
+          ],
+          "answer": 0,
+          "explain": "Value streams and processes."
+        },
+        {
+          "q": "What does the 'L' in PESTLE stand for?",
+          "options": [
+            "Leadership",
+            "Legal",
+            "Lifecycle",
+            "Logistics"
+          ],
+          "answer": 1,
+          "explain": "Political, Economic, Social, Technological, Legal, Environmental."
+        },
+        {
+          "q": "In which dimension is the ITIL AI Capability Model introduced?",
+          "options": [
+            "Organisations and people",
+            "Information and technology",
+            "Partners and suppliers",
+            "Value streams and processes"
+          ],
+          "answer": 1,
+          "explain": "Information and technology."
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "The Product and Service Lifecycle",
+      "summary": "The eight activities, their purposes, and the key terms defined within them.",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Eight activities, not a sequence",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The ITIL Product and Service Lifecycle has eight activities: **discover, design, acquire, build, transition, operate, deliver, support**. They are **not sequential or linear**. Organisations combine them iteratively into value streams; a small change may touch only transition and operate, while a new product may cycle through all eight many times."
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Memory aid",
+              "text": "**D**iscover, **D**esign, **A**cquire, **B**uild, **T**ransition, **O**perate, **D**eliver, **S**upport: \"Don't Delay A Better Transition; Operate, Deliver, Support.\""
+            }
+          ]
+        },
+        {
+          "id": "purposes",
+          "title": "Purpose of each activity",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Activity",
+                "Purpose (paraphrased)"
+              ],
+              "rows": [
+                [
+                  "Discover",
+                  "Understand stakeholder needs, opportunities, demand and context; generate and evaluate ideas for new or changed products and services"
+                ],
+                [
+                  "Design",
+                  "Turn needs into product and service designs, including specifications, prototypes and experience design"
+                ],
+                [
+                  "Acquire",
+                  "Obtain the components, resources, products and services needed, from internal teams or partners and suppliers"
+                ],
+                [
+                  "Build",
+                  "Create, configure, integrate and test the components of products and services"
+                ],
+                [
+                  "Transition",
+                  "Move new or changed products and services into live use safely: release, deploy and manage change"
+                ],
+                [
+                  "Operate",
+                  "Keep technology and components running reliably and efficiently; monitor and manage events and incidents"
+                ],
+                [
+                  "Deliver",
+                  "Provide services to users day to day, fulfil service requests, and enable value realisation"
+                ],
+                [
+                  "Support",
+                  "Help users and restore normal service; manage problems, errors and disasters"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "What to know",
+              "text": "The exam asks you to recognise each activity's purpose (Bloom's level 1) and to understand that activities are iterative. Key success metrics for each activity are also in scope; think of them as \"is this activity creating value?\", e.g. time to discover validated ideas, build quality, change success rate, availability, request fulfilment time, time to restore."
+            }
+          ]
+        },
+        {
+          "id": "design-build",
+          "title": "Terms: design, build and transition",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Product specification",
+              "text": "A description of what a product must do and how it must perform, used to guide its build."
+            },
+            {
+              "type": "def",
+              "term": "Product prototype",
+              "text": "An early, simplified version of a product used to test ideas and gather feedback before full build."
+            },
+            {
+              "type": "def",
+              "term": "Test",
+              "text": "An activity that checks whether a product or service meets requirements and expectations."
+            },
+            {
+              "type": "def",
+              "term": "Release",
+              "text": "A version of a product, service or component, or a collection of them, made available for use."
+            },
+            {
+              "type": "def",
+              "term": "Continuous integration (CI)",
+              "text": "Frequently merging code changes into a shared repository, with automated build and test on each change."
+            },
+            {
+              "type": "def",
+              "term": "Continuous delivery",
+              "text": "Keeping software always in a releasable state so it can be deployed to production at any time, with deployment usually triggered by a decision."
+            },
+            {
+              "type": "def",
+              "term": "Continuous deployment",
+              "text": "Automatically deploying every change that passes the pipeline to production, without manual approval."
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Delivery vs deployment",
+              "text": "Continuous delivery = ready to deploy at any time (human decides). Continuous deployment = deployed automatically."
+            }
+          ]
+        },
+        {
+          "id": "operate-support",
+          "title": "Terms: operate, deliver and support",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Event",
+              "text": "Any change of state that has significance for the management of a product, service or component."
+            },
+            {
+              "type": "def",
+              "term": "Incident",
+              "text": "An unplanned interruption to a service or a reduction in its quality."
+            },
+            {
+              "type": "def",
+              "term": "Reliability",
+              "text": "The ability of a product, service or component to perform its intended function for a specified time or number of cycles."
+            },
+            {
+              "type": "def",
+              "term": "Site reliability engineering (SRE)",
+              "text": "An approach that applies software engineering to operations, using service level objectives and error budgets to balance reliability and change."
+            },
+            {
+              "type": "def",
+              "term": "Observability",
+              "text": "The ability to understand the internal state of a system from its external outputs, such as logs, metrics and traces."
+            },
+            {
+              "type": "def",
+              "term": "Service request",
+              "text": "A request from a user or an authorised representative that initiates a service action agreed as a normal part of service delivery (e.g. password reset, access request)."
+            },
+            {
+              "type": "def",
+              "term": "Problem",
+              "text": "A cause, or potential cause, of one or more incidents."
+            },
+            {
+              "type": "def",
+              "term": "Error",
+              "text": "A flaw or vulnerability that may cause incidents."
+            },
+            {
+              "type": "def",
+              "term": "Known error",
+              "text": "A problem that has been analysed but has not been resolved."
+            },
+            {
+              "type": "def",
+              "term": "Disaster",
+              "text": "A sudden, unplanned event that causes great damage or serious loss, typically triggering continuity plans."
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Problem, error, known error",
+              "text": "Users report slow payments (incidents). The team opens a problem. Analysis finds a memory leak in a service (the error). They document it with a workaround, restart nightly, making it a known error until a fix is released."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is a lifecycle activity in ITIL (Version 5)?",
+          "options": [
+            "Engage",
+            "Acquire",
+            "Improve",
+            "Obtain/build"
+          ],
+          "answer": 1,
+          "explain": "Acquire. Engage, improve and obtain/build are ITIL 4 value-chain activities."
+        },
+        {
+          "q": "Which statement about the lifecycle is correct?",
+          "options": [
+            "Activities must be done in order",
+            "Activities are not sequential or linear and can be used iteratively",
+            "Each product uses all activities exactly once",
+            "Support comes before build"
+          ],
+          "answer": 1,
+          "explain": "They are combined iteratively in value streams."
+        },
+        {
+          "q": "A password reset request is a(n)...",
+          "options": [
+            "Incident",
+            "Problem",
+            "Service request",
+            "Event"
+          ],
+          "answer": 2,
+          "explain": "It is a normal, agreed service action."
+        },
+        {
+          "q": "A problem that has been analysed but not resolved is a(n)...",
+          "options": [
+            "Error",
+            "Known error",
+            "Incident",
+            "Event"
+          ],
+          "answer": 1,
+          "explain": "Known error."
+        },
+        {
+          "q": "Automatic deployment of every change that passes the pipeline is...",
+          "options": [
+            "Continuous integration",
+            "Continuous delivery",
+            "Continuous deployment",
+            "Release management"
+          ],
+          "answer": 2,
+          "explain": "Continuous deployment has no manual approval step."
+        },
+        {
+          "q": "Understanding a system's internal state from logs, metrics and traces is...",
+          "options": [
+            "Reliability",
+            "Observability",
+            "Monitoring",
+            "SRE"
+          ],
+          "answer": 1,
+          "explain": "Observability."
+        }
+      ]
+    },
+    {
+      "id": "value-system",
+      "title": "The ITIL Value System",
+      "summary": "Components, the seven guiding principles, governance, value chain and operating model.",
+      "sections": [
+        {
+          "id": "components",
+          "title": "Components of the ITIL Value System",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The **ITIL Value System** describes how all the components and activities of an organisation work together to enable value creation through products and services. Its components:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Component",
+                "Role"
+              ],
+              "rows": [
+                [
+                  "Guiding principles",
+                  "Recommendations that guide decisions in all circumstances"
+                ],
+                [
+                  "Governance",
+                  "The means by which the organisation is directed and controlled"
+                ],
+                [
+                  "Value chain",
+                  "The activities (expressed through the Product and Service Lifecycle) that respond to demand and create value"
+                ],
+                [
+                  "Management practices",
+                  "Sets of organisational resources for performing work or accomplishing objectives"
+                ],
+                [
+                  "Continual improvement",
+                  "A recurring activity at all levels ensuring performance keeps meeting expectations"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Purpose: remove silos, give a flexible, integrated model where opportunity and demand are turned into value."
+            }
+          ]
+        },
+        {
+          "id": "principles",
+          "title": "The seven guiding principles",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Principle",
+                "Key idea",
+                "In practice"
+              ],
+              "rows": [
+                [
+                  "Focus on value",
+                  "Everything should link, directly or indirectly, to value for stakeholders",
+                  "Know who the consumer is and what they value; consider experience"
+                ],
+                [
+                  "Start where you are",
+                  "Don't start from scratch; assess what exists and reuse it",
+                  "Observe directly; use measurement carefully; avoid assumptions"
+                ],
+                [
+                  "Progress iteratively with feedback",
+                  "Work in small, manageable steps with feedback loops",
+                  "Timebox, gather feedback at each iteration, adjust"
+                ],
+                [
+                  "Collaborate and promote visibility",
+                  "Work across boundaries; make work and results visible",
+                  "Involve the right stakeholders; share information transparently"
+                ],
+                [
+                  "Think and work holistically",
+                  "No component works in isolation; consider the whole system",
+                  "Use the four dimensions; consider end-to-end value streams"
+                ],
+                [
+                  "Keep it simple and practical",
+                  "Use the minimum number of steps; remove what doesn't add value",
+                  "Question each step and control; outcome-based thinking"
+                ],
+                [
+                  "Optimise and automate",
+                  "Maximise the value of work; then automate where it helps",
+                  "Optimise before automating; don't automate a bad process"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "How they interact",
+              "text": "Principles are applied together, not in isolation. Example: focus on value + keep it simple decides what to remove; start where you are + progress iteratively shapes the roadmap; optimise and automate should follow simplification. Not all principles are relevant to every decision."
+            }
+          ]
+        },
+        {
+          "id": "governance",
+          "title": "Governance",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Governance",
+              "text": "The means by which an organisation is directed and controlled."
+            },
+            {
+              "type": "p",
+              "text": "Governance is **enabling**, not only restrictive: it sets direction and constraints so that teams can act with autonomy within clear boundaries. Its activities are often described as:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Evaluate:** assess the organisation, its strategy, portfolio and relationships.",
+                "**Direct:** assign responsibility and direct strategy and policy.",
+                "**Monitor:** check performance and compliance with policies and direction."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Link to COBIT",
+              "text": "The evaluate-direct-monitor pattern is the same as COBIT's EDM domain and ISO/IEC 38500."
+            }
+          ]
+        },
+        {
+          "id": "chain",
+          "title": "Value chain and operating model",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Value chain",
+              "text": "The set of interconnected activities an organisation performs to create and deliver valuable products and services; in ITIL (Version 5) described through the Product and Service Lifecycle activities."
+            },
+            {
+              "type": "def",
+              "term": "Operating model",
+              "text": "A conceptual view of how the organisation works: its structure, capabilities, processes and technology used to achieve its purpose."
+            },
+            {
+              "type": "p",
+              "text": "The organisation's **purpose** shapes its **operating model**, which is realised through **value chain activities** that draw on **management practices**. Practices provide the capabilities; value chain activities combine them into value streams that respond to demand."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is NOT a component of the ITIL Value System?",
+          "options": [
+            "Guiding principles",
+            "Governance",
+            "Four dimensions",
+            "Continual improvement"
+          ],
+          "answer": 2,
+          "explain": "Components: guiding principles, governance, value chain, management practices, continual improvement."
+        },
+        {
+          "q": "Which principle recommends not building everything from scratch?",
+          "options": [
+            "Keep it simple and practical",
+            "Start where you are",
+            "Focus on value",
+            "Think and work holistically"
+          ],
+          "answer": 1,
+          "explain": "Start where you are."
+        },
+        {
+          "q": "Which principle warns against automating before optimising?",
+          "options": [
+            "Optimise and automate",
+            "Progress iteratively with feedback",
+            "Keep it simple and practical",
+            "Collaborate and promote visibility"
+          ],
+          "answer": 0,
+          "explain": "Optimise first, then automate."
+        },
+        {
+          "q": "Governance is defined as...",
+          "options": [
+            "The means by which an organisation is directed and controlled",
+            "A set of IT controls",
+            "The service desk function",
+            "The change approval board"
+          ],
+          "answer": 0,
+          "explain": "That is the definition."
+        },
+        {
+          "q": "Which statement about the guiding principles is correct?",
+          "options": [
+            "They must be applied in order",
+            "Only one should be used at a time",
+            "They interact and should be applied together, as relevant",
+            "They apply only to projects"
+          ],
+          "answer": 2,
+          "explain": "They are universal and interdependent."
+        },
+        {
+          "q": "Making work visible on shared boards reflects which principle?",
+          "options": [
+            "Collaborate and promote visibility",
+            "Focus on value",
+            "Start where you are",
+            "Keep it simple and practical"
+          ],
+          "answer": 0,
+          "explain": "Visibility reduces hidden agendas and duplicate work."
+        }
+      ]
+    },
+    {
+      "id": "practices",
+      "title": "Management practices",
+      "summary": "What a practice is, the two practice groups, all 34 practices, practice guides and metrics.",
+      "sections": [
+        {
+          "id": "define",
+          "title": "What a management practice is",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Management practice",
+              "text": "A set of organisational resources designed for performing work or accomplishing an objective."
+            },
+            {
+              "type": "p",
+              "text": "Practices provide the capabilities that value chain activities draw on. A single practice (e.g. incident management) contributes to several lifecycle activities, and each value stream uses several practices."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Group",
+                "Count",
+                "Scope"
+              ],
+              "rows": [
+                [
+                  "General management practices",
+                  "12",
+                  "Adopted from general business management and applied to products and services"
+                ],
+                [
+                  "Product and service management practices",
+                  "22",
+                  "Developed in service and product management and IT"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Level of detail",
+              "text": "Foundation tests the definition of a practice, the two groups, the role of practices in the Value System, and the structure and benefits of practice guides. Purpose-level awareness of individual practices is useful context."
+            }
+          ]
+        },
+        {
+          "id": "general",
+          "title": "General management practices (12)",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Practice",
+                "Purpose (paraphrased)"
+              ],
+              "rows": [
+                [
+                  "Architecture management",
+                  "Understand all elements of the organisation and how they relate, to achieve current and future objectives"
+                ],
+                [
+                  "Continual improvement",
+                  "Align practices and services with changing needs through ongoing improvement"
+                ],
+                [
+                  "Knowledge management",
+                  "Maintain and improve effective, efficient use of information and knowledge"
+                ],
+                [
+                  "Measurement and reporting",
+                  "Support good decisions and improvement by reducing uncertainty through data"
+                ],
+                [
+                  "Organizational change management",
+                  "Ensure changes are implemented smoothly and benefits realised by managing the human side"
+                ],
+                [
+                  "Portfolio management",
+                  "Ensure the right mix of programmes, projects, products and services to execute strategy within funding"
+                ],
+                [
+                  "Project management",
+                  "Ensure projects are delivered successfully"
+                ],
+                [
+                  "Relationship management",
+                  "Establish and nurture links with stakeholders at strategic and tactical levels"
+                ],
+                [
+                  "Risk management",
+                  "Understand and effectively handle risks"
+                ],
+                [
+                  "Strategy management",
+                  "Formulate goals and adopt courses of action and resources to achieve them"
+                ],
+                [
+                  "Supplier management",
+                  "Ensure suppliers and their performance are managed to support seamless delivery"
+                ],
+                [
+                  "Workforce and talent management",
+                  "Ensure the right people with the right skills and knowledge are in the right roles"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "psm",
+          "title": "Product and service management practices (22)",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Practice",
+                "Purpose (paraphrased)"
+              ],
+              "rows": [
+                [
+                  "Availability management",
+                  "Ensure services deliver agreed levels of availability"
+                ],
+                [
+                  "Business analysis",
+                  "Analyse the business, define needs and recommend solutions"
+                ],
+                [
+                  "Capacity and performance management",
+                  "Ensure services achieve agreed performance and meet demand cost-effectively"
+                ],
+                [
+                  "Change enablement",
+                  "Maximise successful changes by assessing risk, authorising changes and managing the change schedule"
+                ],
+                [
+                  "Deployment management",
+                  "Move new or changed components to live or other environments"
+                ],
+                [
+                  "Incident management",
+                  "Minimise the negative impact of incidents by restoring normal service as quickly as possible"
+                ],
+                [
+                  "Information security management",
+                  "Protect information needed to conduct business: confidentiality, integrity, availability"
+                ],
+                [
+                  "Infrastructure and platform management",
+                  "Oversee infrastructure and platforms, including cloud"
+                ],
+                [
+                  "IT asset management",
+                  "Plan and manage the full lifecycle of IT assets to maximise value and control costs and risks"
+                ],
+                [
+                  "Monitoring and event management",
+                  "Observe services and components, and record and report selected changes of state (events)"
+                ],
+                [
+                  "Problem management",
+                  "Reduce the likelihood and impact of incidents by identifying causes and managing workarounds and known errors"
+                ],
+                [
+                  "Release management",
+                  "Make new and changed services and features available for use"
+                ],
+                [
+                  "Service catalogue management",
+                  "Provide a single source of consistent information on services and offerings"
+                ],
+                [
+                  "Service configuration management",
+                  "Ensure accurate, reliable information about the configuration of services and CIs is available when needed"
+                ],
+                [
+                  "Service continuity management",
+                  "Ensure availability and performance of services are maintained at acceptable levels during a disaster"
+                ],
+                [
+                  "Service design",
+                  "Design products and services that are fit for purpose, fit for use and deliverable"
+                ],
+                [
+                  "Service desk",
+                  "Capture demand for incident resolution and service requests; the entry point and single point of contact"
+                ],
+                [
+                  "Service financial management",
+                  "Support strategies and plans for managing the organisation's finances for services"
+                ],
+                [
+                  "Service level management",
+                  "Set clear business-based targets for service levels and ensure delivery is assessed, monitored and managed against them"
+                ],
+                [
+                  "Service request management",
+                  "Support agreed quality by handling all predefined, user-initiated service requests effectively"
+                ],
+                [
+                  "Service validation and testing",
+                  "Ensure new or changed products and services meet defined requirements"
+                ],
+                [
+                  "Software development and management",
+                  "Ensure applications meet stakeholder needs in functionality, reliability, maintainability, compliance and auditability"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Grouping changed",
+              "text": "In ITIL 4, information security and service financial management were general management practices, and technical management practices were a third group. Version 5 uses two groups. Check the official book if a question hinges on grouping."
+            }
+          ]
+        },
+        {
+          "id": "guides",
+          "title": "Practice guides, metrics and CSFs",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "**ITIL Practice Guides** give detailed guidance for each practice. They typically cover the purpose, key terms and scope; how the practice contributes to value streams; roles and competencies; information and technology; partners and suppliers; and success factors with key metrics."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Benefits:** consistent language across teams, a ready-made starting point, practical process and role guidance, and a basis for measuring capability."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "def",
+              "term": "Metric",
+              "text": "A measurement or calculation that is monitored or reported for management and improvement."
+            },
+            {
+              "type": "def",
+              "term": "Critical success factor (CSF)",
+              "text": "A necessary precondition for achieving an intended result."
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "CSF vs metric",
+              "text": "For incident management, a CSF could be \"incidents are resolved quickly and effectively\". Metrics: mean time to restore, % resolved within target, first-contact resolution rate, user satisfaction."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A 'set of organisational resources designed for performing work or accomplishing an objective' is a...",
+          "options": [
+            "Value stream",
+            "Management practice",
+            "Process",
+            "Service"
+          ],
+          "answer": 1,
+          "explain": "That is the definition of a management practice."
+        },
+        {
+          "q": "How many practices are in ITIL (Version 5)?",
+          "options": [
+            "26",
+            "30",
+            "34",
+            "40"
+          ],
+          "answer": 2,
+          "explain": "34: 12 general and 22 product and service management."
+        },
+        {
+          "q": "Which practice aims to restore normal service as quickly as possible?",
+          "options": [
+            "Problem management",
+            "Incident management",
+            "Change enablement",
+            "Service desk"
+          ],
+          "answer": 1,
+          "explain": "Incident management."
+        },
+        {
+          "q": "A 'necessary precondition for achieving an intended result' is a...",
+          "options": [
+            "Metric",
+            "Critical success factor",
+            "KPI",
+            "SLA"
+          ],
+          "answer": 1,
+          "explain": "CSF."
+        },
+        {
+          "q": "Which practice reduces the likelihood of incidents by finding causes?",
+          "options": [
+            "Problem management",
+            "Incident management",
+            "Monitoring and event management",
+            "Availability management"
+          ],
+          "answer": 0,
+          "explain": "Problem management."
+        },
+        {
+          "q": "Which is a general management practice?",
+          "options": [
+            "Service desk",
+            "Portfolio management",
+            "Deployment management",
+            "Change enablement"
+          ],
+          "answer": 1,
+          "explain": "Portfolio management."
+        }
+      ]
+    },
+    {
+      "id": "improvement",
+      "title": "The Continual Improvement Model",
+      "summary": "The seven steps and the role of continual improvement in the Value System.",
+      "sections": [
+        {
+          "id": "steps",
+          "title": "The seven steps",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Step",
+                "Question",
+                "Activities"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "What is the vision?",
+                  "Understand the organisation's vision and objectives; align the initiative"
+                ],
+                [
+                  "2",
+                  "Where are we now?",
+                  "Baseline assessment of the current state"
+                ],
+                [
+                  "3",
+                  "Where do we want to be?",
+                  "Define measurable target state and outcomes, based on gaps"
+                ],
+                [
+                  "4",
+                  "How do we get there?",
+                  "Plan the approach; often iterative"
+                ],
+                [
+                  "5",
+                  "Take action",
+                  "Execute the plan, iteratively, managing risk and change"
+                ],
+                [
+                  "6",
+                  "Did we get there?",
+                  "Measure results against targets and the vision"
+                ],
+                [
+                  "7",
+                  "How do we keep the momentum going?",
+                  "Embed changes, recognise success, feed lessons into the next cycle"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Link to the principles",
+              "text": "Step 2 embodies start where you are. Steps 4-5 embody progress iteratively with feedback. Step 1 and the whole model embody focus on value."
+            }
+          ]
+        },
+        {
+          "id": "role",
+          "title": "Continual improvement in the Value System",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Continual improvement is a **component** of the Value System, a **general management practice**, and embedded in every lifecycle activity. Everyone is responsible for it, not just a dedicated team. Improvement initiatives are tracked in a continual improvement register (or similar backlog) and prioritised by value."
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A service desk's first-contact resolution is 48% (where are we now). The target is 65% in 6 months (where do we want to be). The team adds a knowledge base and AI-suggested answers in two-week iterations (take action), measures 61% after 4 months (did we get there), and adds the KB review to routine work (keep momentum)."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the first step of the Continual Improvement Model?",
+          "options": [
+            "Where are we now?",
+            "What is the vision?",
+            "Take action",
+            "Did we get there?"
+          ],
+          "answer": 1,
+          "explain": "What is the vision?"
+        },
+        {
+          "q": "A baseline assessment happens in which step?",
+          "options": [
+            "What is the vision?",
+            "Where are we now?",
+            "How do we get there?",
+            "Did we get there?"
+          ],
+          "answer": 1,
+          "explain": "Where are we now?"
+        },
+        {
+          "q": "Who is responsible for continual improvement?",
+          "options": [
+            "Only the improvement manager",
+            "Everyone in the organisation",
+            "Only external auditors",
+            "Only senior management"
+          ],
+          "answer": 1,
+          "explain": "It is everyone's responsibility."
+        },
+        {
+          "q": "How many steps does the model have?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "answer": 2,
+          "explain": "Seven steps."
+        }
+      ]
+    },
+    {
+      "id": "value-streams",
+      "title": "Value streams",
+      "summary": "Core and enabling value streams, complexity thinking, mapping and management.",
+      "sections": [
+        {
+          "id": "concepts",
+          "title": "Key concepts",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Value stream",
+              "text": "A series of steps an organisation undertakes to create and deliver products and services to consumers."
+            },
+            {
+              "type": "def",
+              "term": "Core value stream",
+              "text": "A value stream that directly delivers value to external consumers (e.g. onboarding a new customer, restoring a failed service)."
+            },
+            {
+              "type": "def",
+              "term": "Enabling value stream",
+              "text": "A value stream that supports core value streams by providing capabilities or resources internally (e.g. hiring engineers, procuring cloud capacity)."
+            },
+            {
+              "type": "def",
+              "term": "Value stream mapping",
+              "text": "A technique to visualise the flow of work and information through a value stream to identify waste and improvement opportunities."
+            },
+            {
+              "type": "def",
+              "term": "Value stream management",
+              "text": "The ongoing practice of measuring, managing and improving the flow of value through value streams."
+            },
+            {
+              "type": "p",
+              "text": "Mapping produces the picture; management keeps improving the flow using that picture and live data. Mapping is typically a periodic activity; management is continuous."
+            }
+          ]
+        },
+        {
+          "id": "complexity",
+          "title": "Complexity thinking",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Complexity thinking",
+              "text": "Recognising that systems range from clear and complicated (cause and effect can be known) to complex (cause and effect only visible in hindsight), and choosing ways of working to match."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Clear / complicated work** (e.g. provisioning a standard laptop): standardise, document, automate.",
+                "**Complex work** (e.g. designing a new digital service, resolving a novel major incident): experiment, use short feedback loops, empower teams, avoid rigid procedures.",
+                "Optimising workflows for complexity means not forcing one standard process on every kind of work."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "map",
+          "title": "Elements of a value stream map",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Element",
+                "Meaning"
+              ],
+              "rows": [
+                [
+                  "Trigger / demand",
+                  "What starts the value stream (e.g. customer request)"
+                ],
+                [
+                  "Steps",
+                  "Activities performed, with the teams or practices involved"
+                ],
+                [
+                  "Process (touch) time",
+                  "Time actually spent working on a step"
+                ],
+                [
+                  "Wait time",
+                  "Time work sits idle between steps"
+                ],
+                [
+                  "Lead time",
+                  "Total elapsed time from trigger to outcome"
+                ],
+                [
+                  "% complete and accurate",
+                  "Share of work received by a step that doesn't need rework"
+                ],
+                [
+                  "Handoffs and information flows",
+                  "Transfers between teams and systems"
+                ],
+                [
+                  "Outcome / value",
+                  "What the consumer receives"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "Mapping new employee IT onboarding shows a 12-day lead time with only 5 hours of work; most delay is waiting for manager approvals and hardware. Pre-approved role bundles and stocked devices cut lead time to 2 days."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A value stream that directly delivers value to external consumers is...",
+          "options": [
+            "Enabling",
+            "Core",
+            "Supporting",
+            "Primary practice"
+          ],
+          "answer": 1,
+          "explain": "Core value stream."
+        },
+        {
+          "q": "Hiring engineers for the delivery teams is an example of a(n)...",
+          "options": [
+            "Core value stream",
+            "Enabling value stream",
+            "Practice",
+            "Lifecycle activity"
+          ],
+          "answer": 1,
+          "explain": "It supports core value streams internally."
+        },
+        {
+          "q": "Which is the relationship between value stream mapping and management?",
+          "options": [
+            "They are the same",
+            "Mapping visualises the flow; management continually measures and improves it",
+            "Management happens once; mapping is continuous",
+            "Mapping is only for software"
+          ],
+          "answer": 1,
+          "explain": "Mapping informs ongoing management."
+        },
+        {
+          "q": "For complex work, which approach fits best?",
+          "options": [
+            "Rigid standard procedures",
+            "Experiments with short feedback loops",
+            "Full automation first",
+            "Avoiding any process"
+          ],
+          "answer": 1,
+          "explain": "Complex work needs probing and feedback."
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "ITIL and AI",
+      "summary": "AI terms, how AI supports the lifecycle and value chain, AI governance and the 6C model.",
+      "sections": [
+        {
+          "id": "terms",
+          "title": "AI terms",
+          "blocks": [
+            {
+              "type": "def",
+              "term": "Artificial intelligence (AI)",
+              "text": "Technology that enables machines to perform tasks that normally require human intelligence, such as recognising patterns, understanding language, reasoning and making decisions."
+            },
+            {
+              "type": "def",
+              "term": "AI maturity",
+              "text": "How far an organisation has progressed in adopting, integrating and governing AI to create value."
+            },
+            {
+              "type": "def",
+              "term": "Generative AI (GenAI)",
+              "text": "AI that creates new content (text, code, images, audio) based on patterns learned from data."
+            },
+            {
+              "type": "def",
+              "term": "Agentic AI",
+              "text": "AI systems that can pursue goals with a degree of autonomy: planning, making decisions and taking actions across tools and systems with limited human intervention."
+            },
+            {
+              "type": "def",
+              "term": "AI governance",
+              "text": "The frameworks, policies, roles and controls that direct and oversee how AI is developed, used and monitored so that it is responsible, safe, compliant and aligned with objectives."
+            }
+          ]
+        },
+        {
+          "id": "uses",
+          "title": "AI across the lifecycle and value chain",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Activity",
+                "Example AI use"
+              ],
+              "rows": [
+                [
+                  "Discover",
+                  "Analysing customer feedback and usage data to find opportunities"
+                ],
+                [
+                  "Design",
+                  "Generating prototypes, user journeys and test scenarios"
+                ],
+                [
+                  "Acquire",
+                  "Comparing vendor offers and analysing contract risk"
+                ],
+                [
+                  "Build",
+                  "Code assistants, automated test generation"
+                ],
+                [
+                  "Transition",
+                  "Predicting change risk, automating deployment checks"
+                ],
+                [
+                  "Operate",
+                  "AIOps: anomaly detection, event correlation, predictive capacity"
+                ],
+                [
+                  "Deliver",
+                  "Virtual agents fulfilling service requests"
+                ],
+                [
+                  "Support",
+                  "Suggesting known-error workarounds, summarising incidents, root cause hints"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Keep humans accountable",
+              "text": "AI can automate steps across the lifecycle, but accountability stays with people. Agentic AI in particular needs clear boundaries, approval points and the ability to stop it."
+            }
+          ]
+        },
+        {
+          "id": "6c",
+          "title": "The ITIL AI Capability Model (6C)",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "ITIL (Version 5) introduces the **ITIL AI Capability Model** to classify what an AI system does, so that governance and controls fit the capability. The six capabilities:"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Capability",
+                "What the AI does (typical interpretation)",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Creation",
+                  "Generates new content, code or artefacts",
+                  "Drafting knowledge articles, generating scripts"
+                ],
+                [
+                  "Curation",
+                  "Selects, organises and maintains information",
+                  "Deduplicating the knowledge base, tagging tickets"
+                ],
+                [
+                  "Clarification",
+                  "Explains, summarises and makes information understandable",
+                  "Summarising a long incident thread for a manager"
+                ],
+                [
+                  "Cognition",
+                  "Analyses, reasons, predicts and supports decisions",
+                  "Predicting change failure risk, root cause suggestions"
+                ],
+                [
+                  "Communication",
+                  "Interacts with people or systems",
+                  "Chatbots and virtual agents talking to users"
+                ],
+                [
+                  "Coordination",
+                  "Orchestrates tasks, workflows or other agents",
+                  "An agent routing tickets and triggering automations"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Check the official wording",
+              "text": "Third-party descriptions of the 6C capabilities vary. The exam tests understanding (e.g. matching a scenario to a capability), so confirm the official descriptions in the ITIL Foundation (Version 5) book."
+            },
+            {
+              "type": "p",
+              "text": "A separate **ITIL AI Governance** extension module goes deeper into AI governance, risk profiling of capabilities and controls."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "AI that plans and takes actions toward goals with limited human intervention is...",
+          "options": [
+            "Generative AI",
+            "Agentic AI",
+            "Narrow AI",
+            "Predictive analytics"
+          ],
+          "answer": 1,
+          "explain": "Agentic AI."
+        },
+        {
+          "q": "Which is one of the six capabilities in the ITIL AI Capability Model?",
+          "options": [
+            "Compliance",
+            "Curation",
+            "Control",
+            "Computation"
+          ],
+          "answer": 1,
+          "explain": "Creation, curation, clarification, cognition, communication, coordination."
+        },
+        {
+          "q": "A virtual agent chatting with users mainly reflects which capability?",
+          "options": [
+            "Creation",
+            "Communication",
+            "Curation",
+            "Coordination"
+          ],
+          "answer": 1,
+          "explain": "Communication."
+        },
+        {
+          "q": "AIOps anomaly detection most supports which lifecycle activity?",
+          "options": [
+            "Discover",
+            "Operate",
+            "Acquire",
+            "Design"
+          ],
+          "answer": 1,
+          "explain": "Operate."
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "ITIL and other frameworks",
+      "summary": "How ITIL works with DevOps and PRINCE2.",
+      "sections": [
+        {
+          "id": "devops",
+          "title": "ITIL and DevOps",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "**DevOps** is a culture and set of practices that bring development and operations together to deliver changes quickly and reliably, using automation, CI/CD, shared ownership and fast feedback."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "DevOps brings",
+                "ITIL brings"
+              ],
+              "rows": [
+                [
+                  "Speed, automation, CI/CD pipelines",
+                  "End-to-end view of value, from discover to support"
+                ],
+                [
+                  "Shared team ownership (\"you build it, you run it\")",
+                  "Practices for incident, problem, change, service level and more"
+                ],
+                [
+                  "Fast feedback from production",
+                  "Governance, risk and experience management"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "They complement each other: DevOps accelerates build and transition, while ITIL ensures what is deployed is operated, delivered and supported well, and that changes are enabled (not blocked) by risk-based change enablement, e.g. pre-authorised standard changes in the pipeline."
+            }
+          ]
+        },
+        {
+          "id": "prince2",
+          "title": "ITIL and PRINCE2",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "**PRINCE2** is a structured project management method (also owned by PeopleCert). Project management matters in ITIL because many new or significantly changed products and services are delivered through projects, and project management is itself an ITIL practice."
+            },
+            {
+              "type": "list",
+              "items": [
+                "PRINCE2 controls the **temporary** effort: business case, stages, roles, tolerances, closure.",
+                "ITIL manages the **ongoing** product and service across its lifecycle, before and after the project.",
+                "Together: the project delivers the change within time, cost and scope; ITIL ensures the result is transitioned, operated and supported and keeps creating value."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "Example",
+              "text": "A PRINCE2 project replaces a bank's contact-centre platform. ITIL practices feed requirements (service level, continuity), accept the release through transition, and own operations after project closure."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do ITIL and DevOps relate?",
+          "options": [
+            "DevOps replaces ITIL",
+            "They are complementary: DevOps accelerates delivery, ITIL covers the full lifecycle and practices",
+            "ITIL forbids automation",
+            "They cannot be used together"
+          ],
+          "answer": 1,
+          "explain": "Complementary."
+        },
+        {
+          "q": "Why is project management important in ITIL?",
+          "options": [
+            "ITIL has no practices",
+            "Many new or changed products and services are delivered through projects",
+            "Projects replace services",
+            "Only for audits"
+          ],
+          "answer": 1,
+          "explain": "Projects deliver change; ITIL manages the ongoing service."
+        },
+        {
+          "q": "Which describes PRINCE2's focus?",
+          "options": [
+            "Ongoing service operation",
+            "A temporary, controlled project effort",
+            "AI governance",
+            "Security controls"
+          ],
+          "answer": 1,
+          "explain": "PRINCE2 is a project method."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Service",
+      "back": "A means of enabling value co-creation by facilitating outcomes customers want, without them managing specific costs and risks",
+      "tag": "Terms"
+    },
+    {
+      "front": "Product",
+      "back": "A configuration of an organisation's resources designed to offer value to a consumer",
+      "tag": "Terms"
+    },
+    {
+      "front": "Utility vs warranty",
+      "back": "Utility = what it does (fit for purpose). Warranty = assurance it meets agreed requirements (fit for use)",
+      "tag": "Terms"
+    },
+    {
+      "front": "Output vs outcome",
+      "back": "Output = deliverable of an activity. Outcome = result for a stakeholder enabled by outputs",
+      "tag": "Terms"
+    },
+    {
+      "front": "Service offering components",
+      "back": "Goods, access to resources, service actions",
+      "tag": "Terms"
+    },
+    {
+      "front": "Sponsor / customer / user",
+      "back": "Authorises budget / defines requirements and owns outcomes / uses the service",
+      "tag": "Relationships"
+    },
+    {
+      "front": "Relationship types",
+      "back": "Basic, cooperative, collaborative",
+      "tag": "Relationships"
+    },
+    {
+      "front": "SLA",
+      "back": "Documented agreement identifying services required and expected level of service",
+      "tag": "Relationships"
+    },
+    {
+      "front": "XLA",
+      "back": "Experience level agreement: targets based on experience",
+      "tag": "Experience"
+    },
+    {
+      "front": "Four dimensions",
+      "back": "Organisations and people; information and technology; partners and suppliers; value streams and processes",
+      "tag": "Dimensions"
+    },
+    {
+      "front": "PESTLE",
+      "back": "Political, economic, social, technological, legal, environmental",
+      "tag": "Dimensions"
+    },
+    {
+      "front": "Lifecycle activities",
+      "back": "Discover, design, acquire, build, transition, operate, deliver, support (not linear)",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "Incident",
+      "back": "Unplanned interruption to a service or reduction in its quality",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "Problem",
+      "back": "A cause, or potential cause, of one or more incidents",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "Known error",
+      "back": "A problem that has been analysed but not resolved",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "Service request",
+      "back": "User-initiated request for a service action agreed as a normal part of service delivery",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "Continuous delivery vs deployment",
+      "back": "Delivery: always releasable, deploy on decision. Deployment: automatically deployed",
+      "tag": "Lifecycle"
+    },
+    {
+      "front": "ITIL Value System components",
+      "back": "Guiding principles, governance, value chain, management practices, continual improvement",
+      "tag": "Value System"
+    },
+    {
+      "front": "Seven guiding principles",
+      "back": "Focus on value; start where you are; progress iteratively with feedback; collaborate and promote visibility; think and work holistically; keep it simple and practical; optimise and automate",
+      "tag": "Principles"
+    },
+    {
+      "front": "Governance",
+      "back": "The means by which an organisation is directed and controlled",
+      "tag": "Value System"
+    },
+    {
+      "front": "Management practice",
+      "back": "A set of organisational resources designed for performing work or accomplishing an objective",
+      "tag": "Practices"
+    },
+    {
+      "front": "Practice groups and counts",
+      "back": "General (12) and product and service management (22) = 34",
+      "tag": "Practices"
+    },
+    {
+      "front": "Critical success factor",
+      "back": "A necessary precondition for achieving an intended result",
+      "tag": "Practices"
+    },
+    {
+      "front": "Continual Improvement Model",
+      "back": "Vision? Where are we now? Where do we want to be? How do we get there? Take action. Did we get there? Keep momentum",
+      "tag": "Improvement"
+    },
+    {
+      "front": "Core vs enabling value stream",
+      "back": "Core delivers value to external consumers; enabling supports core value streams internally",
+      "tag": "Value streams"
+    },
+    {
+      "front": "ITIL AI Capability Model (6C)",
+      "back": "Creation, curation, clarification, cognition, communication, coordination",
+      "tag": "AI"
+    },
+    {
+      "front": "Agentic AI",
+      "back": "AI that pursues goals autonomously by planning and taking actions",
+      "tag": "AI"
+    },
+    {
+      "front": "Exam format",
+      "back": "40 questions, 60 minutes, pass 26/40 (65%), closed book",
+      "tag": "Exam"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Service",
+      "definition": "A means of enabling value co-creation by facilitating outcomes customers want, without them managing specific costs and risks"
+    },
+    {
+      "term": "Product",
+      "definition": "A configuration of an organisation's resources designed to offer value to a consumer"
+    },
+    {
+      "term": "Utility vs warranty",
+      "definition": "Utility = what it does (fit for purpose). Warranty = assurance it meets agreed requirements (fit for use)"
+    },
+    {
+      "term": "Output vs outcome",
+      "definition": "Output = deliverable of an activity. Outcome = result for a stakeholder enabled by outputs"
+    },
+    {
+      "term": "Service offering components",
+      "definition": "Goods, access to resources, service actions"
+    },
+    {
+      "term": "Sponsor / customer / user",
+      "definition": "Authorises budget / defines requirements and owns outcomes / uses the service"
+    },
+    {
+      "term": "Relationship types",
+      "definition": "Basic, cooperative, collaborative"
+    },
+    {
+      "term": "SLA",
+      "definition": "Documented agreement identifying services required and expected level of service"
+    },
+    {
+      "term": "XLA",
+      "definition": "Experience level agreement: targets based on experience"
+    },
+    {
+      "term": "Four dimensions",
+      "definition": "Organisations and people; information and technology; partners and suppliers; value streams and processes"
+    },
+    {
+      "term": "PESTLE",
+      "definition": "Political, economic, social, technological, legal, environmental"
+    },
+    {
+      "term": "Lifecycle activities",
+      "definition": "Discover, design, acquire, build, transition, operate, deliver, support (not linear)"
+    },
+    {
+      "term": "Incident",
+      "definition": "Unplanned interruption to a service or reduction in its quality"
+    },
+    {
+      "term": "Problem",
+      "definition": "A cause, or potential cause, of one or more incidents"
+    },
+    {
+      "term": "Known error",
+      "definition": "A problem that has been analysed but not resolved"
+    },
+    {
+      "term": "Service request",
+      "definition": "User-initiated request for a service action agreed as a normal part of service delivery"
+    },
+    {
+      "term": "Continuous delivery vs deployment",
+      "definition": "Delivery: always releasable, deploy on decision. Deployment: automatically deployed"
+    },
+    {
+      "term": "ITIL Value System components",
+      "definition": "Guiding principles, governance, value chain, management practices, continual improvement"
+    },
+    {
+      "term": "Seven guiding principles",
+      "definition": "Focus on value; start where you are; progress iteratively with feedback; collaborate and promote visibility; think and work holistically; keep it simple and practical; optimise and automate"
+    },
+    {
+      "term": "Governance",
+      "definition": "The means by which an organisation is directed and controlled"
+    },
+    {
+      "term": "Management practice",
+      "definition": "A set of organisational resources designed for performing work or accomplishing an objective"
+    },
+    {
+      "term": "Practice groups and counts",
+      "definition": "General (12) and product and service management (22) = 34"
+    },
+    {
+      "term": "Critical success factor",
+      "definition": "A necessary precondition for achieving an intended result"
+    },
+    {
+      "term": "Continual Improvement Model",
+      "definition": "Vision? Where are we now? Where do we want to be? How do we get there? Take action. Did we get there? Keep momentum"
+    },
+    {
+      "term": "Core vs enabling value stream",
+      "definition": "Core delivers value to external consumers; enabling supports core value streams internally"
+    },
+    {
+      "term": "ITIL AI Capability Model (6C)",
+      "definition": "Creation, curation, clarification, cognition, communication, coordination"
+    },
+    {
+      "term": "Agentic AI",
+      "definition": "AI that pursues goals autonomously by planning and taking actions"
+    },
+    {
+      "term": "DPSM",
+      "definition": "Digital product and service management."
+    },
+    {
+      "term": "Good",
+      "definition": "Resource whose ownership transfers to the consumer."
+    },
+    {
+      "term": "Value co-creation",
+      "definition": "Value created jointly by provider and consumer through interactions."
+    },
+    {
+      "term": "Service journey",
+      "definition": "End-to-end sequence of a consumer's interactions with a provider."
+    },
+    {
+      "term": "Digital product vendor",
+      "definition": "Organisation that creates and sells digital products that others use to provide or consume services."
+    },
+    {
+      "term": "VUCA",
+      "definition": "Volatility, uncertainty, complexity, ambiguity."
+    },
+    {
+      "term": "BAU",
+      "definition": "Business as usual: normal day-to-day operations."
+    },
+    {
+      "term": "Event",
+      "definition": "Change of state significant for managing a product, service or component."
+    },
+    {
+      "term": "Observability",
+      "definition": "Ability to understand a system's internal state from its external outputs."
+    },
+    {
+      "term": "SRE",
+      "definition": "Site reliability engineering: applying software engineering to operations with SLOs and error budgets."
+    },
+    {
+      "term": "Value stream mapping",
+      "definition": "Visualising the flow of work and information to find waste."
+    },
+    {
+      "term": "Complexity thinking",
+      "definition": "Matching ways of working to whether work is clear, complicated or complex."
+    },
+    {
+      "term": "Operating model",
+      "definition": "How an organisation works: structure, capabilities, processes and technology."
+    }
+  ]
+}

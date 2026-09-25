@@ -1,0 +1,2507 @@
+{
+  "schema": "fwlib.book/1",
+  "id": "nist-csf-2",
+  "title": "NIST CSF 2.0",
+  "subtitle": "The Cybersecurity Framework, all 106 outcomes",
+  "source": "NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0, February 2024",
+  "version": "2.0",
+  "color": "#1F4E79",
+  "estimatedMinutes": 240,
+  "description": "Every function, category and subcategory explained with practical guidance and examples, plus Profiles, Tiers and how to apply CSF in an assessment.",
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "CSF 2.0 at a glance",
+      "summary": "History, what changed in 2.0, the three components and how the Core is organised.",
+      "sections": [
+        {
+          "id": "history",
+          "title": "Where CSF comes from",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The NIST Cybersecurity Framework was first published in February 2014 in response to US Executive Order 13636, aimed at critical infrastructure. Version 1.1 followed in April 2018 (adding supply chain and identity refinements). **Version 2.0 was published on 26 February 2024** as NIST CSWP 29."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Version",
+                "Year",
+                "Headline change"
+              ],
+              "rows": [
+                [
+                  "1.0",
+                  "2014",
+                  "Five functions: Identify, Protect, Detect, Respond, Recover"
+                ],
+                [
+                  "1.1",
+                  "2018",
+                  "Supply chain risk, self-assessment, identity and access refinements"
+                ],
+                [
+                  "2.0",
+                  "2024",
+                  "New GOVERN function, scope extended to all organisations, restructured categories, Implementation Examples, Quick-Start Guides, Community Profiles"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "Why it matters",
+              "text": "CSF has become the lingua franca of cybersecurity across sectors and countries. Many regulators and cyber insurers accept or reference it, and it is the most common way to report cyber posture to boards."
+            }
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "What's new in 2.0",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**GOVERN function added.** Strategy, roles, policy, oversight and supply chain risk now sit in a function of their own, informing all others.",
+                "**Scope for everyone.** The title dropped \"for Improving Critical Infrastructure Cybersecurity\". It is meant for organisations of any size or sector.",
+                "**Restructured Core.** Categories were merged and moved; many 1.1 subcategories were withdrawn or relocated. Example: access control and identity became PR.AA; platform security became PR.PS.",
+                "**Supply chain elevated.** A full category, GV.SC, with 10 subcategories.",
+                "**Implementation Examples.** Concrete, action-oriented examples for each subcategory, published online.",
+                "**Quick-Start Guides.** Short guides for small businesses, profiles, tiers, enterprise risk management and supply chain.",
+                "**Community Profiles.** Shared target profiles for sectors or use cases.",
+                "**Online-first.** The Core, Informative References and Implementation Examples live in the CSF 2.0 Reference Tool and can be exported."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Numbering gaps are deliberate",
+              "text": "You will see gaps such as ID.AM-06 missing or DE.CM-04 absent. Those identifiers were withdrawn or moved in 2.0, and NIST did not renumber to keep traceability."
+            }
+          ]
+        },
+        {
+          "id": "components",
+          "title": "The three components",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Component",
+                "What it is",
+                "Use it to"
+              ],
+              "rows": [
+                [
+                  "CSF Core",
+                  "Taxonomy of outcomes: Functions > Categories > Subcategories",
+                  "Describe and assess cybersecurity outcomes"
+                ],
+                [
+                  "CSF Organizational Profiles",
+                  "Current and Target state of your organisation against the Core",
+                  "Find gaps and prioritise"
+                ],
+                [
+                  "CSF Tiers",
+                  "Four levels of rigor for risk governance and management",
+                  "Set expectations for how formal and adaptive practices should be"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "Around these, NIST provides **online resources**: Informative References (mappings to 800-53, ISO 27001, CIS and others), Implementation Examples, Quick-Start Guides and Community Profiles."
+            }
+          ]
+        },
+        {
+          "id": "core",
+          "title": "The Core structure",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Function",
+                "Code",
+                "Purpose",
+                "Categories",
+                "Subcategories"
+              ],
+              "rows": [
+                [
+                  "GOVERN",
+                  "GV",
+                  "Establish, communicate and monitor the cybersecurity risk management strategy, expectations and policy",
+                  "6",
+                  "31"
+                ],
+                [
+                  "IDENTIFY",
+                  "ID",
+                  "Understand current cybersecurity risks to the organisation",
+                  "3",
+                  "21"
+                ],
+                [
+                  "PROTECT",
+                  "PR",
+                  "Use safeguards to manage cybersecurity risks",
+                  "5",
+                  "22"
+                ],
+                [
+                  "DETECT",
+                  "DE",
+                  "Find and analyse possible attacks and compromises",
+                  "2",
+                  "11"
+                ],
+                [
+                  "RESPOND",
+                  "RS",
+                  "Take action regarding a detected incident",
+                  "4",
+                  "13"
+                ],
+                [
+                  "RECOVER",
+                  "RC",
+                  "Restore assets and operations affected by an incident",
+                  "2",
+                  "8"
+                ],
+                [
+                  "Total",
+                  "",
+                  "",
+                  "22",
+                  "106"
+                ]
+              ]
+            },
+            {
+              "type": "p",
+              "text": "NIST draws the functions as a wheel with GOVERN at the centre, because governance informs how every other function is run. The other five are not a strict sequence; they operate concurrently."
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Two groupings to remember",
+              "text": "**Before an incident:** GOVERN, IDENTIFY, PROTECT, DETECT (ongoing). **During and after:** RESPOND, RECOVER. And GOVERN overlays all of them."
+            }
+          ]
+        },
+        {
+          "id": "howread",
+          "title": "How to read each outcome in this book",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Every subcategory in the following chapters appears as a card with three parts:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**The outcome** as NIST states it (NIST text is public domain).",
+                "**In practice:** what an organisation actually does to achieve it, and what evidence an assessor would look for.",
+                "**Example:** a concrete scenario, drawn from banking, energy, manufacturing, public sector and SaaS environments."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "exam",
+              "title": "Study tip",
+              "text": "Don't memorise every ID. Memorise the 22 category codes and their intent; the subcategories follow naturally. Use the flashcards for the category codes."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When was NIST CSF 2.0 published?",
+          "options": [
+            "April 2018",
+            "February 2024",
+            "January 2023",
+            "October 2022"
+          ],
+          "answer": 1,
+          "explain": "CSF 2.0 (CSWP 29) was released on 26 February 2024."
+        },
+        {
+          "q": "Which function was added in CSF 2.0?",
+          "options": [
+            "IDENTIFY",
+            "GOVERN",
+            "RECOVER",
+            "MANAGE"
+          ],
+          "answer": 1,
+          "explain": "GOVERN is new in 2.0. MANAGE belongs to the AI RMF."
+        },
+        {
+          "q": "How many categories and subcategories are in the CSF 2.0 Core?",
+          "options": [
+            "23 and 108",
+            "22 and 106",
+            "19 and 72",
+            "6 and 22"
+          ],
+          "answer": 1,
+          "explain": "22 categories and 106 subcategories. 19/72 is the AI RMF."
+        },
+        {
+          "q": "Which is NOT one of the three CSF components?",
+          "options": [
+            "Core",
+            "Profiles",
+            "Tiers",
+            "Baselines"
+          ],
+          "answer": 3,
+          "explain": "Baselines belong to SP 800-53B."
+        },
+        {
+          "q": "Why does GOVERN sit at the centre of the CSF wheel?",
+          "options": [
+            "It is performed first and then finished",
+            "It informs how the organisation implements all other functions",
+            "It is optional",
+            "It only applies to large organisations"
+          ],
+          "answer": 1,
+          "explain": "Governance is continuous and shapes every other function."
+        },
+        {
+          "q": "Why is ID.AM-06 missing from CSF 2.0?",
+          "options": [
+            "It is classified",
+            "It was withdrawn or moved and NIST kept original numbering for traceability",
+            "It is in the Tier model",
+            "It is a typo"
+          ],
+          "answer": 1,
+          "explain": "Withdrawn identifiers are not reused."
+        }
+      ]
+    },
+    {
+      "id": "govern",
+      "title": "GOVERN (GV)",
+      "summary": "6 categories, 31 outcomes: context, risk strategy, roles, policy, oversight and supply chain.",
+      "sections": [
+        {
+          "id": "gv-intro",
+          "title": "GOVERN in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "GOVERN establishes and monitors the organisation's cybersecurity risk management strategy, expectations and policy. It links cybersecurity to enterprise risk management (ERM) and to the organisation's mission. It answers: **who decides, based on what, and how do we know it is working?**"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Code",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "Organizational Context",
+                  "GV.OC",
+                  "Mission, stakeholders, legal and dependency context"
+                ],
+                [
+                  "Risk Management Strategy",
+                  "GV.RM",
+                  "Objectives, appetite, tolerance, methods"
+                ],
+                [
+                  "Roles, Responsibilities, and Authorities",
+                  "GV.RR",
+                  "Accountability, resources, HR"
+                ],
+                [
+                  "Policy",
+                  "GV.PO",
+                  "Establishing and maintaining policy"
+                ],
+                [
+                  "Oversight",
+                  "GV.OV",
+                  "Reviewing strategy and performance"
+                ],
+                [
+                  "Cybersecurity Supply Chain Risk Management",
+                  "GV.SC",
+                  "Suppliers and third parties across the lifecycle"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gv-oc",
+          "title": "GV.OC Organizational Context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The circumstances (mission, stakeholder expectations, dependencies, and legal, regulatory and contractual requirements) surrounding the organisation's cybersecurity risk management decisions are understood."
+            },
+            {
+              "type": "control",
+              "id": "GV.OC-01",
+              "text": "The organizational mission is understood and informs cybersecurity risk management.",
+              "practice": "Document the mission and critical business services, and show how security priorities trace back to them. Evidence: strategy document referencing mission, risk register linked to business services.",
+              "example": "A bank lists payments, lending and deposits as mission-critical; the security strategy prioritises availability of the payments switch over the marketing website."
+            },
+            {
+              "type": "control",
+              "id": "GV.OC-02",
+              "text": "Internal and external stakeholders are understood, and their needs and expectations regarding cybersecurity risk management are understood and considered.",
+              "practice": "Maintain a stakeholder map (board, regulators, customers, partners, employees) with their security expectations.",
+              "example": "A telecom operator records that its regulator expects 72-hour breach notification and that enterprise customers expect ISO 27001 certification."
+            },
+            {
+              "type": "control",
+              "id": "GV.OC-03",
+              "text": "Legal, regulatory, and contractual requirements regarding cybersecurity, including privacy and civil liberties obligations, are understood and managed.",
+              "practice": "Keep an obligations register with owners, and track changes. Map obligations to controls.",
+              "example": "A company operating in Mauritius and Saudi Arabia tracks the Data Protection Act 2017, Saudi PDPL and customer DPAs in one register."
+            },
+            {
+              "type": "control",
+              "id": "GV.OC-04",
+              "text": "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated.",
+              "practice": "Identify services others rely on, with their availability and resilience expectations (e.g. SLAs, RTOs).",
+              "example": "A national utility documents that hospitals depend on uninterrupted power and sets recovery objectives accordingly."
+            },
+            {
+              "type": "control",
+              "id": "GV.OC-05",
+              "text": "Outcomes, capabilities, and services that the organization depends on are understood and communicated.",
+              "practice": "Map your own dependencies: cloud providers, telecom links, key SaaS, utilities.",
+              "example": "A manufacturer discovers its MES depends on a single cloud identity provider, making that provider a critical dependency."
+            }
+          ]
+        },
+        {
+          "id": "gv-rm",
+          "title": "GV.RM Risk Management Strategy",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The organisation's priorities, constraints, risk tolerance and appetite statements, and assumptions are established, communicated and used to support operational risk decisions."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-01",
+              "text": "Risk management objectives are established and agreed to by organizational stakeholders.",
+              "practice": "Define measurable cyber risk objectives approved by leadership (e.g. \"no critical-service outage over 4 hours due to cyber events\").",
+              "example": "The executive committee approves three objectives: protect customer data, keep payment uptime above 99.95%, pass regulatory inspections without major findings."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-02",
+              "text": "Risk appetite and risk tolerance statements are established, communicated, and maintained.",
+              "practice": "Appetite = how much risk you are willing to pursue; tolerance = acceptable variation. Write both, get board approval, review yearly.",
+              "example": "\"We have zero appetite for unpatched internet-facing critical vulnerabilities older than 14 days.\""
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-03",
+              "text": "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes.",
+              "practice": "Cyber risks appear in the enterprise risk register using the same scales as financial and operational risks. See NIST IR 8286.",
+              "example": "Ransomware on OT is rated alongside commodity price risk in the group risk register of an oil & gas company."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-04",
+              "text": "Strategic direction that describes appropriate risk response options is established and communicated.",
+              "practice": "Define when to accept, mitigate, transfer (e.g. insurance) or avoid risk, and who can approve each.",
+              "example": "Policy states that only the CRO can accept high cyber risks, and only for 6 months."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-05",
+              "text": "Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties.",
+              "practice": "Define escalation paths from teams to risk committee to board, including third-party risk.",
+              "example": "A supplier breach notification goes from procurement to the CISO within 24 hours, then to the risk committee if rated high."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-06",
+              "text": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated.",
+              "practice": "One risk methodology (likelihood x impact, or quantitative such as FAIR) used by everyone.",
+              "example": "All subsidiaries use the same 5x5 matrix and definitions, so risks can be compared across countries."
+            },
+            {
+              "type": "control",
+              "id": "GV.RM-07",
+              "text": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions.",
+              "practice": "Consider upside: security as a market differentiator, faster cloud adoption through better controls.",
+              "example": "A SaaS firm treats ISO 27001 certification as an opportunity to enter regulated banking clients."
+            }
+          ]
+        },
+        {
+          "id": "gv-rr",
+          "title": "GV.RR Roles, Responsibilities, and Authorities",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Cybersecurity roles, responsibilities and authorities to foster accountability, performance assessment and continuous improvement are established and communicated."
+            },
+            {
+              "type": "control",
+              "id": "GV.RR-01",
+              "text": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving.",
+              "practice": "Board and executives own cyber risk (not only the CISO). Evidence: board minutes, cyber in executive objectives.",
+              "example": "The CEO sponsors the security programme and includes phishing-reporting rates in management scorecards."
+            },
+            {
+              "type": "control",
+              "id": "GV.RR-02",
+              "text": "Roles, responsibilities, and authorities related to cybersecurity risk management are established, communicated, understood, and enforced.",
+              "practice": "RACI for security processes, job descriptions with security duties, named risk and asset owners.",
+              "example": "Each business application has a named business owner who approves access reviews."
+            },
+            {
+              "type": "control",
+              "id": "GV.RR-03",
+              "text": "Adequate resources are allocated commensurate with the cybersecurity risk strategy, roles, responsibilities, and policies.",
+              "practice": "Budget and staffing linked to risk priorities; resourcing reviewed when risk changes.",
+              "example": "After adding a new digital bank channel, the board approves two extra SOC analysts."
+            },
+            {
+              "type": "control",
+              "id": "GV.RR-04",
+              "text": "Cybersecurity is included in human resources practices.",
+              "practice": "Screening, onboarding, security clauses in contracts, disciplinary process, offboarding access removal.",
+              "example": "HR triggers same-day account disablement for leavers through an HRIS-IAM integration."
+            }
+          ]
+        },
+        {
+          "id": "gv-po",
+          "title": "GV.PO Policy",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Organisational cybersecurity policy is established, communicated and enforced."
+            },
+            {
+              "type": "control",
+              "id": "GV.PO-01",
+              "text": "Policy for managing cybersecurity risks is established based on organizational context, cybersecurity strategy, and priorities and is communicated and enforced.",
+              "practice": "Approved policy set (e.g. information security policy plus topic policies), acknowledged by staff, with enforcement mechanisms.",
+              "example": "A top-level policy approved by the board, supported by standards for access, cryptography and cloud."
+            },
+            {
+              "type": "control",
+              "id": "GV.PO-02",
+              "text": "Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organizational mission.",
+              "practice": "Scheduled reviews (at least yearly) and event-driven reviews (new regulation, major incident, new tech such as GenAI).",
+              "example": "An acceptable-use policy is updated to cover generative AI tools after staff start pasting client data into public chatbots."
+            }
+          ]
+        },
+        {
+          "id": "gv-ov",
+          "title": "GV.OV Oversight",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Results of organisation-wide cybersecurity risk management activities and performance are used to inform, improve and adjust the risk management strategy."
+            },
+            {
+              "type": "control",
+              "id": "GV.OV-01",
+              "text": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction.",
+              "practice": "Periodic strategy review by leadership using outcome data.",
+              "example": "Annual board review shows phishing losses dropped but third-party incidents rose; strategy shifts budget to supplier assurance."
+            },
+            {
+              "type": "control",
+              "id": "GV.OV-02",
+              "text": "The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks.",
+              "practice": "Check that the strategy still covers new business lines, regulations and threats.",
+              "example": "Launching an AI-driven credit scoring service triggers a strategy review to cover AI risk."
+            },
+            {
+              "type": "control",
+              "id": "GV.OV-03",
+              "text": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed.",
+              "practice": "KPIs and KRIs reported and acted on (e.g. patch SLA compliance, MTTD, MTTR).",
+              "example": "Monthly dashboard shows critical patch SLA at 62%; management assigns an action plan with a 90-day target."
+            }
+          ]
+        },
+        {
+          "id": "gv-sc",
+          "title": "GV.SC Supply Chain Risk Management",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Cyber supply chain risk management (C-SCRM) processes are identified, established, managed, monitored and improved by organisational stakeholders. This is the largest category in CSF 2.0."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-01",
+              "text": "A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders.",
+              "practice": "Formal third-party risk programme with policy and ownership shared by procurement, legal, security.",
+              "example": "A bank sets up a Third-Party Risk Committee chaired by the COO."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-02",
+              "text": "Cybersecurity roles and responsibilities for suppliers, customers, and partners are established, communicated, and coordinated internally and externally.",
+              "practice": "Shared responsibility defined in contracts and RACI (who patches, who monitors, who notifies).",
+              "example": "A cloud contract states the provider secures infrastructure while the customer manages identities and data."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-03",
+              "text": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes.",
+              "practice": "Supplier risks appear in the same risk register and review cycles.",
+              "example": "Concentration risk on one managed security provider is escalated in the enterprise risk register."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-04",
+              "text": "Suppliers are known and prioritized by criticality.",
+              "practice": "Supplier inventory with tiering (critical, high, medium, low) by data access, service criticality, substitutability.",
+              "example": "Of 600 vendors, 35 are tiered critical and get annual security assessments."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-05",
+              "text": "Requirements to address cybersecurity risks in supply chains are established, prioritized, and integrated into contracts and other types of agreements with suppliers and other relevant third parties.",
+              "practice": "Security schedules in contracts: breach notification, audit rights, certifications, subcontractor controls, data location.",
+              "example": "Contracts require notification within 24 hours, annual SOC 2 Type II, and right to audit."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-06",
+              "text": "Planning and due diligence are performed to reduce risks before entering into formal supplier or other third-party relationships.",
+              "practice": "Pre-contract security questionnaires, evidence review, financial and geopolitical checks.",
+              "example": "Before selecting a core banking SaaS, the bank reviews the vendor's penetration test reports and hosting locations."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-07",
+              "text": "The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship.",
+              "practice": "Ongoing monitoring: reassessments, external rating services, performance reviews, issue tracking.",
+              "example": "A vendor's security rating drops after a leaked credential incident; the relationship owner triggers a reassessment."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-08",
+              "text": "Relevant suppliers and other third parties are included in incident planning, response, and recovery activities.",
+              "practice": "Joint playbooks, contacts, participation in exercises.",
+              "example": "The managed SOC provider and the ISP join the annual ransomware tabletop exercise."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-09",
+              "text": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle.",
+              "practice": "Secure acquisition, SBOMs, provenance checks, end-of-support tracking.",
+              "example": "A manufacturer requires SBOMs from PLC vendors and tracks component vulnerabilities through the asset lifecycle."
+            },
+            {
+              "type": "control",
+              "id": "GV.SC-10",
+              "text": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement.",
+              "practice": "Exit plans: data return and deletion, access revocation, transition support.",
+              "example": "When changing payroll provider, the company obtains a certificate of data destruction and revokes all API keys."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which GOVERN category covers risk appetite and tolerance?",
+          "options": [
+            "GV.OC",
+            "GV.RM",
+            "GV.RR",
+            "GV.OV"
+          ],
+          "answer": 1,
+          "explain": "GV.RM-02 requires risk appetite and tolerance statements."
+        },
+        {
+          "q": "GV.RR-04 is about...",
+          "options": [
+            "Board reporting",
+            "Including cybersecurity in human resources practices",
+            "Policy reviews",
+            "Supplier tiering"
+          ],
+          "answer": 1,
+          "explain": "HR practices: screening, onboarding, offboarding and so on."
+        },
+        {
+          "q": "Which subcategory addresses exit provisions at the end of a supplier relationship?",
+          "options": [
+            "GV.SC-04",
+            "GV.SC-06",
+            "GV.SC-10",
+            "GV.RM-05"
+          ],
+          "answer": 2,
+          "explain": "GV.SC-10 covers activities after the conclusion of the agreement."
+        },
+        {
+          "q": "GV.RM-07 introduces which concept?",
+          "options": [
+            "Zero trust",
+            "Positive risks (strategic opportunities)",
+            "Insurance",
+            "Tiering"
+          ],
+          "answer": 1,
+          "explain": "CSF 2.0 explicitly includes opportunities as positive risks."
+        },
+        {
+          "q": "A company maps the cloud identity provider its factory depends on. Which subcategory is this?",
+          "options": [
+            "GV.OC-04",
+            "GV.OC-05",
+            "GV.SC-02",
+            "ID.AM-02"
+          ],
+          "answer": 1,
+          "explain": "GV.OC-05: outcomes, capabilities and services the organisation depends on."
+        },
+        {
+          "q": "How many subcategories does GV.SC contain?",
+          "options": [
+            "5",
+            "7",
+            "10",
+            "4"
+          ],
+          "answer": 2,
+          "explain": "GV.SC-01 to GV.SC-10."
+        }
+      ]
+    },
+    {
+      "id": "identify",
+      "title": "IDENTIFY (ID)",
+      "summary": "3 categories, 21 outcomes: assets, risk assessment and improvement.",
+      "sections": [
+        {
+          "id": "id-intro",
+          "title": "IDENTIFY in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "IDENTIFY helps the organisation understand its current cybersecurity risks: what it has, what threatens it, how likely and harmful that is, and where to improve. In CSF 2.0 it also hosts **Improvement** (ID.IM), which in 1.1 was scattered across functions."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Code",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "Asset Management",
+                  "ID.AM",
+                  "Inventories of hardware, software, data, flows and services"
+                ],
+                [
+                  "Risk Assessment",
+                  "ID.RA",
+                  "Vulnerabilities, threats, likelihood, impact, responses"
+                ],
+                [
+                  "Improvement",
+                  "ID.IM",
+                  "Lessons from evaluations, tests, operations and plans"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-am",
+          "title": "ID.AM Asset Management",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Assets (data, hardware, software, systems, facilities, services, people) that enable the organisation to achieve business purposes are identified and managed consistent with their relative importance to organisational objectives and risk strategy."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-01",
+              "text": "Inventories of hardware managed by the organization are maintained.",
+              "practice": "Automated discovery plus CMDB with owners. Includes endpoints, servers, network, IoT and OT.",
+              "example": "An OT asset discovery tool finds 40 undocumented PLCs on a refinery network."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-02",
+              "text": "Inventories of software, services, and systems managed by the organization are maintained.",
+              "practice": "Software inventory including SaaS and cloud services; flags unsupported versions.",
+              "example": "SaaS discovery via the CASB reveals 120 unsanctioned apps."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-03",
+              "text": "Representations of the organization's authorized network communication and internal and external network data flows are maintained.",
+              "practice": "Network and data-flow diagrams kept current, including third-party connections.",
+              "example": "Data-flow diagrams for the card processing environment support PCI DSS scoping."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-04",
+              "text": "Inventories of services provided by suppliers are maintained.",
+              "practice": "List of supplier-provided services linked to the supplier inventory (GV.SC-04).",
+              "example": "The inventory shows which business processes rely on the outsourced call-centre platform."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-05",
+              "text": "Assets are prioritized based on classification, criticality, resources, and impact on the mission.",
+              "practice": "Criticality ratings drive control strength, monitoring and recovery priority.",
+              "example": "The core banking database is rated Tier 1; the intranet wiki is Tier 3."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-07",
+              "text": "Inventories of data and corresponding metadata for designated data types are maintained.",
+              "practice": "Data catalogue for sensitive data types (PII, card, health, IP) with location, owner and classification.",
+              "example": "A data discovery scan maps where national ID numbers are stored across file shares and databases."
+            },
+            {
+              "type": "control",
+              "id": "ID.AM-08",
+              "text": "Systems, hardware, software, services, and data are managed throughout their life cycles.",
+              "practice": "Lifecycle from acquisition to secure disposal; end-of-life tracking; media sanitisation.",
+              "example": "Laptops are wiped to NIST SP 800-88 standards before resale, with certificates retained."
+            }
+          ]
+        },
+        {
+          "id": "id-ra",
+          "title": "ID.RA Risk Assessment",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The cybersecurity risk to the organisation, assets and individuals is understood."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-01",
+              "text": "Vulnerabilities in assets are identified, validated, and recorded.",
+              "practice": "Vulnerability scanning, penetration tests, code analysis, configuration audits, with validated findings tracked.",
+              "example": "Authenticated scans run weekly; a VAPT engagement validates exploitability of the top findings."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-02",
+              "text": "Cyber threat intelligence is received from information sharing forums and sources.",
+              "practice": "Subscriptions to CERT feeds, sector ISACs, vendor intelligence.",
+              "example": "A bank receives indicators from its national CERT and the FS-ISAC."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-03",
+              "text": "Internal and external threats to the organization are identified and recorded.",
+              "practice": "Threat profile covering relevant actors (ransomware groups, insiders, state actors) and techniques (e.g. MITRE ATT&CK).",
+              "example": "An energy company records state-sponsored OT threat groups as a top threat."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-04",
+              "text": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded.",
+              "practice": "Scenario analysis combining threat, vulnerability and business impact.",
+              "example": "Scenario: ransomware encrypts the ERP for 5 days, estimated loss USD 2.1M."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-05",
+              "text": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization.",
+              "practice": "Risk ratings computed with the GV.RM-06 method; inherent vs residual risk recorded.",
+              "example": "Risk register ranks internet-facing VPN vulnerabilities above internal printer issues."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-06",
+              "text": "Risk responses are chosen, prioritized, planned, tracked, and communicated.",
+              "practice": "Treatment plans with owners and dates; progress reported.",
+              "example": "Each high risk has a treatment owner and a quarterly status in the risk committee pack."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-07",
+              "text": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked.",
+              "practice": "Change management with security review; exception register with expiry and compensating controls.",
+              "example": "An exception allows a legacy system without MFA for 6 months with extra monitoring."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-08",
+              "text": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established.",
+              "practice": "Vulnerability disclosure policy, security.txt, PSIRT process for product companies.",
+              "example": "A SaaS firm publishes a disclosure policy and triages researcher reports within 5 days."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-09",
+              "text": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use.",
+              "practice": "Verify signatures, hashes, trusted sources; avoid grey-market hardware.",
+              "example": "Firmware updates for network switches are only installed after signature verification."
+            },
+            {
+              "type": "control",
+              "id": "ID.RA-10",
+              "text": "Critical suppliers are assessed prior to acquisition.",
+              "practice": "Security assessment of critical suppliers before contract (links to GV.SC-06).",
+              "example": "A managed SOC provider undergoes an onsite assessment before selection."
+            }
+          ]
+        },
+        {
+          "id": "id-im",
+          "title": "ID.IM Improvement",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Improvements to organisational cybersecurity risk management processes, procedures and activities are identified across all CSF functions."
+            },
+            {
+              "type": "control",
+              "id": "ID.IM-01",
+              "text": "Improvements are identified from evaluations.",
+              "practice": "Audits, assessments and reviews produce tracked improvement actions.",
+              "example": "The internal audit of access management yields 7 findings tracked to closure."
+            },
+            {
+              "type": "control",
+              "id": "ID.IM-02",
+              "text": "Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties.",
+              "practice": "Red team, tabletop and DR test results feed improvement backlogs.",
+              "example": "A red team shows lateral movement through a shared admin account; remediation removes shared accounts."
+            },
+            {
+              "type": "control",
+              "id": "ID.IM-03",
+              "text": "Improvements are identified from execution of operational processes, procedures, and activities.",
+              "practice": "Lessons from daily operations and real incidents.",
+              "example": "Post-incident review finds alert fatigue; the SOC tunes rules and reduces noise by 40%."
+            },
+            {
+              "type": "control",
+              "id": "ID.IM-04",
+              "text": "Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved.",
+              "practice": "Plans (IR, BCP, DR, crisis comms) are version-controlled, tested and updated.",
+              "example": "The incident response plan is updated after a tabletop reveals unclear legal escalation."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which subcategory requires inventories of data and metadata?",
+          "options": [
+            "ID.AM-02",
+            "ID.AM-05",
+            "ID.AM-07",
+            "ID.AM-08"
+          ],
+          "answer": 2,
+          "explain": "ID.AM-07 covers data inventories for designated data types."
+        },
+        {
+          "q": "Receiving threat intelligence from ISACs falls under...",
+          "options": [
+            "ID.RA-01",
+            "ID.RA-02",
+            "DE.AE-07",
+            "GV.OC-02"
+          ],
+          "answer": 1,
+          "explain": "ID.RA-02. Integrating it into event analysis is DE.AE-07."
+        },
+        {
+          "q": "A vulnerability disclosure policy supports which subcategory?",
+          "options": [
+            "ID.RA-08",
+            "ID.RA-06",
+            "RS.AN-03",
+            "PR.PS-06"
+          ],
+          "answer": 0,
+          "explain": "ID.RA-08: processes for receiving, analysing and responding to vulnerability disclosures."
+        },
+        {
+          "q": "Where does 'Improvement' live in CSF 2.0?",
+          "options": [
+            "GOVERN",
+            "IDENTIFY",
+            "RECOVER",
+            "It was removed"
+          ],
+          "answer": 1,
+          "explain": "ID.IM gathers improvement across all functions."
+        },
+        {
+          "q": "Verifying firmware signatures before installation maps to...",
+          "options": [
+            "ID.RA-09",
+            "PR.PS-02",
+            "ID.AM-08",
+            "GV.SC-05"
+          ],
+          "answer": 0,
+          "explain": "ID.RA-09: authenticity and integrity of hardware and software assessed prior to acquisition and use."
+        },
+        {
+          "q": "Managing exceptions with expiry dates maps to...",
+          "options": [
+            "GV.PO-02",
+            "ID.RA-07",
+            "ID.IM-03",
+            "GV.RM-04"
+          ],
+          "answer": 1,
+          "explain": "ID.RA-07: changes and exceptions are managed, assessed, recorded and tracked."
+        }
+      ]
+    },
+    {
+      "id": "protect",
+      "title": "PROTECT (PR)",
+      "summary": "5 categories, 22 outcomes: identity and access, training, data, platforms and resilience.",
+      "sections": [
+        {
+          "id": "pr-intro",
+          "title": "PROTECT in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "PROTECT covers safeguards that prevent or reduce the likelihood and impact of adverse events. CSF 2.0 consolidated 1.1's six categories into five, organised around identity, people, data, platforms and infrastructure."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Code",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "Identity Management, Authentication, and Access Control",
+                  "PR.AA",
+                  "Identities, credentials, authentication, permissions, physical access"
+                ],
+                [
+                  "Awareness and Training",
+                  "PR.AT",
+                  "General and specialised training"
+                ],
+                [
+                  "Data Security",
+                  "PR.DS",
+                  "Data at rest, in transit, in use, backups"
+                ],
+                [
+                  "Platform Security",
+                  "PR.PS",
+                  "Configuration, patching, logging, software integrity, secure development"
+                ],
+                [
+                  "Technology Infrastructure Resilience",
+                  "PR.IR",
+                  "Network protection, environment, resilience, capacity"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pr-aa",
+          "title": "PR.AA Identity Management, Authentication, and Access Control",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Access to physical and logical assets is limited to authorised users, services and hardware and managed commensurate with the assessed risk of unauthorised access."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-01",
+              "text": "Identities and credentials for authorized users, services, and hardware are managed by the organization.",
+              "practice": "Joiner-mover-leaver lifecycle, service account governance, device identities, credential rotation.",
+              "example": "All service accounts are inventoried, owned and rotated through a PAM vault."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-02",
+              "text": "Identities are proofed and bound to credentials based on the context of interactions.",
+              "practice": "Identity proofing strength matched to risk (see NIST SP 800-63).",
+              "example": "A digital bank verifies new customers with document scan plus liveness check before issuing credentials."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-03",
+              "text": "Users, services, and hardware are authenticated.",
+              "practice": "MFA, phishing-resistant authenticators for high risk, certificate-based device authentication.",
+              "example": "FIDO2 security keys are required for all privileged administrators."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-04",
+              "text": "Identity assertions are protected, conveyed, and verified.",
+              "practice": "Secure federation (SAML, OIDC), signed and validated tokens, short lifetimes.",
+              "example": "The SSO platform signs SAML assertions and applications reject unsigned or expired ones."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-05",
+              "text": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties.",
+              "practice": "Role-based access, periodic access reviews, SoD rules, just-in-time privileged access.",
+              "example": "Quarterly access reviews in the ERP flag a user who can both create and approve vendor payments."
+            },
+            {
+              "type": "control",
+              "id": "PR.AA-06",
+              "text": "Physical access to assets is managed, monitored, and enforced commensurate with risk.",
+              "practice": "Badge access, visitor logs, CCTV, access reviews for data centres and OT sites.",
+              "example": "Access to the control room of a gas plant requires badge plus PIN and is reviewed monthly."
+            }
+          ]
+        },
+        {
+          "id": "pr-at",
+          "title": "PR.AT Awareness and Training",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The organisation's personnel are provided with cybersecurity awareness and training so that they can perform their cybersecurity-related tasks."
+            },
+            {
+              "type": "control",
+              "id": "PR.AT-01",
+              "text": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind.",
+              "practice": "Onboarding and annual awareness, phishing simulations, measured by reporting rates not just completion.",
+              "example": "Phishing report rate rises from 18% to 61% over a year of monthly simulations."
+            },
+            {
+              "type": "control",
+              "id": "PR.AT-02",
+              "text": "Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind.",
+              "practice": "Role-based training for developers, admins, executives, OT engineers, finance.",
+              "example": "Developers complete secure coding training; finance staff train on business email compromise."
+            }
+          ]
+        },
+        {
+          "id": "pr-ds",
+          "title": "PR.DS Data Security",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Data are managed consistent with the organisation's risk strategy to protect the confidentiality, integrity and availability of information."
+            },
+            {
+              "type": "control",
+              "id": "PR.DS-01",
+              "text": "The confidentiality, integrity, and availability of data-at-rest are protected.",
+              "practice": "Encryption at rest, key management, DLP, integrity checks, access controls on storage.",
+              "example": "Customer databases use TDE with keys held in an HSM."
+            },
+            {
+              "type": "control",
+              "id": "PR.DS-02",
+              "text": "The confidentiality, integrity, and availability of data-in-transit are protected.",
+              "practice": "TLS 1.2+ everywhere, VPN/private links, email encryption, certificate management.",
+              "example": "All internal APIs enforce mutual TLS."
+            },
+            {
+              "type": "control",
+              "id": "PR.DS-10",
+              "text": "The confidentiality, integrity, and availability of data-in-use are protected.",
+              "practice": "Memory protection, confidential computing, screen and clipboard controls, masking in UIs.",
+              "example": "Call-centre screens mask card numbers except the last four digits."
+            },
+            {
+              "type": "control",
+              "id": "PR.DS-11",
+              "text": "Backups of data are created, protected, maintained, and tested.",
+              "practice": "3-2-1 backups, immutable or offline copies, restore tests on schedule.",
+              "example": "Immutable backups and a quarterly full restore test of the core banking system."
+            }
+          ]
+        },
+        {
+          "id": "pr-ps",
+          "title": "PR.PS Platform Security",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "The hardware, software (firmware, operating systems, applications) and services of physical and virtual platforms are managed consistent with the organisation's risk strategy."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-01",
+              "text": "Configuration management practices are established and applied.",
+              "practice": "Hardening baselines (e.g. CIS Benchmarks), configuration drift detection, infrastructure as code.",
+              "example": "Cloud accounts are continuously checked against CIS benchmarks with auto-remediation."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-02",
+              "text": "Software is maintained, replaced, and removed commensurate with risk.",
+              "practice": "Patch management SLAs by severity, removal of unsupported software.",
+              "example": "Critical internet-facing patches are deployed within 7 days; Windows Server 2012 is retired."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-03",
+              "text": "Hardware is maintained, replaced, and removed commensurate with risk.",
+              "practice": "Firmware updates, hardware refresh cycles, secure decommissioning.",
+              "example": "End-of-life firewalls are replaced before vendor support ends."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-04",
+              "text": "Log records are generated and made available for continuous monitoring.",
+              "practice": "Logging standard specifying sources, content, retention, time sync; logs forwarded to SIEM.",
+              "example": "Authentication, admin actions and firewall logs are sent to the SIEM and kept 12 months."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-05",
+              "text": "Installation and execution of unauthorized software are prevented.",
+              "practice": "Application allowlisting, restricted admin rights, app store controls.",
+              "example": "OT engineering workstations run application allowlisting."
+            },
+            {
+              "type": "control",
+              "id": "PR.PS-06",
+              "text": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle.",
+              "practice": "Secure SDLC aligned with NIST SSDF (SP 800-218): threat modelling, SAST/DAST, dependency scanning, code review.",
+              "example": "Pull requests are blocked if SAST finds high-severity issues or dependencies with known critical CVEs."
+            }
+          ]
+        },
+        {
+          "id": "pr-ir",
+          "title": "PR.IR Technology Infrastructure Resilience",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Security architectures are managed with the organisation's risk strategy to protect asset confidentiality, integrity and availability, and organisational resilience."
+            },
+            {
+              "type": "control",
+              "id": "PR.IR-01",
+              "text": "Networks and environments are protected from unauthorized logical access and usage.",
+              "practice": "Segmentation, zero trust network access, firewalls, IT/OT separation (e.g. IEC 62443 zones and conduits).",
+              "example": "A DMZ separates the corporate network from the plant control network, with only brokered connections allowed."
+            },
+            {
+              "type": "control",
+              "id": "PR.IR-02",
+              "text": "The organization's technology assets are protected from environmental threats.",
+              "practice": "Fire suppression, cooling, flood protection, power conditioning.",
+              "example": "The data centre in a cyclone-prone area has raised floors and redundant cooling."
+            },
+            {
+              "type": "control",
+              "id": "PR.IR-03",
+              "text": "Mechanisms are implemented to achieve resilience requirements in normal and adverse situations.",
+              "practice": "Redundancy, failover, load balancing, geographic distribution.",
+              "example": "The payment gateway runs active-active across two sites."
+            },
+            {
+              "type": "control",
+              "id": "PR.IR-04",
+              "text": "Adequate resource capacity to ensure availability is maintained.",
+              "practice": "Capacity planning, DDoS protection, autoscaling.",
+              "example": "DDoS scrubbing protects online banking during peak salary-day traffic."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which subcategory covers least privilege and separation of duties?",
+          "options": [
+            "PR.AA-01",
+            "PR.AA-03",
+            "PR.AA-05",
+            "PR.PS-05"
+          ],
+          "answer": 2,
+          "explain": "PR.AA-05."
+        },
+        {
+          "q": "Protection of data-in-use is...",
+          "options": [
+            "PR.DS-01",
+            "PR.DS-02",
+            "PR.DS-10",
+            "PR.DS-11"
+          ],
+          "answer": 2,
+          "explain": "PR.DS-10. 01 = at rest, 02 = in transit, 11 = backups."
+        },
+        {
+          "q": "Generating logs and making them available for monitoring falls under...",
+          "options": [
+            "DE.CM-01",
+            "PR.PS-04",
+            "DE.AE-03",
+            "ID.AM-03"
+          ],
+          "answer": 1,
+          "explain": "PR.PS-04 generates logs; DE functions use them."
+        },
+        {
+          "q": "Secure SDLC practices map to...",
+          "options": [
+            "PR.PS-06",
+            "ID.RA-01",
+            "GV.SC-09",
+            "PR.PS-01"
+          ],
+          "answer": 0,
+          "explain": "PR.PS-06, aligned to the NIST SSDF."
+        },
+        {
+          "q": "IT/OT network segmentation most directly supports...",
+          "options": [
+            "PR.IR-01",
+            "PR.IR-03",
+            "PR.AA-06",
+            "DE.CM-02"
+          ],
+          "answer": 0,
+          "explain": "PR.IR-01: networks and environments protected from unauthorised logical access."
+        },
+        {
+          "q": "A quarterly full restore test demonstrates...",
+          "options": [
+            "RC.RP-03",
+            "PR.DS-11",
+            "PR.IR-03",
+            "ID.IM-02"
+          ],
+          "answer": 1,
+          "explain": "PR.DS-11 requires backups to be tested. RC.RP-03 verifies backup integrity before using them in recovery."
+        }
+      ]
+    },
+    {
+      "id": "detect",
+      "title": "DETECT (DE)",
+      "summary": "2 categories, 11 outcomes: continuous monitoring and adverse event analysis.",
+      "sections": [
+        {
+          "id": "de-intro",
+          "title": "DETECT in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "DETECT enables timely discovery and analysis of anomalies, indicators of compromise and other potentially adverse events. CSF 2.0 folded the 1.1 \"Detection Processes\" category into these two categories."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Code",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "Continuous Monitoring",
+                  "DE.CM",
+                  "Watching networks, physical environment, people, providers and computing"
+                ],
+                [
+                  "Adverse Event Analysis",
+                  "DE.AE",
+                  "Analysing, correlating, scoping and declaring incidents"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "de-cm",
+          "title": "DE.CM Continuous Monitoring",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Assets are monitored to find anomalies, indicators of compromise and other potentially adverse events."
+            },
+            {
+              "type": "control",
+              "id": "DE.CM-01",
+              "text": "Networks and network services are monitored to find potentially adverse events.",
+              "practice": "IDS/NDR, flow analysis, DNS monitoring, OT passive monitoring.",
+              "example": "Network detection spots beaconing from a finance workstation to a newly registered domain."
+            },
+            {
+              "type": "control",
+              "id": "DE.CM-02",
+              "text": "The physical environment is monitored to find potentially adverse events.",
+              "practice": "CCTV, door alarms, environmental sensors.",
+              "example": "A door-forced alarm in the server room triggers a SOC ticket."
+            },
+            {
+              "type": "control",
+              "id": "DE.CM-03",
+              "text": "Personnel activity and technology usage are monitored to find potentially adverse events.",
+              "practice": "UEBA, privileged session monitoring, insider-risk analytics (within legal and privacy limits).",
+              "example": "UEBA flags an employee downloading 10x their normal volume two days after resigning."
+            },
+            {
+              "type": "control",
+              "id": "DE.CM-06",
+              "text": "External service provider activities and services are monitored to find potentially adverse events.",
+              "practice": "Monitor vendor remote access sessions and SaaS audit logs.",
+              "example": "Vendor remote support sessions are recorded and alerts fire on access outside agreed windows."
+            },
+            {
+              "type": "control",
+              "id": "DE.CM-09",
+              "text": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events.",
+              "practice": "EDR, cloud workload protection, file integrity monitoring, container runtime security.",
+              "example": "EDR detects credential dumping on a domain controller."
+            }
+          ]
+        },
+        {
+          "id": "de-ae",
+          "title": "DE.AE Adverse Event Analysis",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Anomalies, indicators of compromise and other potentially adverse events are analysed to characterise the events and detect cybersecurity incidents."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-02",
+              "text": "Potentially adverse events are analyzed to better understand associated activities.",
+              "practice": "Triage by SOC analysts; playbooks per alert type.",
+              "example": "An analyst reviews an impossible-travel alert and confirms a token theft."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-03",
+              "text": "Information is correlated from multiple sources.",
+              "practice": "SIEM correlation across identity, endpoint, network, cloud.",
+              "example": "Correlating a VPN login, EDR alert and mailbox rule creation reveals account takeover."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-04",
+              "text": "The estimated impact and scope of adverse events are understood.",
+              "practice": "Assess affected assets, data and business services.",
+              "example": "The SOC estimates 3 servers and 2,000 customer records potentially exposed."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-06",
+              "text": "Information on adverse events is provided to authorized staff and tools.",
+              "practice": "Alerts routed to the right teams and tools (ticketing, SOAR).",
+              "example": "High-severity alerts page the on-call incident manager."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-07",
+              "text": "Cyber threat intelligence and other contextual information are integrated into the analysis.",
+              "practice": "Enrich alerts with CTI, asset criticality, vulnerability data.",
+              "example": "An IP in an alert matches a CERT advisory on a ransomware group, raising priority."
+            },
+            {
+              "type": "control",
+              "id": "DE.AE-08",
+              "text": "Incidents are declared when adverse events meet the defined incident criteria.",
+              "practice": "Written incident criteria and a declared-incident handoff to RESPOND.",
+              "example": "Confirmed data exfiltration automatically meets the criteria for a major incident."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many subcategories does DETECT have in CSF 2.0?",
+          "options": [
+            "11",
+            "18",
+            "13",
+            "8"
+          ],
+          "answer": 0,
+          "explain": "DE.CM has 5 and DE.AE has 6."
+        },
+        {
+          "q": "EDR monitoring of workloads maps to...",
+          "options": [
+            "DE.CM-01",
+            "DE.CM-09",
+            "PR.PS-04",
+            "DE.AE-03"
+          ],
+          "answer": 1,
+          "explain": "DE.CM-09: computing hardware, software, runtime environments and data."
+        },
+        {
+          "q": "Which subcategory is the handoff point to RESPOND?",
+          "options": [
+            "DE.AE-06",
+            "DE.AE-08",
+            "RS.MA-02",
+            "DE.CM-03"
+          ],
+          "answer": 1,
+          "explain": "DE.AE-08: incidents are declared when criteria are met."
+        },
+        {
+          "q": "Monitoring vendor remote support sessions maps to...",
+          "options": [
+            "DE.CM-06",
+            "GV.SC-07",
+            "PR.AA-06",
+            "DE.CM-03"
+          ],
+          "answer": 0,
+          "explain": "DE.CM-06: external service provider activities are monitored."
+        },
+        {
+          "q": "SIEM correlation of identity, endpoint and network data is...",
+          "options": [
+            "DE.AE-02",
+            "DE.AE-03",
+            "DE.AE-04",
+            "DE.AE-07"
+          ],
+          "answer": 1,
+          "explain": "DE.AE-03: information is correlated from multiple sources."
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "title": "RESPOND (RS)",
+      "summary": "4 categories, 13 outcomes: incident management, analysis, communication and mitigation.",
+      "sections": [
+        {
+          "id": "rs-intro",
+          "title": "RESPOND in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "RESPOND supports the ability to contain the effects of cybersecurity incidents. It begins once an incident is declared (DE.AE-08). Align your process with **NIST SP 800-61 Rev. 3** (Incident Response Recommendations and Considerations for Cybersecurity Risk Management, April 2025), which is itself organised around CSF 2.0."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Category",
+                "Code",
+                "Focus"
+              ],
+              "rows": [
+                [
+                  "Incident Management",
+                  "RS.MA",
+                  "Executing the plan, triage, prioritisation, escalation, recovery criteria"
+                ],
+                [
+                  "Incident Analysis",
+                  "RS.AN",
+                  "Root cause, evidence, magnitude"
+                ],
+                [
+                  "Incident Response Reporting and Communication",
+                  "RS.CO",
+                  "Notifying and sharing with stakeholders"
+                ],
+                [
+                  "Incident Mitigation",
+                  "RS.MI",
+                  "Containment and eradication"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rs-ma",
+          "title": "RS.MA Incident Management",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Responses to detected cybersecurity incidents are managed."
+            },
+            {
+              "type": "control",
+              "id": "RS.MA-01",
+              "text": "The incident response plan is executed in coordination with relevant third parties once an incident is declared.",
+              "practice": "Activate the IR plan, the incident team and third parties (IR retainer, MSSP, insurer, legal counsel).",
+              "example": "The bank activates its IR retainer and notifies its cyber insurer within the policy window."
+            },
+            {
+              "type": "control",
+              "id": "RS.MA-02",
+              "text": "Incident reports are triaged and validated.",
+              "practice": "Confirm the incident is real and determine initial scope.",
+              "example": "A reported \"ransomware\" is validated as a single infected laptop with no spread."
+            },
+            {
+              "type": "control",
+              "id": "RS.MA-03",
+              "text": "Incidents are categorized and prioritized.",
+              "practice": "Severity matrix based on impact and scope.",
+              "example": "Incident classified Severity 1 because the payments service is affected."
+            },
+            {
+              "type": "control",
+              "id": "RS.MA-04",
+              "text": "Incidents are escalated or elevated as needed.",
+              "practice": "Escalation criteria to executives, crisis team, board.",
+              "example": "Severity 1 incidents escalate to the CEO and crisis management team within 1 hour."
+            },
+            {
+              "type": "control",
+              "id": "RS.MA-05",
+              "text": "The criteria for initiating incident recovery are applied.",
+              "practice": "Defined conditions (e.g. containment confirmed) before moving to RECOVER.",
+              "example": "Recovery begins only after the attacker's persistence is removed and credentials reset."
+            }
+          ]
+        },
+        {
+          "id": "rs-an",
+          "title": "RS.AN Incident Analysis",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Investigations are conducted to ensure effective response and support forensics and recovery activities."
+            },
+            {
+              "type": "control",
+              "id": "RS.AN-03",
+              "text": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident.",
+              "practice": "Forensic timeline, attack path, root cause.",
+              "example": "Root cause: an unpatched VPN appliance exploited 3 weeks before detection."
+            },
+            {
+              "type": "control",
+              "id": "RS.AN-06",
+              "text": "Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved.",
+              "practice": "Investigation log, chain-of-custody documentation.",
+              "example": "Every analyst action is recorded in the case management system with timestamps."
+            },
+            {
+              "type": "control",
+              "id": "RS.AN-07",
+              "text": "Incident data and metadata are collected, and their integrity and provenance are preserved.",
+              "practice": "Forensic images, hash verification, evidence storage.",
+              "example": "Disk images are hashed with SHA-256 and stored in a restricted evidence locker."
+            },
+            {
+              "type": "control",
+              "id": "RS.AN-08",
+              "text": "An incident's magnitude is estimated and validated.",
+              "practice": "Validate how many systems, records and customers are affected.",
+              "example": "Analysis confirms 12,400 customer records were accessed, correcting the initial estimate of 2,000."
+            }
+          ]
+        },
+        {
+          "id": "rs-co",
+          "title": "RS.CO Incident Response Reporting and Communication",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Response activities are coordinated with internal and external stakeholders as required by laws, regulations or policies."
+            },
+            {
+              "type": "control",
+              "id": "RS.CO-02",
+              "text": "Internal and external stakeholders are notified of incidents.",
+              "practice": "Notification matrix with legal deadlines (regulators, data protection authority, customers, partners).",
+              "example": "The data protection authority is notified within the 72-hour legal deadline."
+            },
+            {
+              "type": "control",
+              "id": "RS.CO-03",
+              "text": "Information is shared with designated internal and external stakeholders.",
+              "practice": "Ongoing updates; sharing indicators with CERTs and ISACs.",
+              "example": "IOCs are shared with the national CERT to help other banks."
+            }
+          ]
+        },
+        {
+          "id": "rs-mi",
+          "title": "RS.MI Incident Mitigation",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Activities are performed to prevent expansion of an event and mitigate its effects."
+            },
+            {
+              "type": "control",
+              "id": "RS.MI-01",
+              "text": "Incidents are contained.",
+              "practice": "Isolate hosts, disable accounts, block IOCs, segment networks.",
+              "example": "EDR network-isolates 14 infected endpoints within minutes."
+            },
+            {
+              "type": "control",
+              "id": "RS.MI-02",
+              "text": "Incidents are eradicated.",
+              "practice": "Remove malware and persistence, close the entry point, reset credentials.",
+              "example": "The team rebuilds compromised servers, patches the VPN and resets all privileged passwords."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which subcategory covers notifying regulators and customers?",
+          "options": [
+            "RS.CO-02",
+            "RS.CO-03",
+            "RC.CO-04",
+            "GV.OC-03"
+          ],
+          "answer": 0,
+          "explain": "RS.CO-02: stakeholders are notified of incidents."
+        },
+        {
+          "q": "Preserving chain of custody for forensic images maps to...",
+          "options": [
+            "RS.AN-03",
+            "RS.AN-07",
+            "RS.MA-02",
+            "RS.MI-02"
+          ],
+          "answer": 1,
+          "explain": "RS.AN-07 covers collecting data and metadata while preserving integrity and provenance. RS.AN-06 covers recording investigation actions."
+        },
+        {
+          "q": "Which subcategory triggers the move from RESPOND to RECOVER?",
+          "options": [
+            "RS.MA-05",
+            "RS.MI-02",
+            "RC.RP-01",
+            "DE.AE-08"
+          ],
+          "answer": 0,
+          "explain": "RS.MA-05: criteria for initiating recovery are applied."
+        },
+        {
+          "q": "Isolating infected hosts is...",
+          "options": [
+            "RS.MI-01",
+            "RS.MI-02",
+            "RS.MA-03",
+            "PR.IR-01"
+          ],
+          "answer": 0,
+          "explain": "Containment is RS.MI-01; eradication is RS.MI-02."
+        },
+        {
+          "q": "Which NIST publication on incident response is organised around CSF 2.0?",
+          "options": [
+            "SP 800-61 Rev. 3",
+            "SP 800-53B",
+            "SP 800-37",
+            "AI 600-1"
+          ],
+          "answer": 0,
+          "explain": "SP 800-61 Rev. 3 (April 2025)."
+        }
+      ]
+    },
+    {
+      "id": "recover",
+      "title": "RECOVER (RC)",
+      "summary": "2 categories, 8 outcomes: executing recovery and communicating it.",
+      "sections": [
+        {
+          "id": "rc-intro",
+          "title": "RECOVER in context",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "RECOVER supports timely restoration of normal operations to reduce the effects of incidents. It links closely to business continuity and disaster recovery plans (ID.IM-04) and backups (PR.DS-11)."
+            }
+          ]
+        },
+        {
+          "id": "rc-rp",
+          "title": "RC.RP Incident Recovery Plan Execution",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-01",
+              "text": "The recovery portion of the incident response plan is executed once initiated from the incident response process.",
+              "practice": "Formal hand-over from response to recovery team.",
+              "example": "The recovery lead takes ownership once containment is signed off."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-02",
+              "text": "Recovery actions are selected, scoped, prioritized, and performed.",
+              "practice": "Recovery order driven by business impact analysis and asset criticality (ID.AM-05).",
+              "example": "Payments and ATMs are restored first, then internet banking, then HR systems."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-03",
+              "text": "The integrity of backups and other restoration assets is verified before using them for restoration.",
+              "practice": "Scan backups for malware, verify hashes, pick a clean restore point.",
+              "example": "Backups from before the initial intrusion date are scanned before restoration."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-04",
+              "text": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms.",
+              "practice": "Decide acceptable temporary operating mode (manual workarounds, reduced service).",
+              "example": "A plant runs in manual mode with extra supervision until the control system is validated."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-05",
+              "text": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed.",
+              "practice": "Validation tests, business sign-off, enhanced monitoring after restore.",
+              "example": "Business owners sign off after reconciliation shows no transaction discrepancies."
+            },
+            {
+              "type": "control",
+              "id": "RC.RP-06",
+              "text": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed.",
+              "practice": "Closure criteria, final report, lessons learned feeding ID.IM.",
+              "example": "The incident is closed with a final report and 11 improvement actions."
+            }
+          ]
+        },
+        {
+          "id": "rc-co",
+          "title": "RC.CO Incident Recovery Communication",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Restoration activities are coordinated with internal and external parties."
+            },
+            {
+              "type": "control",
+              "id": "RC.CO-03",
+              "text": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders.",
+              "practice": "Regular status updates to executives, regulators and key customers.",
+              "example": "Hourly updates to the executive team and daily updates to the central bank."
+            },
+            {
+              "type": "control",
+              "id": "RC.CO-04",
+              "text": "Public updates on incident recovery are shared using approved methods and messaging.",
+              "practice": "Pre-approved communication templates, spokesperson, channels.",
+              "example": "The company posts updates on its website and social channels using templates approved by legal."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Verifying backups are clean before restoring maps to...",
+          "options": [
+            "PR.DS-11",
+            "RC.RP-03",
+            "RC.RP-05",
+            "RS.AN-07"
+          ],
+          "answer": 1,
+          "explain": "RC.RP-03."
+        },
+        {
+          "q": "Public statements during recovery fall under...",
+          "options": [
+            "RC.CO-03",
+            "RC.CO-04",
+            "RS.CO-02",
+            "GV.OC-02"
+          ],
+          "answer": 1,
+          "explain": "RC.CO-04: public updates using approved methods and messaging."
+        },
+        {
+          "q": "Restoring payments before HR systems reflects...",
+          "options": [
+            "RC.RP-02",
+            "RC.RP-04",
+            "ID.AM-05 only",
+            "RS.MA-03"
+          ],
+          "answer": 0,
+          "explain": "RC.RP-02: recovery actions selected, scoped, prioritised and performed (informed by ID.AM-05)."
+        },
+        {
+          "q": "How many subcategories does RECOVER have?",
+          "options": [
+            "6",
+            "8",
+            "11",
+            "13"
+          ],
+          "answer": 1,
+          "explain": "RC.RP has 6 and RC.CO has 2."
+        }
+      ]
+    },
+    {
+      "id": "profiles-tiers",
+      "title": "Profiles and Tiers",
+      "summary": "Building Current and Target Profiles, Community Profiles, and using the four Tiers.",
+      "sections": [
+        {
+          "id": "profiles",
+          "title": "Organizational Profiles",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "An **Organizational Profile** describes an organisation's current and/or target cybersecurity posture in terms of the Core's outcomes. A **Current Profile** states which outcomes are being achieved and how well. A **Target Profile** states the desired outcomes prioritised to meet objectives."
+            },
+            {
+              "type": "h",
+              "text": "NIST's five steps"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Scope the profile:** which facts and assumptions, which business units, systems or products.",
+                "**Gather information:** policies, risk priorities, assessments, requirements, relevant Community Profiles.",
+                "**Create the profile:** determine what information to record for each outcome (status, priority, evidence, owner), and document current and target.",
+                "**Analyse gaps and create an action plan:** root causes of gaps, prioritised plan with costs and benefits (a POA&M or risk register works).",
+                "**Implement the action plan and update the profile:** track progress, repeat."
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "example",
+              "title": "A simple profile row",
+              "text": "**PR.AA-03** (authentication). Current: MFA for remote access only; 60% of staff covered. Target: phishing-resistant MFA for all users and all admins. Priority: High. Gap action: roll out FIDO2 for admins in Q1, number matching for all users in Q2. Owner: Head of IAM."
+            }
+          ]
+        },
+        {
+          "id": "community",
+          "title": "Community Profiles",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A **Community Profile** is a baseline of CSF outcomes created for a shared interest: a sector, technology, threat or use case. Organisations use it as a starting point for their Target Profile."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Examples exist or are in development for manufacturing, election infrastructure, maritime, semiconductors, telecom and small businesses.",
+                "NIST maintains a list of published Community Profiles on the CSF website.",
+                "Regulators or industry bodies can publish Community Profiles to set expectations for a sector."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "tiers",
+          "title": "The four Tiers",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "Tiers characterise the **rigor** of an organisation's cybersecurity risk governance (GOVERN) and management (the other functions). They are chosen as a target, informed by risk, threats, regulation and resources."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Tier",
+                "Governance",
+                "Management"
+              ],
+              "rows": [
+                [
+                  "1 Partial",
+                  "Ad hoc strategy; prioritisation not formal; limited awareness at organisational level.",
+                  "Irregular, case-by-case; limited sharing of information; little awareness of supplier risks."
+                ],
+                [
+                  "2 Risk Informed",
+                  "Practices approved by management but not organisation-wide policy.",
+                  "Awareness of risk at organisational level but no consistent approach; informal supplier risk awareness."
+                ],
+                [
+                  "3 Repeatable",
+                  "Practices formally approved and expressed as policy; updated regularly.",
+                  "Organisation-wide approach; consistent methods; roles defined; supplier requirements formalised in contracts."
+                ],
+                [
+                  "4 Adaptive",
+                  "Cyber risk is part of organisational culture and decision-making; adapts to changing threats and lessons learned.",
+                  "Continuous improvement using advanced practices and real-time information; supply chain risk actively managed."
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "style": "warn",
+              "title": "Tiers are not the goal",
+              "text": "Moving everything to Tier 4 is usually not cost-effective. NIST encourages selecting the Tier that meets organisational goals and reduces risk to acceptable levels. Tiers are also applied to the whole organisation's practices, not to individual subcategories (although many assessors score subcategories separately using their own scale)."
+            }
+          ]
+        },
+        {
+          "id": "resources",
+          "title": "Online resources you should use",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Resource",
+                "What you get"
+              ],
+              "rows": [
+                [
+                  "CSF 2.0 Reference Tool",
+                  "Browse, search and export the Core in JSON or Excel"
+                ],
+                [
+                  "Informative References",
+                  "Mappings to SP 800-53 Rev. 5, ISO/IEC 27001, CIS Controls and others"
+                ],
+                [
+                  "Implementation Examples",
+                  "Several concrete examples for each subcategory"
+                ],
+                [
+                  "Quick-Start Guides",
+                  "Short guides: Small Business, Organizational Profiles, Tiers, ERM, C-SCRM, Framework Components"
+                ],
+                [
+                  "Profile templates",
+                  "Spreadsheet templates for Current and Target Profiles"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does a Target Profile describe?",
+          "options": [
+            "The current state",
+            "The desired outcomes prioritised to meet objectives",
+            "The attacker's profile",
+            "The auditor's opinion"
+          ],
+          "answer": 1,
+          "explain": "Target = desired posture."
+        },
+        {
+          "q": "Which Tier describes practices formally approved and expressed as policy?",
+          "options": [
+            "Tier 1 Partial",
+            "Tier 2 Risk Informed",
+            "Tier 3 Repeatable",
+            "Tier 4 Adaptive"
+          ],
+          "answer": 2,
+          "explain": "Tier 3 Repeatable."
+        },
+        {
+          "q": "Which statement about Tiers is accurate?",
+          "options": [
+            "Every organisation should aim for Tier 4",
+            "Tiers describe rigor of risk governance and management and should be chosen based on risk and resources",
+            "Tiers are the same as CMMI levels",
+            "Tiers only apply to PROTECT"
+          ],
+          "answer": 1,
+          "explain": "NIST says to choose the Tier that meets goals and is cost-effective."
+        },
+        {
+          "q": "A sector-wide baseline of CSF outcomes is called a...",
+          "options": [
+            "Community Profile",
+            "Tier",
+            "Informative Reference",
+            "Overlay"
+          ],
+          "answer": 0,
+          "explain": "Community Profile."
+        },
+        {
+          "q": "Which is the final step of creating and using an Organizational Profile?",
+          "options": [
+            "Scope",
+            "Gather information",
+            "Implement the action plan and update the profile",
+            "Analyse gaps"
+          ],
+          "answer": 2,
+          "explain": "Profiles are living documents updated as the plan is executed."
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "title": "Applying CSF 2.0",
+      "summary": "Assessment approach, metrics, board reporting and a worked case.",
+      "sections": [
+        {
+          "id": "assess",
+          "title": "Running a CSF assessment",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**Scope and stakeholders:** agree the scope (entity, services, sites), sponsors and interviewees.",
+                "**Collect evidence:** policies, configurations, tool reports, interviews, samples. Evidence beats opinions.",
+                "**Rate each subcategory:** use a defined scale (e.g. 0 Not implemented to 4 Optimised) and record evidence, gaps and owners.",
+                "**Set targets with the business:** target scores should follow risk appetite (GV.RM-02), not a blanket \"4 everywhere\".",
+                "**Prioritise gaps:** weight by risk reduction, regulatory need, cost and dependencies.",
+                "**Roadmap:** 30/90/180/365-day plan with owners and budgets.",
+                "**Report and repeat:** track quarterly; reassess yearly or after major change."
+              ],
+              "ordered": true
+            },
+            {
+              "type": "callout",
+              "style": "tip",
+              "title": "Scoring tip",
+              "text": "Rate implementation and effectiveness separately. A documented access review process with no evidence of reviews happening should not score as implemented."
+            }
+          ]
+        },
+        {
+          "id": "metrics",
+          "title": "Metrics that matter",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Function",
+                "Example KPI / KRI"
+              ],
+              "rows": [
+                [
+                  "GOVERN",
+                  "% of critical suppliers assessed in last 12 months; # risks outside tolerance"
+                ],
+                [
+                  "IDENTIFY",
+                  "% of assets with owner and criticality; # critical vulnerabilities older than SLA"
+                ],
+                [
+                  "PROTECT",
+                  "% of users with phishing-resistant MFA; patch SLA compliance; restore test success rate"
+                ],
+                [
+                  "DETECT",
+                  "Mean time to detect (MTTD); % of critical assets sending logs to SIEM"
+                ],
+                [
+                  "RESPOND",
+                  "Mean time to contain (MTTC); % incidents with root cause identified"
+                ],
+                [
+                  "RECOVER",
+                  "Actual vs target recovery time for critical services; # improvement actions closed"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "board",
+          "title": "Reporting to the board",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "Lead with the top 5 cyber risks in business terms (money, customers, regulators, safety).",
+                "Show posture by function as current vs target, with trend since last report.",
+                "Show the few decisions you need from the board: risk acceptance, budget, policy approval.",
+                "Keep technical detail in an appendix."
+              ],
+              "ordered": false
+            },
+            {
+              "type": "callout",
+              "style": "exec",
+              "title": "One-slide structure",
+              "text": "Left: risk heatmap of top 5 risks. Middle: CSF function bars current vs target. Right: 3 decisions required and 3 key achievements."
+            }
+          ]
+        },
+        {
+          "id": "case",
+          "title": "Worked case: a regional bank",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "A bank with operations in three countries runs a CSF 2.0 assessment across 106 subcategories."
+            },
+            {
+              "type": "list",
+              "items": [
+                "**Findings:** strong PROTECT controls (average 3.1 of 4) but weak GOVERN (1.8), especially GV.SC (1.2): no supplier tiering, contracts lack notification clauses.",
+                "**Detect gap:** only 55% of critical systems log to the SIEM (PR.PS-04, DE.CM-09).",
+                "**Recover gap:** restore of core banking never tested end-to-end (PR.DS-11, RC.RP-03).",
+                "**Targets:** GOVERN to 3.0, DETECT to 3.0, RECOVER to 3.0 within 18 months, approved by the board risk committee.",
+                "**Roadmap:** third-party risk programme (Q1-Q2), SIEM onboarding of all Tier 1 systems (Q1-Q3), annual full restore test (Q3).",
+                "**Result after 12 months:** GOVERN 2.7, DETECT 2.9, first successful full restore in 14 hours against a 24-hour objective."
+              ],
+              "ordered": false
+            }
+          ]
+        },
+        {
+          "id": "related",
+          "title": "Related NIST resources",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Resource",
+                "Use"
+              ],
+              "rows": [
+                [
+                  "NIST IR 8286 series",
+                  "Integrating cyber risk into ERM"
+                ],
+                [
+                  "NIST Privacy Framework",
+                  "Privacy risk, designed to align with CSF"
+                ],
+                [
+                  "NICE Framework (SP 800-181)",
+                  "Workforce roles and skills"
+                ],
+                [
+                  "SP 800-161 Rev. 1",
+                  "Cyber supply chain risk management practices"
+                ],
+                [
+                  "SP 800-218 (SSDF)",
+                  "Secure software development"
+                ],
+                [
+                  "SP 800-61 Rev. 3",
+                  "Incident response aligned to CSF 2.0"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should drive target scores for each subcategory?",
+          "options": [
+            "Maximum score everywhere",
+            "Risk appetite and business priorities",
+            "Vendor recommendations",
+            "The previous year's score"
+          ],
+          "answer": 1,
+          "explain": "Targets follow GV.RM-02 risk appetite and business priorities."
+        },
+        {
+          "q": "Which is a good DETECT metric?",
+          "options": [
+            "Patch SLA compliance",
+            "Mean time to detect",
+            "% suppliers assessed",
+            "Restore test success"
+          ],
+          "answer": 1,
+          "explain": "MTTD measures detection."
+        },
+        {
+          "q": "What should lead a board report?",
+          "options": [
+            "A full list of 106 subcategory scores",
+            "Top risks in business terms and the decisions needed",
+            "Tool licence counts",
+            "Firewall rule changes"
+          ],
+          "answer": 1,
+          "explain": "Boards need risk, trend and decisions."
+        },
+        {
+          "q": "Which NIST document helps integrate cyber risk into ERM?",
+          "options": [
+            "IR 8286",
+            "SP 800-53B",
+            "AI 100-1",
+            "SP 800-88"
+          ],
+          "answer": 0,
+          "explain": "The NIST IR 8286 series."
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "GV.OC",
+      "back": "Organizational Context: mission, stakeholders, obligations, dependencies",
+      "tag": "Category"
+    },
+    {
+      "front": "GV.RM",
+      "back": "Risk Management Strategy: objectives, appetite, tolerance, methods, opportunities",
+      "tag": "Category"
+    },
+    {
+      "front": "GV.RR",
+      "back": "Roles, Responsibilities, and Authorities: leadership accountability, resources, HR",
+      "tag": "Category"
+    },
+    {
+      "front": "GV.PO",
+      "back": "Policy: established, reviewed and enforced",
+      "tag": "Category"
+    },
+    {
+      "front": "GV.OV",
+      "back": "Oversight: reviewing strategy and performance",
+      "tag": "Category"
+    },
+    {
+      "front": "GV.SC",
+      "back": "Cybersecurity Supply Chain Risk Management (10 subcategories)",
+      "tag": "Category"
+    },
+    {
+      "front": "ID.AM",
+      "back": "Asset Management: hardware, software, flows, supplier services, data, lifecycle",
+      "tag": "Category"
+    },
+    {
+      "front": "ID.RA",
+      "back": "Risk Assessment: vulnerabilities, CTI, threats, impact, responses, exceptions, disclosures",
+      "tag": "Category"
+    },
+    {
+      "front": "ID.IM",
+      "back": "Improvement: from evaluations, tests, operations; plans maintained",
+      "tag": "Category"
+    },
+    {
+      "front": "PR.AA",
+      "back": "Identity Management, Authentication, and Access Control",
+      "tag": "Category"
+    },
+    {
+      "front": "PR.AT",
+      "back": "Awareness and Training: general and specialised roles",
+      "tag": "Category"
+    },
+    {
+      "front": "PR.DS",
+      "back": "Data Security: at rest, in transit, in use, backups",
+      "tag": "Category"
+    },
+    {
+      "front": "PR.PS",
+      "back": "Platform Security: config, software, hardware, logs, unauthorised software, secure SDLC",
+      "tag": "Category"
+    },
+    {
+      "front": "PR.IR",
+      "back": "Technology Infrastructure Resilience: network protection, environment, resilience, capacity",
+      "tag": "Category"
+    },
+    {
+      "front": "DE.CM",
+      "back": "Continuous Monitoring: networks, physical, personnel, providers, computing",
+      "tag": "Category"
+    },
+    {
+      "front": "DE.AE",
+      "back": "Adverse Event Analysis: analyse, correlate, scope, share, enrich, declare",
+      "tag": "Category"
+    },
+    {
+      "front": "RS.MA",
+      "back": "Incident Management: execute plan, triage, prioritise, escalate, recovery criteria",
+      "tag": "Category"
+    },
+    {
+      "front": "RS.AN",
+      "back": "Incident Analysis: root cause, records, evidence, magnitude",
+      "tag": "Category"
+    },
+    {
+      "front": "RS.CO",
+      "back": "Incident Response Reporting and Communication",
+      "tag": "Category"
+    },
+    {
+      "front": "RS.MI",
+      "back": "Incident Mitigation: contain and eradicate",
+      "tag": "Category"
+    },
+    {
+      "front": "RC.RP",
+      "back": "Incident Recovery Plan Execution",
+      "tag": "Category"
+    },
+    {
+      "front": "RC.CO",
+      "back": "Incident Recovery Communication",
+      "tag": "Category"
+    },
+    {
+      "front": "CSF 2.0 functions",
+      "back": "GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER",
+      "tag": "Core"
+    },
+    {
+      "front": "CSF 2.0 counts",
+      "back": "6 Functions, 22 Categories, 106 Subcategories",
+      "tag": "Core"
+    },
+    {
+      "front": "CSF 2.0 release date",
+      "back": "26 February 2024 (NIST CSWP 29)",
+      "tag": "History"
+    },
+    {
+      "front": "Three CSF components",
+      "back": "Core, Organizational Profiles, Tiers",
+      "tag": "Components"
+    },
+    {
+      "front": "The four Tiers",
+      "back": "1 Partial, 2 Risk Informed, 3 Repeatable, 4 Adaptive",
+      "tag": "Tiers"
+    },
+    {
+      "front": "Five steps to create a profile",
+      "back": "Scope, gather information, create profile, analyse gaps and plan, implement and update",
+      "tag": "Profiles"
+    },
+    {
+      "front": "PR.DS-01 / 02 / 10 / 11",
+      "back": "Data at rest / in transit / in use / backups",
+      "tag": "Data"
+    },
+    {
+      "front": "DE.AE-08",
+      "back": "Incidents are declared when adverse events meet defined incident criteria",
+      "tag": "Detect"
+    },
+    {
+      "front": "RS.MA-05",
+      "back": "The criteria for initiating incident recovery are applied",
+      "tag": "Respond"
+    },
+    {
+      "front": "RC.RP-03",
+      "back": "Integrity of backups and restoration assets verified before use",
+      "tag": "Recover"
+    },
+    {
+      "front": "GV.RM-02",
+      "back": "Risk appetite and risk tolerance statements are established, communicated and maintained",
+      "tag": "Govern"
+    },
+    {
+      "front": "PR.AA-05",
+      "back": "Least privilege and separation of duties in access permissions",
+      "tag": "Protect"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Function",
+      "definition": "Highest level of the CSF Core (e.g. PROTECT)."
+    },
+    {
+      "term": "Category",
+      "definition": "Group of related outcomes within a function (e.g. PR.AA)."
+    },
+    {
+      "term": "Subcategory",
+      "definition": "Specific outcome statement (e.g. PR.AA-05)."
+    },
+    {
+      "term": "Organizational Profile",
+      "definition": "Description of current and/or target posture in terms of Core outcomes."
+    },
+    {
+      "term": "Community Profile",
+      "definition": "Baseline of CSF outcomes created for a shared interest such as a sector."
+    },
+    {
+      "term": "Tier",
+      "definition": "Characterisation of the rigor of cybersecurity risk governance and management (1-4)."
+    },
+    {
+      "term": "Implementation Example",
+      "definition": "NIST-published concrete action illustrating a subcategory."
+    },
+    {
+      "term": "Informative Reference",
+      "definition": "Mapping from CSF to another standard, guideline or control."
+    },
+    {
+      "term": "C-SCRM",
+      "definition": "Cybersecurity Supply Chain Risk Management."
+    },
+    {
+      "term": "Risk appetite",
+      "definition": "The types and amount of risk an organisation is willing to accept in pursuit of value."
+    },
+    {
+      "term": "Risk tolerance",
+      "definition": "The acceptable variation around risk appetite for specific objectives."
+    },
+    {
+      "term": "Adverse event",
+      "definition": "Any event associated with a negative impact; may or may not become an incident."
+    },
+    {
+      "term": "Incident",
+      "definition": "An occurrence that jeopardises confidentiality, integrity or availability, or violates policy, meeting the organisation's incident criteria."
+    },
+    {
+      "term": "POA&M",
+      "definition": "Plan of Action and Milestones: a list of gaps with remediation actions, owners and dates."
+    },
+    {
+      "term": "SSDF",
+      "definition": "Secure Software Development Framework, NIST SP 800-218."
+    },
+    {
+      "term": "MTTD / MTTC",
+      "definition": "Mean time to detect / mean time to contain."
+    },
+    {
+      "term": "CSWP 29",
+      "definition": "NIST Cybersecurity White Paper number of CSF 2.0."
+    }
+  ]
+}
